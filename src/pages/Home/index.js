@@ -8,6 +8,7 @@ const anchors = ['Banner', 'Description', 'Initialize', 'Character', 'Footer']
 export const HomepageWrapper = () => (
 	<ReactFullpage
 		scrollingSpeed={1200}
+		anchors={anchors}
 		navigation
 		scrollOverflow={true}
 		navigationTooltips={anchors}
