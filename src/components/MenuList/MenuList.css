@@ -1,0 +1,28 @@
+.menu-list {
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    background-color: #140D09;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    color:white;
+    width:0%;
+    height:0%;
+    animation-fill-mode: forwards;
+    overflow: hidden;
+    color:#DECFC0;
+}
+.menu-list .item {
+    padding: 10px 20px;
+    font-weight: 600;
+    text-align: center;
+    transition: all .3s;
+    border-radius: 10px;
+    font-size:18px;
+}
+.menu-list .item:hover {
+    background-color: rgba(255,255,255, 0.2);
+}

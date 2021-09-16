@@ -1,0 +1,27 @@
+.account-detail {
+    font-family: 'Montserrat'
+}
+.account-detail .form-detail {
+    background-color: #2A2A2D;
+    width:450px;
+}
+.account-detail .form-detail .online-icon {
+    width:8px;
+    height:8px;
+    background-color: #31b554;
+    border-radius: 50%;
+    box-shadow: 0px 0px 22px 5px rgba(49,181,84,0.84);
+}
+.account-detail .logo-binance {
+    width:25px;
+    height:25px;
+}
+.account-detail .balance-info {
+    background: url('../../../assets/binance-bg.svg'),#1A1A1B ;
+    background-repeat: no-repeat;
+    background-position:90% 0px;
+    border: 1px solid #acb0ad
+}
+.account-detail .btn-account:active {
+    @apply bg-gray-500
+}

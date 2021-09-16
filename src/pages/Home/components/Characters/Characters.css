@@ -1,0 +1,588 @@
+
+.section-2__container .border-image{
+    position: absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    transform: translateY(40%)
+}
+.section-2__container {
+    background-color: #130C09;
+    background-image: url('../../../../assets/home/bg-section4.png') , url('../../../../assets/home/bg_text3.png');
+    background-size: 100% 100%, 1000px;
+    background-repeat: no-repeat;
+    background-position: center, 80% 70px;
+    height:100%;
+    position:relative
+}
+.character-section {
+    color:rgba(231, 225, 217, 1);
+}
+.character-section .title {
+    margin-top:70px;
+    font-size:42px;
+    font-family: 'Chakra Petch';
+    font-weight: 700;
+    letter-spacing: 20px;
+    text-transform: uppercase;
+    display:block;
+    z-index: 100;
+}
+.character-section .character-content {
+
+}
+.character-section .left-side__text {
+    flex: 0.5;
+    min-width: 350px;
+    margin-right:60px;
+}
+
+.character-section .left-side__text .faction-container {
+    display: flex;
+    flex-direction: row;
+}
+.character-section .left-side__text .faction-container img {
+    width:60px;
+    height:60px;
+    border-radius: 50%;
+    border:3px solid white;
+    @apply mr-6;
+    transition:all .3s;
+    cursor: pointer;
+}
+.character-section .left-side__text .faction-container img:hover {
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+
+}
+.character-section .left-side__text .faction__name {
+    font-size: 24px;
+    display: block;
+    letter-spacing: 8px;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: 'Chakra Petch';
+}
+.character-section .left-side__text .faction__description {
+    color:rgba(222, 207, 192, 1);
+    font-size: 14px;
+    margin:0 !important;
+    font-family: 'Titillium Web', sans-serif;
+}
+.character-section .left-side__text .faction__droprate {
+    background: url('../../../../assets/home/bg-text2.png');
+    background-size: contain;
+    width:fit-content;
+    padding:10px;
+    font-size: 12px;
+    color: rgba(222, 207, 192, 1);
+}
+.character-section .left-side__text .faction__droprate span {
+    font-size: 20px;
+    color:#DECFC0;
+    font-weight: 600;
+    @apply ml-2;
+}
+
+.character-section .right-side__img {
+    position: relative;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.character-section .right-side__img .btn-primary {
+    display: none;
+    font-weight: 600;
+}
+.character-section .right-side__img  .slick-slider {
+    width:900px;
+}
+.character-section .right-side__img #btn-prev {
+    position: absolute;
+    left:0%;
+    top:50%;
+    transform: translate(-100%, -50%);
+    width: 50px;
+    z-index: 10;
+    cursor: pointer;
+}
+.character-section .right-side__img .btn-arrow#btn-next {
+    position: absolute;
+    right:20px;
+    top:50%;
+    transform: translate(-100%, -50%) rotate(180deg);
+    width: 50px;
+    z-index: 10;
+    cursor: pointer;
+}
+.character-section .right-side__img .slick-arrow {
+    display: none !important;
+}
+.character-section  .title-container {
+    position: relative;
+}
+
+.character-section  .title-container img{
+    position:absolute;
+    top:0;
+    left:450px;
+    transform: translate(0%,0%);
+    width:1000px !important;
+}
+.character-section .right-side__img .character-container img {
+    transition:all .2s;
+    width:100%;
+    height: 100%;
+    cursor:pointer;
+    border:2px solid #E7E1D9;
+}
+.character-section .right-side__img .character-container {
+    position:relative;
+    padding:10px;
+    height:400px;
+    box-sizing: border-box;
+}
+.character-section .right-side__img .character-container span {
+    display: block;
+}
+.character-section .right-side__img .character-container:hover img {
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.3), 0 6px 20px 0 rgba(255, 255, 255, 0.3); 
+}
+.character-section .right-side__img .character-container:hover .character__info {
+    height:170px;
+}
+.character-section .right-side__img .character-container:hover .btn-tertiary {
+    opacity: 1;
+    visibility: visible;
+}
+.character-section .right-side__img .character-container  .character__info {
+    position:absolute;
+    bottom: 10px;
+    text-align: center;
+    height:105px;
+    left:10px;
+    border: 2px solid #E7E1D9;
+    width:calc(100% - 20px);
+    font:'Chakra Petch';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding:20px 0px;
+    transition:all .25s;
+    background-color: rgba(19, 12, 9, 0.8);
+}
+.character-section .right-side__img .character-container  .character__info img {
+    width: 35px;
+    height:35px;
+    border:none;
+    position: absolute;
+    display: block;
+    top:0;
+    left:50%;
+    z-index: 100;
+    box-shadow: none !important;
+    transform: translate(-50%,-50%);
+}
+.character-section .right-side__img .character-container  .character__info  .character__name {
+    font-size:20px;
+    font-weight: 600;
+    color:white;
+    letter-spacing: 7px;
+}
+.character-section .right-side__img .character-container  .character__info .character__major {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom:11px;
+}
+.character-section .right-side__img .character-container .btn-tertiary  {
+    opacity: 0;
+    visibility: hidden;
+    transition: all .2s;
+}
+.btn-tertiary {
+    padding:10px 20px;
+    background-color: #130C09;
+    color:#E7E1D9;
+    font-size: 16px;
+    border:2px solid #cba320;
+}
+
+/* Description video css */
+
+.descript-video {
+    @apply w-full;
+    height:1000px;
+    color:rgb(182, 173, 161);
+    position: relative;
+    background-image:  url('../../../../assets/home/text-bg.png');
+    background-size:  100%;
+    background-repeat: no-repeat;
+    background-position:  50% 95%;
+    color:#FFEFD8;
+    
+}
+.descript-video .title {
+    font-family: 'Chakra Petch';
+    font-size:40px;
+    letter-spacing: 15px;
+    font-weight: 600;
+    text-align:center;
+}
+.descript-video .description-extend {
+    @apply max-w-2xl;
+    text-align: center;
+    margin: 20px 0px;
+}
+.descript-video .video-container {
+    width:80%;
+    height:65%;
+    position:relative;
+}
+.descript-video .video-container img {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height:100%;
+    z-index: 1;
+}
+.descript-video .video-container .video {
+    width:92%;
+    height:92%;
+    top:50%;
+    left:50%;
+    z-index:2;
+    transform: translate(-50%, -50%);
+}
+.descript-video .text-bg {
+    position: absolute;
+    bottom:30px;
+    left:50%;
+    width:90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-50%) !important;
+    z-index:0;
+    @apply max-w-screen-xl;
+}
+/* utilities  */
+.utilities-section {
+    width:100vw;
+    color:#FFEFD8;
+    margin:60px 0px;
+}
+.utilities-section .empty-grid {
+
+}
+.utilities-section .header-container {
+    padding-right:20px;
+}
+.utilities-section .header-container img {
+    width:100px;
+}
+.utilities-section .title {
+    font-family: 'Chakra Petch';
+    font-size:40px;
+    letter-spacing: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.utilities-section .title__expand {
+    font-size: 14px;
+    font-weight: 400;
+    margin-top:10px;
+    padding:0px 10px;
+    border-left: 2px solid #F6D683;
+}
+.utilities-section .grid-utilities {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 25px;
+    column-gap: 50px;
+}
+.utilities-section b {
+    color:#F6D683;
+}
+.utilities-section .grid-utilities .utilities {
+    padding: 40px;
+    border: 2px solid #CCAA8B;
+    background: url('../../../../assets/home/bg-grid.png'), url('../../../../assets/home/bg-grid-icon.png');
+    background-color: #130C09;
+    background-size: 50px, 65px;
+    background-repeat: no-repeat;
+    background-position: 0px 0px, 90% 10px;
+
+}
+.utilities-section .grid-utilities .utilities__title {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+
+}
+.utilities-section .grid-utilities .utilities__content {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    display: block;
+    margin-top:20px;
+}
+/* Gameplay section */
+
+.gameplay {
+    
+}
+.gameplay .illustration__container {
+    margin: 20px 0px;
+    position:relative; 
+    width:50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:100%;
+    flex-direction: row;
+    max-height: 400px;
+}
+.gameplay .illustration__container .bg-ill {
+    width:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    height:100%;
+}
+.gameplay .illustration__container .bg-ill.bg-ill-2{ 
+    width:97%;
+    height: 97%;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+.gameplay .front-side {
+    height:50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; 
+    height:500px;
+}
+.gameplay .front-side .illustration__container .illustration {
+    z-index:1;
+    width:94%;
+    height: 90%;
+}
+.gameplay .front-side .title__container {
+    width:40%;
+    color: #DECFC0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: url('../../../../assets/home/title_bg.png');
+    background-size: 100% 100%;
+    background-position: center;
+    padding: 20px 10px;
+}
+.gameplay .front-side .title__container .title__text {
+    color: #E7E1D9;
+    font-family: 'Chakra Petch';
+    font-size: 40px;
+    letter-spacing: 10px;
+    display: block;
+    font-weight: 600;
+    text-transform: uppercase;
+    
+}
+.gameplay .front-side .title__container .title__expand {
+    font-size:16px;
+    @apply max-w-sm;
+}
+.gameplay .back-side {
+    color: #DECFC0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    height:50%;
+    margin:20px 0px;
+    margin-top:0px;
+}
+.gameplay .back-side .brief-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    max-width: 30%;
+    text-align: center;
+}
+
+.gameplay .back-side .brief-content img{
+    max-width: 120px;
+    max-height: 120px;
+    width:100%;
+    height:100%;
+    border-radius: 50%;
+
+}
+.gameplay .back-side .brief-content .brief__title {
+    font-size: 20px;
+    font-family: 'Chakra Petch';
+    font-weight: bold;
+    display: block;
+    margin: 10px 0px;
+    letter-spacing: 4px;
+}
+.gameplay .back-side .brief-content .brief__content {
+    font-size: 14px;
+    font-weight: 400;
+    max-width: 80%;
+}
+
+/*feature section inherit from gameplay section luv u */
+
+.feature-section .front-side  {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between; 
+    height:500px;
+}
+.feature-section {
+    margin-bottom: 60px;
+}
+@media only screen and (max-width: 1280px) {
+    .character-section .left-side__text  {
+        padding: 0px 20px;
+    }
+    .character-section .title  {
+        padding:0px 20px;
+    }
+    .descript-video {
+        padding:0px 20px;
+    }
+    .utilities-section {
+        padding:0px 20px;
+    }
+}
+@media only screen and (max-width: 750px) {
+    .character-section .character__content {
+        flex-direction: column !important;
+    }
+    .character-section .right-side__img {
+        width:100%;
+        margin-top: 20px;
+        margin-left: 0px;
+    }
+    .character-section .right-side__img #btn-prev {
+        left:80px;
+    }
+    .character-section .left-side__text  {
+        flex:1;
+        margin-right: 0px;
+    }
+    
+    .character-section .character__content  {
+        margin-top: 20px;
+    }
+    .character-section .left-side__text .btn-primary {
+        display: none;
+    }
+    .character-section .right-side__img .btn-primary {
+        display: block;
+        margin-top:0px;
+    }
+    .descript-video {
+        padding:0px 20px;
+        height: 800px;
+        margin-top: 20px;
+    }
+    .descript-video .video-container  {
+        width:100%;
+        height:80%;
+    }
+    .utilities-section {
+        margin:0px;
+        margin-top: 40px;
+        padding:0px 20px;
+    }
+    .utilities-section .grid-utilities {
+        margin-top:20px;
+        row-gap: 0px;
+        column-gap: 0px;
+        grid-gap: 10px;
+    }
+    
+    .gameplay .front-side {
+        flex-direction: column;
+        height:fit-content;
+    }
+    .gameplay .illustration__container { 
+        width:100%;
+     }
+     .gameplay .front-side .title__container {
+         width:60%;
+     }
+    .gameplay .back-side {
+        margin-top:60px;
+    }
+}
+@media only screen and (max-width: 560px) { 
+    .character-section .title {
+        font-size: 30px;
+        letter-spacing: 10px;
+    }
+    .descript-video .title {
+        font-size: 30px;
+        letter-spacing: 10px;
+    }
+    .utilities-section .title {
+        font-size: 30px;
+        letter-spacing: 10px;
+    }
+    .utilities-section .empty-grid {
+        display: none;
+    }
+    .gameplay .front-side .title__container .title__text {
+        font-size: 30px;
+        letter-spacing: 10px;
+    }
+    .utilities-section .grid-utilities {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    .gameplay .front-side .title__container {
+        width:100%
+    }
+    .gameplay .back-side {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    .gameplay .back-side .brief-content {
+        max-width: 100%;
+        margin:0;
+        margin-top: 20px;
+    }
+    .character-section .right-side__img  .slick-slider {
+        width: 800px;
+    }
+    .gameplay .front-side .title__container .title__expand {
+        font-size: 13px;
+    }
+    .descript-video .video-container {
+        height: 55%;
+    }
+    .character-section .right-side__img .btn-arrow#btn-next {
+        right:0px;
+    }
+}
+@media only screen and (max-width: 390px) {
+    .utilities-section .grid-utilities {
+        grid-template-columns: 1fr;
+    }
+ }

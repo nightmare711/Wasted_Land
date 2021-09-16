@@ -1,0 +1,28 @@
+.message-container {
+    width: 300px;
+    background-color: rgba(53, 52, 68, 0.7);
+    font-family: 'Montserrat';
+    overflow: hidden;
+    animation: moveInOpacity .3s;
+}
+.message-container .message-content {
+    max-height: 120px;
+    overflow-y: scroll;
+    margin-left: 45px;;
+}
+.message-container .message-content::-webkit-scrollbar {
+    display: none;
+}
+.message-container .color-container {
+    position:absolute;
+    top:0;
+    left:0;
+    width:40px;
+}
+.message-container .message-content .title {
+    font-size: 17px;
+    font-weight: 900;
+}
+.message-container .message-content .content {
+    font-size: 15px;
+}

@@ -1,0 +1,60 @@
+.begin-section {
+    background: linear-gradient(180deg, rgba(246,233,217,0.95) 0%, rgba(246,233,217,0.95) 100%), url('../../../../assets/home/bg-section3.png');
+    text-transform: uppercase;
+    background-size: cover;
+    color:#5B4B37;
+
+}
+.begin-section img {
+    animation: moveInfinity 2s infinite;
+    animation-fill-mode: both;
+}
+.begin-section .sub-title {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Chakra Petch';
+    letter-spacing: 10px;
+}
+.begin-section .title {
+    background: url('../../../../assets/home/bg-title.png');
+    background-size: 100% 100%;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 15px;
+    font-family: 'Chakra Petch';
+    color: #2C1B05;
+}
+.begin-section .title-secondary {
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 10px;
+    font-family: 'Chakra Petch';
+    margin-top:20px;
+    text-transform: none;
+}
+
+.begin-section .title-secondary span {
+    color: red;
+}
+/* @keyframes moveInfinity {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+} */
+@media only screen and (max-width: 560px) {
+    .begin-section .title {
+        text-align: center;
+        font-size: 28px;
+    }
+    .begin-section .sub-title {
+        font-size: 18px;
+    }
+    .begin-section .title-secondary {
+        text-align: center;
+        font-size: 18px;
+        margin-top:0px
+    }
+}

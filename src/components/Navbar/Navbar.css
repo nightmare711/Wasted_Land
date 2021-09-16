@@ -1,0 +1,78 @@
+.navbar { 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    width:100%;
+    height:65px;
+    color:white;
+    z-index: 101;
+    box-sizing: border-box;
+    background:linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.6) 100%), url('../../assets/nav-asset/bg.png');
+    background-size: cover;
+    background-position: center;
+    font-weight: 800;
+    color:rgba(255, 239, 216, 1);
+    position:absolute;
+    top:0;
+    left:0;
+}
+.navbar .icon-menu-bar {
+    font-size: 35px;
+    margin-left:10px;
+    display: none;
+    cursor: pointer;
+}
+.navbar .bnb-logo {
+    width:30px;
+}
+.navbar .profile {
+    font-size:15px;
+    font-family: 'Montserrat';
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-weight: 600;
+}
+.navbar img {
+    width:150px;
+}
+.navbar .container-md {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex:1;
+}
+.navbar .container-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.navbar .list-nav {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+.navbar .list-nav li {
+    margin-left:25px;
+    text-transform: capitalize;
+}
+.navbar .btn-primary {
+    font-weight: 600;
+    font-size: 15px;
+}
+@media only screen and (max-width: 1280px) {
+    .navbar  {
+        padding: 0px 20px;
+    }
+}
+@media only screen and (max-width: 750px) {
+    .navbar .list-nav  {
+        display: none;
+    }
+    .navbar .icon-menu-bar {
+        display: block;
+    }
+}

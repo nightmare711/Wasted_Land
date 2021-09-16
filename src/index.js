@@ -1,12 +1,17 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
+import './animation.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
+import 'animate.css/animate.min.css'
+import Provider from './Providers'
 
 ReactDOM.render(
 	<React.StrictMode>
-		<App />
+		<Provider>
+			<App />
+		</Provider>
 	</React.StrictMode>,
 	document.getElementById('root')
 )

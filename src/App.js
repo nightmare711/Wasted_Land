@@ -1,5 +1,25 @@
+import React from 'react'
+import { Navbar, Connect, Loading, ListMessage, AccountDetail, MenuList } from 'components'
+import { useHideMessage } from 'services/useDevelopUI'
+import { HomepageWrapper } from 'pages'
+import { Switch, Route } from 'react-router-dom'
+import './root.css'
+
 function App() {
-	return <div>Wasted land</div>
+	useHideMessage()
+	return (
+		<React.Fragment>
+			<AccountDetail />
+			<ListMessage />
+			<Loading />
+			<MenuList />
+			<Navbar />
+			<Connect />
+			<Switch>
+				<Route component={HomepageWrapper} path='/' exact />
+			</Switch>
+		</React.Fragment>
+	)
 }
 
 export default App
