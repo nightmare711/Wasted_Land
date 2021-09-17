@@ -7,6 +7,7 @@ import DiscordIcon from 'assets/home/discord__icon.png'
 import TwitterIcon from 'assets/home/twitter__icon.png'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 import FooterCharacters from 'assets/home/footer-characters.png'
+import { BannerFooter } from 'assets'
 import './Footer.css'
 
 const onChangeAttStyle = (id, height) => {
@@ -97,7 +98,16 @@ export const Footer = () => {
 								typesetting, remaining essentially unchanged.
 							</div>
 						</div>
-						<img src={FooterCharacters} alt='Footer Characters' className='footer__characters' />
+						<div className='footer__characters'>
+							<div className='character__content'>
+								<span className='glitch' data-text='GET YOUR CHARACTERS NOW'>
+									GET YOUR CHARACTERS NOW
+								</span>
+								<div className='btn-primary'>Go to Marketplace</div>
+								<img src={BannerFooter} alt='Banner Footer' />
+							</div>
+							<img className='bg__character' src={FooterCharacters} alt='Footer Characters' />
+						</div>
 					</div>
 				</div>
 				<div className='footer-social__container'>

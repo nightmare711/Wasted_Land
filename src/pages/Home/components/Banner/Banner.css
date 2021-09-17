@@ -3,8 +3,11 @@
     background-repeat: no-repeat;
     display: flex;
     position:relative;
+    width:100vw;
+    height: 100vh;
     background-size:100vw calc(100vh - 65px);
     background-position: bottom;
+    overflow: hidden;
 }
 
 .banner-home .banner-content {
@@ -51,12 +54,19 @@
 .banner-home .btn-primary {
     filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.8));
 }
+
 @media only screen and (max-width: 750px) {
     .banner-home .banner-content h1  {
         letter-spacing: 0.4em;
     }
+    .banner-home .banner-content {
+        bottom:70px;
+    }
 }
 @media only screen and (max-width: 560px) {
+    /* .banner-home {
+        background-size:calc(100vh * 1.77) calc(100vh - 65px);
+    } */
     .banner-home .banner-content h1 {
         text-align: center;
         font-size: 44px;
@@ -76,5 +86,8 @@
     }
     .banner-home .btn-primary {
         margin:0;
+    }
+    .banner-home .banner-content {
+        bottom:50px;
     }
  }

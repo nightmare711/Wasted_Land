@@ -12,6 +12,27 @@ import Diamond from 'assets/home/diamond.png'
 import GameplayIllustration from 'assets/gameplay-illustration.png'
 import FeatureIllustration from 'assets/gameplay-illustration2.png'
 import BorderAbove from 'assets/home/border-grow-up.png'
+import { AnimationWithoutMobile } from 'components'
+import {
+	Faction__1,
+	Faction__2,
+	Faction__3,
+	Character__1,
+	Character__2,
+	Character__3,
+	Character__4,
+	Character__5,
+	Character__6,
+	Character__7,
+	Character__8,
+	Character__9,
+	Gameplay__1,
+	Gameplay__2,
+	Gameplay__3,
+	Gameplay__4,
+	Gameplay__5,
+	Gameplay__6,
+} from 'assets'
 import { YoutubeEmbed } from 'components'
 import './Characters.css'
 
@@ -37,8 +58,79 @@ const onClickNext = (action) => {
 		}
 	}
 }
-
+const factionDescription = [
+	{
+		type: 'Hybrid',
+		description:
+			'Sheer might is everything to the Orc. Every Orc is born with a muscular body coupled with seemingly never ending strength. On any battlefield, their physical attributes alone terrorize anyone facing them.',
+		dropRate: 24.5,
+		characters: [
+			{
+				name: 'Farmer',
+				type: 'Master',
+				image: Character__1,
+			},
+			{
+				name: 'Worker',
+				type: 'Member',
+				image: Character__2,
+			},
+			{
+				name: 'Dockter',
+				type: 'Intern',
+				image: Character__3,
+			},
+		],
+	},
+	{
+		type: 'SUVIVOR',
+		description:
+			'Shadya had only been dead a few weeks, and already Akshan could feel all traces of her slipping away. That was the hardest facet of his grief—the hoarding of mementos, the scrambling to scrape together whatever remained of his beloved mentor.',
+		dropRate: 72.5,
+		characters: [
+			{
+				name: 'WIND RUNNER',
+				type: 'Eagle Man',
+				image: Character__4,
+			},
+			{
+				name: 'OCEAN WALKER',
+				type: 'Octoman',
+				image: Character__5,
+			},
+			{
+				name: 'PREY TRACKER',
+				type: 'Wolfman',
+				image: Character__6,
+			},
+		],
+	},
+	{
+		type: 'EX-COMPANY',
+		description:
+			'He is highly skilled in the art of stealth combat, able to evade the eyes of his enemies and reappear when they least expect him. With a keen sense of justice and a legendary death-reversing weapon.',
+		dropRate: 5.0,
+		characters: [
+			{
+				name: 'SCIENTIST',
+				type: 'Associate',
+				image: Character__7,
+			},
+			{
+				name: 'SCIENTIST',
+				type: 'Veteran',
+				image: Character__8,
+			},
+			{
+				name: 'SECURITY',
+				type: 'Professor',
+				image: Character__9,
+			},
+		],
+	},
+]
 export const Characters = () => {
+	const [activeFaction, setActiveFaction] = React.useState(0)
 	return (
 		<div className='section'>
 			<div className='flex flex-col items-center justify-center w-full section-2__container'>
@@ -46,202 +138,232 @@ export const Characters = () => {
 				<div className='w-full max-w-screen-xl overflow-hidden'>
 					<div className='flex items-center justify-center w-full h-full character-section'>
 						<div className='flex flex-col justify-center w-full h-full max-w-screen-xl overflow-hidden '>
-							<span className='title'>NFT Characters</span>
+							<AnimationWithoutMobile
+								animateIn='animate__fadeInLeft'
+								animateOut='animate__fadeOutLeft'
+							>
+								<span className='title'>NFT Characters</span>
+							</AnimationWithoutMobile>
 							<div className='flex flex-row items-start justify-start character__content mt-14 '>
-								<div className='left-side__text'>
-									<span className='block mb-6'>Choose Faction</span>
-									<div className='faction-container'>
-										<img src='https://picsum.photos/200' alt='Faction' />
-										<img src='https://picsum.photos/200' alt='Faction' />
-										<img src='https://picsum.photos/200' alt='Faction' />
+								<AnimationWithoutMobile
+									animateIn='animate__fadeInLeft'
+									animateOut='animate__fadeOutLeft'
+								>
+									<div className='left-side__text'>
+										<span className='block mb-6'>Choose Faction</span>
+										<div className='faction-container'>
+											<img
+												onClick={() => setActiveFaction(0)}
+												className={activeFaction === 0 ? 'active__faction' : ''}
+												src={Faction__1}
+												alt='Faction'
+											/>
+											<img
+												onClick={() => setActiveFaction(1)}
+												className={activeFaction === 1 ? 'active__faction' : ''}
+												src={Faction__3}
+												alt='Faction'
+											/>
+											<img
+												onClick={() => setActiveFaction(2)}
+												className={activeFaction === 2 ? 'active__faction' : ''}
+												src={Faction__2}
+												alt='Faction'
+											/>
+										</div>
+										<span className='mt-6 faction__name'>
+											{factionDescription[activeFaction].type}
+										</span>
+										<span className='mt-2 faction__description'>
+											{factionDescription[activeFaction].description}
+										</span>
+										<div className='mt-2 faction__droprate'>
+											Droprate:{' '}
+											<span>{factionDescription[activeFaction].dropRate.toString() + '%'}</span>
+										</div>
+										<div className='mt-14 btn-primary'>
+											<a href='/marketplace'>
+												<div className='btn-primary_hover'>
+													<img src={Btn_Hover} alt='Shadow' />
+												</div>
+												Go to Marketplace
+											</a>
+										</div>
 									</div>
-									<span className='mt-6 faction__name'>HyBrid</span>
-									<span className='mt-2 faction__description'>
-										Sheer might is everything to the Orc. Every Orc is born with a muscular body
-										coupled with seemingly never ending strength. On any battlefield, their physical
-										attributes alone terrorize anyone facing them.
-									</span>
-									<div className='mt-2 faction__droprate'>
-										Droprate: <span>24.5%</span>
+								</AnimationWithoutMobile>
+
+								<AnimationWithoutMobile
+									animateIn='animate__fadeInRight'
+									animateOut='animate__fadeOutRight'
+								>
+									<div className='ml-10 right-side__img'>
+										<img
+											src={BtnArrow}
+											onClick={() => onClickNext('prev')}
+											className='btn-arrow'
+											id='btn-prev'
+											alt='Btn Arrow'
+										/>
+										<img
+											onClick={() => onClickNext('next')}
+											src={BtnArrow}
+											className='btn-arrow'
+											id='btn-next'
+											alt='Btn Arrow'
+										/>
+										<Slider {...settings}>
+											{factionDescription[activeFaction].characters.map((character) => (
+												<div className='character-container'>
+													<img src={character.image} alt='Character' />
+													<div className='character__info'>
+														<img src={IconProgress} alt='Icon' />
+														<span className='character__name'>{character.name}</span>
+														<span className='character__major'>{character.type}</span>
+														<div className='btn-tertiary'>Buy Character</div>
+													</div>
+												</div>
+											))}
+											<div className='character-container'>
+												<img
+													src={factionDescription[activeFaction].characters[1].image}
+													alt='Character'
+												/>
+												<div className='character__info'>
+													<img src={IconProgress} alt='Icon' />
+													<span className='character__name'>
+														{factionDescription[activeFaction].characters[1].name}
+													</span>
+													<span className='character__major'>
+														{factionDescription[activeFaction].characters[1].type}
+													</span>
+													<div className='btn-tertiary'>Buy Character</div>
+												</div>
+											</div>
+										</Slider>
+										<div className='self-center btn-primary'>Marketplace</div>
 									</div>
-									<div className='mt-14 btn-primary'>
-										<a href='/marketplace'>
-											<div className='btn-primary_hover'>
-												<img src={Btn_Hover} alt='Shadow' />
-											</div>
-											Go to Marketplace
-										</a>
-									</div>
-								</div>
-								<div className='ml-10 right-side__img'>
-									<img
-										src={BtnArrow}
-										onClick={() => onClickNext('prev')}
-										className='btn-arrow'
-										id='btn-prev'
-										alt='Btn Arrow'
-									/>
-									<img
-										onClick={() => onClickNext('next')}
-										src={BtnArrow}
-										className='btn-arrow'
-										id='btn-next'
-										alt='Btn Arrow'
-									/>
-									<Slider {...settings}>
-										<div className='character-container'>
-											<img src='https://picsum.photos/200' alt='Character' />
-											<div className='character__info'>
-												<img src={IconProgress} alt='Icon' />
-												<span className='character__name'>Assistant</span>
-												<span className='character__major'>Scientist</span>
-												<div className='btn-tertiary'>Buy Character</div>
-											</div>
-										</div>
-										<div className='character-container'>
-											<img src='https://picsum.photos/200' alt='Character' />
-											<div className='character__info'>
-												<img src={IconProgress} alt='Icon' />
-												<span className='character__name'>Assistant</span>
-												<span className='character__major'>Scientist</span>
-												<div className='btn-tertiary'>Buy Character</div>
-											</div>
-										</div>
-										<div className='character-container'>
-											<img src='https://picsum.photos/200' alt='Character' />
-											<div className='character__info'>
-												<img src={IconProgress} alt='Icon' />
-												<span className='character__name'>Assistant</span>
-												<span className='character__major'>Scientist</span>
-												<div className='btn-tertiary'>Buy Character</div>
-											</div>
-										</div>
-										<div className='character-container'>
-											<img src='https://picsum.photos/200' alt='Character' />
-											<div className='character__info'>
-												<img src={IconProgress} alt='Icon' />
-												<span className='character__name'>Assistant</span>
-												<span className='character__major'>Scientist</span>
-												<div className='btn-tertiary'>Buy Character</div>
-											</div>
-										</div>
-										<div className='character-container'>
-											<img src='https://picsum.photos/200' alt='Character' />
-											<div className='character__info'>
-												<img src={IconProgress} alt='Icon' />
-												<span className='character__name'>Assistant</span>
-												<span className='character__major'>Scientist</span>
-												<div className='btn-tertiary'>Buy Character</div>
-											</div>
-										</div>
-										<div className='character-container'>
-											<img src='https://picsum.photos/200' alt='Character' />
-											<div className='character__info'>
-												<img src={IconProgress} alt='Icon' />
-												<span className='character__name'>Assistant</span>
-												<span className='character__major'>Scientist</span>
-												<div className='btn-tertiary'>Buy Character</div>
-											</div>
-										</div>
-									</Slider>
-									<div className='self-center btn-primary'>Marketplace</div>
-								</div>
+								</AnimationWithoutMobile>
 							</div>
 						</div>
 					</div>
-					<div className='flex flex-col items-center justify-center descript-video'>
-						<span className='title'>NFT PLAY TO EARN GAME</span>
-						<span className='description-extend'>
-							Wasted coin is a new type of game, partially owned and operated by its players. Earn
-							WAC tokens by playing and use them to decide the future of the game!
-						</span>
-						<div className='video-container'>
-							<img src={BgVideo2} alt='bg-video' />
-							<img src={BgVideo1} alt='bg-video' />
-							<div className='absolute inset-0 video'>
-								<YoutubeEmbed embedId={'bc4q5elBEBE'} />
+					<AnimationWithoutMobile animateIn='animate__fadeIn' animateOut='animate__fadeOut'>
+						<div className='flex flex-col items-center justify-center descript-video'>
+							<span className='title'>NFT PLAY TO EARN GAME</span>
+							<span className='description-extend'>
+								Wasted coin is a new type of game, partially owned and operated by its players. Earn
+								WAC tokens by playing and use them to decide the future of the game!
+							</span>
+							<div className='video-container'>
+								<img src={BgVideo2} alt='bg-video' />
+								<img src={BgVideo1} alt='bg-video' />
+								<div className='absolute inset-0 video'>
+									<YoutubeEmbed embedId={'bc4q5elBEBE'} />
+								</div>
 							</div>
 						</div>
-					</div>
+					</AnimationWithoutMobile>
 				</div>
 				<div className='flex items-center justify-center utilities-section'>
 					<div className='flex flex-col justify-center w-full h-full max-w-screen-xl'>
 						<div className='flex flex-row items-center justify-between header-container'>
 							<div className='flex flex-col'>
-								<span className='title'>OUR TOKEN UTILITIES</span>
-								<div className='max-w-sm title__expand'>
-									The main token in The Wasted Land Ecosystem is <b>TWL</b>. <b>TWL</b> Token can be
-									used in many different ways
-								</div>
+								<AnimationWithoutMobile animateIn='animate__fadeInLeft'>
+									<span className='title'>OUR TOKEN UTILITIES</span>
+									<div className='max-w-sm title__expand'>
+										The main token in The Wasted Land Ecosystem is <b>TWL</b>. <b>TWL</b> Token can
+										be used in many different ways
+									</div>
+								</AnimationWithoutMobile>
 							</div>
 							<img src={Diamond} alt='diamond' />
 						</div>
-						<div className='mt-20 grid-utilities'>
-							<div className='utilities'>
-								<span className='utilities__title'>Exchange</span>
-								<span className='utilities__content'>
-									Exchange for resources or in-game equipments or land upgrades.
-								</span>
-							</div>
-							<div className='utilities'>
-								<span className='utilities__title'>Speed up</span>
-								<span className='utilities__content'>Speed up time-gated content.</span>
-							</div>
-							<div className='utilities'>
-								<span className='utilities__title'>TRADING</span>
-								<span className='utilities__content'>Mint NFT from in-game heroes/items.</span>
-							</div>
-							<div className='empty-grid'></div>
-							<div className='utilities'>
-								<span className='utilities__title'>BREEDING</span>
-								<span className='utilities__content'>
-									Use to born(mint) next generation hero NFTs
-								</span>
-							</div>
+						<AnimationWithoutMobile delay={300} animateIn='animate__fadeIn'>
+							<div className='mt-20 grid-utilities'>
+								<div className='utilities'>
+									<span className='utilities__title'>Exchange</span>
+									<span className='utilities__content'>
+										Exchange for resources or in-game equipments or land upgrades.
+									</span>
+								</div>
+								<div className='utilities'>
+									<span className='utilities__title'>Speed up</span>
+									<span className='utilities__content'>Speed up time-gated content.</span>
+								</div>
+								<div className='utilities'>
+									<span className='utilities__title'>TRADING</span>
+									<span className='utilities__content'>Mint NFT from in-game heroes/items.</span>
+								</div>
+								<div className='empty-grid'></div>
+								<div className='utilities'>
+									<span className='utilities__title'>BREEDING</span>
+									<span className='utilities__content'>
+										Use to born(mint) next generation hero NFTs
+									</span>
+								</div>
 
-							<div className='utilities'>
-								<span className='utilities__title'>PVP BATTLE</span>
-								<span className='utilities__content'>Wage on PvP battles.</span>
+								<div className='utilities'>
+									<span className='utilities__title'>PVP BATTLE</span>
+									<span className='utilities__content'>Wage on PvP battles.</span>
+								</div>
 							</div>
-						</div>
+						</AnimationWithoutMobile>
 					</div>
 				</div>
 				<div className='flex items-center justify-center gameplay'>
 					<div className='w-full max-w-screen-xl '>
 						<div className='front-side'>
 							<div className='illustration__container'>
-								<img className='illustration' src={GameplayIllustration} alt='Illustration' />
+								<AnimationWithoutMobile animateIn='animate__fadeIn' animateOut='animate__fadeOut'>
+									<img className='illustration' src={GameplayIllustration} alt='Illustration' />
+								</AnimationWithoutMobile>
 							</div>
+
 							<div className='title__container'>
-								<span className='title__text'>GamePlay</span>
-								<span className='title__expand'>
-									All the distinctive gaming features revolving around our ecosystem
-								</span>
+								<AnimationWithoutMobile delay={400} animateIn='animate__fadeIn'>
+									<span className='title__text'>GamePlay</span>
+									<span className='title__expand'>
+										All the distinctive gaming features revolving around our ecosystem
+									</span>
+								</AnimationWithoutMobile>
 							</div>
 						</div>
 						<div className='back-side'>
 							<div className='brief-content'>
-								<img src='https://picsum.photos/200' alt='Brife' />
-								<span className='brief__title'>PvP Mode</span>
-								<span className='brief__content'>
-									Gather your crew, take on an adventure and discover the secret of the apocalypse.
-								</span>
+								<AnimationWithoutMobile delay={400} animateIn='animate__fadeInUp'>
+									<div className='flex flex-col items-center justify-start'>
+										<img src={Gameplay__1} alt='Brife' />
+										<span className='brief__title'>PvP Mode</span>
+										<span className='brief__content'>
+											Gather your crew, take on an adventure and discover the secret of the
+											apocalypse.
+										</span>
+									</div>
+								</AnimationWithoutMobile>
+							</div>
+
+							<div className='brief-content'>
+								<AnimationWithoutMobile delay={600} animateIn='animate__fadeInUp'>
+									<div className='flex flex-col items-center justify-start'>
+										<img src={Gameplay__2} alt='Brife' />
+										<span className='brief__title'>PvE Mode</span>
+										<span className='brief__content'>
+											Push your team to higher levels in Tournaments. Compete with real players and
+											earn tokens.
+										</span>
+									</div>
+								</AnimationWithoutMobile>
 							</div>
 							<div className='brief-content'>
-								<img src='https://picsum.photos/200' alt='Brife' />
-								<span className='brief__title'>PvE Mode</span>
-								<span className='brief__content'>
-									Push your team to higher levels in Tournaments. Compete with real players and earn
-									tokens.
-								</span>
-							</div>
-							<div className='brief-content'>
-								<img src='https://picsum.photos/200' alt='Brife' />
-								<span className='brief__title'>Mating</span>
-								<span className='brief__content'>
-									The world first game that allows LGBT to have children. Mating easily with 2
-									heroes, regardless of their gender.
-								</span>
+								<AnimationWithoutMobile delay={800} animateIn='animate__fadeInUp'>
+									<div className='flex flex-col items-center justify-start'>
+										<img src={Gameplay__3} alt='Brife' />
+										<span className='brief__title'>Mating</span>
+										<span className='brief__content'>
+											The world first game that allows LGBT to have children. Mating easily with 2
+											heroes, regardless of their gender.
+										</span>
+									</div>
+								</AnimationWithoutMobile>
 							</div>
 						</div>
 					</div>
@@ -250,41 +372,58 @@ export const Characters = () => {
 					<div className='w-full max-w-screen-xl '>
 						<div className='front-side'>
 							<div className='illustration__container'>
-								<img className='illustration' src={FeatureIllustration} alt='Illustration' />
+								<AnimationWithoutMobile animateIn='animate__fadeIn' animateOut='animate__fadeOut'>
+									<img className='illustration' src={FeatureIllustration} alt='Illustration' />
+								</AnimationWithoutMobile>
 							</div>
 							<div className='title__container'>
-								<span className='title__text'>Feature</span>
-								<span className='title__expand'>
-									All the distinctive gaming features revolving around our ecosystem
-								</span>
+								<AnimationWithoutMobile animateIn='animate__fadeIn' delay={400}>
+									<span className='title__text'>Feature</span>
+									<span className='title__expand'>
+										All the distinctive gaming features revolving around our ecosystem
+									</span>
+								</AnimationWithoutMobile>
 							</div>
 						</div>
 						<div className='back-side'>
 							<div className='brief-content'>
-								<img src='https://picsum.photos/200' alt='Brife' />
-								<span className='brief__title'>Marketplace</span>
-								<span className='brief__content'>
-									By joining the game, you can choose to become either a conqueror or a wealthy
-									merchant. Marketplace will be a place to connect you with millions buyers/sellers.
-								</span>
+								<AnimationWithoutMobile delay={400} animateIn='animate__fadeInUp'>
+									<div className='flex flex-col items-center justify-start'>
+										<img src={Gameplay__4} alt='Brife' />
+										<span className='brief__title'>Marketplace</span>
+										<span className='brief__content'>
+											By joining the game, you can choose to become either a conqueror or a wealthy
+											merchant. Marketplace will be a place to connect you with millions
+											buyers/sellers.
+										</span>
+									</div>
+								</AnimationWithoutMobile>
 							</div>
 							<div className='brief-content'>
-								<img src='https://picsum.photos/200' alt='Brife' />
-								<span className='brief__title'>Build your team</span>
-								<span className='brief__content'>
-									Build your ultimate team and conquer your enemies. Understanding character’s
-									strengths and weaknesses, as well as billions of possible genetic combinations,
-									the number of strategy you could use is limitless.
-								</span>
+								<AnimationWithoutMobile delay={600} animateIn='animate__fadeInUp'>
+									<div className='flex flex-col items-center justify-start'>
+										<img src={Gameplay__5} alt='Brife' />
+										<span className='brief__title'>Build your team</span>
+										<span className='brief__content'>
+											Build your ultimate team and conquer your enemies. Understanding character’s
+											strengths and weaknesses, as well as billions of possible genetic
+											combinations, the number of strategy you could use is limitless.
+										</span>
+									</div>
+								</AnimationWithoutMobile>
 							</div>
 							<div className='brief-content'>
-								<img src='https://picsum.photos/200' alt='Brife' />
-								<span className='brief__title'>Expand your shelter</span>
-								<span className='brief__content'>
-									In near future, there will be a place where you could call the second home.
-									Combining with your characters, there will be new gameplay and new surprise
-									rewards for you.
-								</span>
+								<AnimationWithoutMobile delay={600} animateIn='animate__fadeInUp'>
+									<div className='flex flex-col items-center justify-start'>
+										<img src={Gameplay__6} alt='Brife' />
+										<span className='brief__title'>Expand your shelter</span>
+										<span className='brief__content'>
+											In near future, there will be a place where you could call the second home.
+											Combining with your characters, there will be new gameplay and new surprise
+											rewards for you.
+										</span>
+									</div>
+								</AnimationWithoutMobile>
 							</div>
 						</div>
 					</div>
