@@ -7,6 +7,7 @@ import DiscordIcon from 'assets/home/discord__icon.png'
 import TwitterIcon from 'assets/home/twitter__icon.png'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 import FooterCharacters from 'assets/home/footer-characters.png'
+import PartnerBG_1 from 'assets/home/bg_partner_1.png'
 import './Footer.css'
 
 const onChangeAttStyle = (id, height) => {
@@ -29,10 +30,11 @@ export const Footer = () => {
 	return (
 		<div className='section'>
 			<div className='footer-section'>
-				<div className='flex flex-col items-center justify-center bg-black footer__partner'>
+				<div className='flex flex-col items-center justify-center footer__partner'>
 					<div className='relative flex flex-col items-center justify-center w-full h-full max-w-screen-xl '>
 						<span className='title'>Our Partner</span>
 						<div className='partner'>
+							<img className='partner__overlay' src={PartnerBG_1} alt='Partner' />
 							<img src={PartnerBG} alt='BG Partner' />
 						</div>
 					</div>

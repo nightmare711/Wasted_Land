@@ -5,7 +5,7 @@
 }
 .footer__partner {
     height:400px;
-    background-color: #130C09;
+    background-color: #130B09;
     color: #DECFC0;
     font-size: 40px;
     font-weight: 700;
@@ -33,6 +33,14 @@
     transform: translate(-50%,50%);
     z-index: 10;
     position: absolute;
+}
+.footer__partner .partner .partner__overlay {
+    width: 95%;
+    height:95%;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
 }
 .footer-question {
     margin-top:250px;
