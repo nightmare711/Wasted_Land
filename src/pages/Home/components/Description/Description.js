@@ -22,7 +22,6 @@ export const DescriptionSection = () => {
 			root.style.filter = 'grayscale(0%)'
 			root.style.transform = 'scale(1.1)'
 			root.style.boxShadow = '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'
-			prevRoot.style.filter = 'grayscale(100%)'
 			prevRoot.style.transform = 'scale(1)'
 			prevRoot.style.boxShadow = 'none'
 			setActive(id)
@@ -32,7 +31,7 @@ export const DescriptionSection = () => {
 		<div className='justify-center description-section'>
 			<AnimationWithoutMobile delay={300} animateIn='animate__fadeIn'>
 				<div className='flex items-center justify-center w-full h-full'>
-					<div className='flex flex-row w-full max-w-screen-xl'>
+					<div className='flex flex-row w-full h-full container__max-w '>
 						<div className='flex items-center justify-center left-side'>
 							<div className='flex flex-col time-line'>
 								{active >= 1 ? (

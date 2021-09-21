@@ -1,5 +1,6 @@
 import React from 'react'
 import { AnimationOnScroll } from 'react-animation-on-scroll'
+import CharacterStrip from 'assets/home/character_strip.png'
 import './Begin.css'
 
 export const Begin = () => {
@@ -16,6 +17,9 @@ export const Begin = () => {
 					Collect Your <span className='text-center'>NFT characters</span>
 				</AnimationOnScroll>
 			</span>
+			<div className='character__strip'>
+				<img src={CharacterStrip} alt='Strip' />
+			</div>
 		</div>
 	)
 }

@@ -1,12 +1,10 @@
 import React from 'react'
-import BorderImage from 'assets/home/border-page.png'
 import { AnimationOnScroll } from 'react-animation-on-scroll'
 import './Banner.css'
 
 export const Banner = () => {
 	return (
 		<div className='banner-home section'>
-			<img src={BorderImage} alt='BorderImage' className='border-page' />
 			<div className='banner-content'>
 				<AnimationOnScroll animateOut='animate__fadeOutDown' animateIn='animate__fadeInUp'>
 					<h1>WASTED LANDS</h1>
