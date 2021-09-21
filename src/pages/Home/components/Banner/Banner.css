@@ -1,4 +1,5 @@
 .banner-home {
+    
     background: linear-gradient(180deg, rgba(19, 12, 9, 0) 0%, #130C09 100%),  url('../../../../assets/home/banner.gif');
     background-repeat: no-repeat;
     display: flex;
@@ -8,6 +9,7 @@
     background-size:100vw calc(100vh - 65px);
     background-position: bottom;
     overflow: hidden;
+    background-attachment: fixed;
 }
 
 .banner-home .banner-content {
