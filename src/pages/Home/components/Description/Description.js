@@ -30,7 +30,7 @@ export const DescriptionSection = () => {
 	return (
 		<div className='justify-center description-section'>
 			<AnimationWithoutMobile delay={300} animateIn='animate__fadeIn'>
-				<div className='flex items-center justify-center w-full h-full'>
+				<div className='flex items-center justify-center w-full h-full max-w-screen-xl'>
 					<div className='flex flex-row w-full h-full container__max-w '>
 						<div className='flex items-center justify-center left-side'>
 							<div className='flex flex-col time-line'>

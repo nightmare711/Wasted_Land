@@ -1,15 +1,19 @@
 .banner-home {
-    
-    background: linear-gradient(180deg, rgba(19, 12, 9, 0) 0%, #130C09 100%),  url('../../../../assets/home/banner.gif');
-    background-repeat: no-repeat;
     display: flex;
     position:relative;
     width:100vw;
     height: 100vh;
-    background-size:100vw calc(100vh - 65px);
-    background-position: bottom;
     overflow: hidden;
     background-attachment: fixed;
+}
+.banner-home video {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+.banner-home .rh5v-Overlay_component {
+    display: none !important;
 }
 
 .banner-home .banner-content {
