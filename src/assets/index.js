@@ -16,7 +16,6 @@ import Gameplay__3 from './gameplay/icon__3.png'
 import Gameplay__4 from './gameplay/icon__4.png'
 import Gameplay__5 from './gameplay/icon__5.png'
 import Gameplay__6 from './gameplay/icon__6.png'
-import BannerFooter from './home/banner_footer.png'
 
 export {
 	Faction__1,
@@ -37,5 +36,4 @@ export {
 	Gameplay__4,
 	Gameplay__5,
 	Gameplay__6,
-	BannerFooter,
 }
