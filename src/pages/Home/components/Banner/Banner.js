@@ -9,7 +9,17 @@ import './Banner.css'
 export const Banner = () => {
 	return (
 		<div className='banner-home section'>
-			<Video autoPlay loop muted playsinline controls={[]} poster={BannerPoster}>
+			<Video
+				autoplay='autoplay'
+				loop='loop'
+				muted
+				defaultMuted
+				playsinline
+				oncontextmenu='return false;'
+				preload='auto'
+				controls={false}
+				poster={BannerPoster}
+			>
 				<source src={BannerGif} type='video/webm' />
 			</Video>
 			<div className='banner-content'>

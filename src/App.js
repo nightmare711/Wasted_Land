@@ -4,6 +4,7 @@ import { useHideMessage } from 'services/useDevelopUI'
 import { HomepageWrapper } from 'pages'
 import { Switch, Route } from 'react-router-dom'
 import './root.css'
+import 'animate.css/animate.min.css'
 
 function App() {
 	useHideMessage()
