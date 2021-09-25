@@ -2,9 +2,9 @@
     background: url('../../../../assets/home/bg-section3.png');
     background-attachment: fixed;
     text-transform: uppercase;
+    background-color: #130c09;
     background-size: 100% 100%;
     color: #F6E9D9;
-    background-color: #130c09;
     height:100vh;
     min-height: 1000px;
 }
