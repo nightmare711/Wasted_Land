@@ -2,7 +2,6 @@ import React from 'react'
 import { AnimationOnScroll } from 'react-animation-on-scroll'
 import BannerGif from 'assets/home/banner.webm'
 import BannerPoster from 'assets/home/bg.png'
-import { DefaultPlayer as Video } from 'react-html5video'
 import { onMoveAnimation } from 'services/useDevelopUI'
 
 import 'react-html5video/dist/styles.css'
@@ -14,22 +13,19 @@ export const Banner = () => {
 	}, [])
 	return (
 		<div className='banner-home section'>
-			<Video
-				autoplay='autoplay'
-				loop='loop'
-				muted
-				defaultMuted
-				playsInline
-				oncontextmenu='return false;'
-				preload='auto'
+			<video
+				autoPlay={true}
+				loop={true}
 				controls={false}
+				playsInline
+				muted
 				poster={BannerPoster}
 				onLoadedData={() => {
 					onMoveAnimation('pre-loading', 'moveOutOpacity')
 				}}
-			>
-				<source src={BannerGif} type='video/webm' />
-			</Video>
+				type='video/webm'
+				src={BannerGif}
+			></video>
 			<div className='banner-content'>
 				<AnimationOnScroll animateIn='animate__fadeInUp'>
 					<h1>WASTED LANDS</h1>
