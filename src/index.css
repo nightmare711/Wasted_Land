@@ -8,6 +8,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   overflow-y: scroll;
+  
+}
+
+#root {
+  background: url('./assets/home/bg-section4.png');
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+  background-color: #130C09;
+  background-position: center; 
+  background-attachment: fixed; 
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

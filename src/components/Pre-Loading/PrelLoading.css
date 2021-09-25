@@ -1,0 +1,16 @@
+.pre-loading {
+    width:100vw;
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 100000000000;
+    background-color: white;
+    transition:all .3s;
+}
+.pre-loading img {
+    width:150px;
+}

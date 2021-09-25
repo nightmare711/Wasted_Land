@@ -3,6 +3,8 @@ import { AnimationOnScroll } from 'react-animation-on-scroll'
 import BannerGif from 'assets/home/banner.webm'
 import BannerPoster from 'assets/home/bg.png'
 import { DefaultPlayer as Video } from 'react-html5video'
+import { onMoveAnimation } from 'services/useDevelopUI'
+
 import 'react-html5video/dist/styles.css'
 import './Banner.css'
 
@@ -19,6 +21,9 @@ export const Banner = () => {
 				preload='auto'
 				controls={false}
 				poster={BannerPoster}
+				onLoadedData={() => {
+					onMoveAnimation('pre-loading', 'moveOutOpacity')
+				}}
 			>
 				<source src={BannerGif} type='video/webm' />
 			</Video>
