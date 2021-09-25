@@ -10,7 +10,7 @@ import './Banner.css'
 
 export const Banner = () => {
 	React.useEffect(() => {
-		setTimeout(() => onMoveAnimation('pre-loading', 'moveOutOpacity'), 8000)
+		setTimeout(() => onMoveAnimation('pre-loading', 'moveOutOpacity'), 20000)
 	}, [])
 	return (
 		<div className='banner-home section'>
@@ -19,7 +19,7 @@ export const Banner = () => {
 				loop='loop'
 				muted
 				defaultMuted
-				playsinline
+				playsInline
 				oncontextmenu='return false;'
 				preload='auto'
 				controls={false}
