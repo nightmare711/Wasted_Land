@@ -6,8 +6,7 @@ import 'slick-carousel/slick/slick-theme.css'
 import IconProgress from 'assets/home/Active.png'
 import Btn_Hover from 'assets/home/btn-primary-hover.png'
 import BtnArrow from 'assets/home/btn-arrow.png'
-import BgVideo1 from 'assets/home/bg-video.png'
-import BgVideo2 from 'assets/home/bg-video2.png'
+import BgVideo2 from 'assets/home/thumbnail_bg.png'
 import Diamond from 'assets/home/diamond.png'
 import GameplayIllustration from 'assets/gameplay-illustration.png'
 import FeatureIllustration from 'assets/gameplay-illustration2.png'
@@ -255,7 +254,6 @@ export const Characters = () => {
 							</span>
 							<div className='video-container'>
 								<img src={BgVideo2} alt='bg-video' />
-								<img src={BgVideo1} alt='bg-video' />
 								<div className='absolute inset-0 video'>
 									<YoutubeEmbed embedId={'bc4q5elBEBE'} />
 								</div>
