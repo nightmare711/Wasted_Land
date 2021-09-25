@@ -9,6 +9,9 @@ import 'react-html5video/dist/styles.css'
 import './Banner.css'
 
 export const Banner = () => {
+	React.useEffect(() => {
+		setTimeout(() => onMoveAnimation('pre-loading', 'moveOutOpacity'), 8000)
+	}, [])
 	return (
 		<div className='banner-home section'>
 			<Video
