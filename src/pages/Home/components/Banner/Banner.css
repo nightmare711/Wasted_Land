@@ -1,3 +1,4 @@
+
 .banner-home {
     display: flex;
     position:relative;
@@ -7,14 +8,31 @@
     background-attachment: fixed;
     padding-top:65px
 }
+
 video::-webkit-media-controls {
     display: none;
 }
+.banner-home .video-react-control-bar {
+    display: none !important;
+    opacity:0 !important;
+    visibility: hidden !important;
+}
+.banner-home .video-react-loading-spinner {
+    display: none !important;
+    opacity:0 !important;
+    visibility: hidden !important;
+}
+.banner-home .video-react-big-play-button {
+    display: none !important;
+    opacity:0 !important;
+    visibility: hidden !important;
+}
 .banner-home video {
-    display: block;
     width: 100vw;
-    height: 100vh;
+    height:100vh;
     object-fit: cover;
+    pointer-events: none;
+    outline: none;
 }
 .banner-home .rh5v-Overlay_component {
     display: none !important;

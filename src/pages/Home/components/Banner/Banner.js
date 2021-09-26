@@ -3,31 +3,29 @@ import { AnimationOnScroll } from 'react-animation-on-scroll'
 import BannerGif from 'assets/home/banner.webm'
 import BannerPoster from 'assets/home/bg.png'
 import { onMoveAnimation } from 'services/useDevelopUI'
+import { Player, ControlBar, VolumeMenuButton } from 'video-react'
+import 'video-react/dist/video-react.css'
 
-import 'react-html5video/dist/styles.css'
 import './Banner.css'
 
 export const Banner = () => {
 	React.useEffect(() => {
+		const root = document.querySelector('.banner-home video')
+		if (root) {
+			root.addEventListener('loadeddata', () => {
+				onMoveAnimation('pre-loading', 'moveOutOpacity')
+			})
+		}
 		setTimeout(() => onMoveAnimation('pre-loading', 'moveOutOpacity'), 20000)
 	}, [])
 	return (
 		<div className='banner-home section'>
-			<video
-				autoPlay={true}
-				loop={true}
-				controls={false}
-				playsInline
-				muted
-				poster={BannerPoster}
-				onLoadedData={() => {
-					onMoveAnimation('pre-loading', 'moveOutOpacity')
-				}}
-				preload='none'
-			>
-				<source type='video/webm' src={BannerGif} />
-				Sorry, your browser doesn't support embedded videos.
-			</video>
+			<Player playsInline loop muted autoPlay src={BannerGif} poster={BannerPoster}>
+				<ControlBar autoHide={true} disableDefaultControls>
+					<VolumeMenuButton />
+					<VolumeMenuButton vertical />
+				</ControlBar>
+			</Player>
 			<div className='banner-content'>
 				<AnimationOnScroll animateIn='animate__fadeInUp'>
 					<h1>WASTED LANDS</h1>

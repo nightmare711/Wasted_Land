@@ -33,6 +33,7 @@
     "react-transition-group": "^4.4.2",
     "redux": "^4.1.1",
     "slick-carousel": "^1.8.1",
+    "video-react": "^0.14.1",
     "web-vitals": "^1.0.1",
     "web3": "^1.5.2"
   },
