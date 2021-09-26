@@ -1,6 +1,6 @@
 import React from 'react'
 import { AnimationOnScroll } from 'react-animation-on-scroll'
-import BannerGif from 'assets/home/banner.webm'
+import BannerGif from 'assets/home/banner.mp4'
 import BannerPoster from 'assets/home/bg.png'
 import { onMoveAnimation } from 'services/useDevelopUI'
 import { Player, ControlBar, VolumeMenuButton } from 'video-react'
