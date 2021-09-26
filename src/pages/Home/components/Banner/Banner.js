@@ -23,9 +23,11 @@ export const Banner = () => {
 				onLoadedData={() => {
 					onMoveAnimation('pre-loading', 'moveOutOpacity')
 				}}
-				type='video/webm'
-				src={BannerGif}
-			></video>
+				preload='none'
+			>
+				<source type='video/webm' src={BannerGif} />
+				Sorry, your browser doesn't support embedded videos.
+			</video>
 			<div className='banner-content'>
 				<AnimationOnScroll animateIn='animate__fadeInUp'>
 					<h1>WASTED LANDS</h1>

@@ -7,6 +7,9 @@
     background-attachment: fixed;
     padding-top:65px
 }
+video::-webkit-media-controls {
+    display: none;
+}
 .banner-home video {
     display: block;
     width: 100vw;
