@@ -148,7 +148,6 @@
 }
 .description-section .right-side span {
     writing-mode: vertical-lr;
-    max-height: 80%;
     background: -webkit-linear-gradient(rgba(77,71,68,1), rgba(77,71,68,0.3));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -171,6 +170,9 @@
 }
 
 @media only screen and (max-width: 560px) {
+    .description-section {
+        background: none;
+    }
     .description-section .main-frame .mainframe__title {
         font-size:30px;
         letter-spacing: 6px;

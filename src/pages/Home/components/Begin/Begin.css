@@ -2,11 +2,12 @@
     background: url('../../../../assets/home/bg-section3.png');
     background-attachment: fixed;
     text-transform: uppercase;
+    min-height: 800px;
     background-color: #130c09;
-    background-size: 100% 100%;
+    background-size: 100vw 100%;
+    background-position: center;
     color: #F6E9D9;
     height:100vh;
-    min-height: 1000px;
 }
 
 .begin-section .sub-title {
@@ -58,6 +59,9 @@
     }
 } */
 @media only screen and (max-width: 560px) {
+    .begin-section {
+        background: none;
+    }
     .begin-section .title {
         text-align: center;
         font-size: 28px;

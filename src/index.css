@@ -14,10 +14,11 @@ body {
 #root {
   background: url('./assets/home/bg-section4.png');
   background-repeat: no-repeat;
-  background-size: 100vw 100vh;
+  background-size: 100% 100%;
   background-color: #130C09;
   background-position: center; 
-  background-attachment: fixed; 
+  background-attachment: fixed;
+  -webkit-background-size: cover; 
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
