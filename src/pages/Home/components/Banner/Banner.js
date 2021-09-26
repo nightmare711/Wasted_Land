@@ -3,7 +3,6 @@ import { AnimationOnScroll } from 'react-animation-on-scroll'
 import BannerGif from 'assets/home/banner.mp4'
 import BannerPoster from 'assets/home/bg.png'
 import { onMoveAnimation } from 'services/useDevelopUI'
-import { Player, ControlBar, VolumeMenuButton } from 'video-react'
 import 'video-react/dist/video-react.css'
 
 import './Banner.css'
@@ -13,6 +12,7 @@ export const Banner = () => {
 		const root = document.querySelector('.banner-home video')
 		if (root) {
 			root.addEventListener('loadeddata', () => {
+				root.play()
 				onMoveAnimation('pre-loading', 'moveOutOpacity')
 			})
 		}
@@ -20,12 +20,21 @@ export const Banner = () => {
 	}, [])
 	return (
 		<div className='banner-home section'>
-			<Player playsInline loop muted autoPlay src={BannerGif} poster={BannerPoster}>
-				<ControlBar autoHide={true} disableDefaultControls>
-					<VolumeMenuButton />
-					<VolumeMenuButton vertical />
-				</ControlBar>
-			</Player>
+			<div
+				dangerouslySetInnerHTML={{
+					__html: `
+        <video
+          loop
+          muted
+          autoplay
+          playsinline
+          src="${BannerGif}"
+          poster="${BannerPoster}"
+        />,
+      `,
+				}}
+			></div>
+
 			<div className='banner-content'>
 				<AnimationOnScroll animateIn='animate__fadeInUp'>
 					<h1>WASTED LANDS</h1>

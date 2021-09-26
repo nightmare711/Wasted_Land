@@ -6,30 +6,16 @@
     height: 100vh;
     overflow: hidden;
     background-attachment: fixed;
-    padding-top:65px
+    padding-top:65px;
 }
 
 video::-webkit-media-controls {
     display: none;
 }
-.banner-home .video-react-control-bar {
-    display: none !important;
-    opacity:0 !important;
-    visibility: hidden !important;
-}
-.banner-home .video-react-loading-spinner {
-    display: none !important;
-    opacity:0 !important;
-    visibility: hidden !important;
-}
-.banner-home .video-react-big-play-button {
-    display: none !important;
-    opacity:0 !important;
-    visibility: hidden !important;
-}
+
 .banner-home video {
     width: 100vw;
-    min-height:100vh;
+    height:100vh;
     object-fit: cover;
     pointer-events: none;
     outline: none;
