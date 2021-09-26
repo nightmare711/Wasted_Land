@@ -29,7 +29,7 @@ video::-webkit-media-controls {
 }
 .banner-home video {
     width: 100vw;
-    height:100vh;
+    min-height:100vh;
     object-fit: cover;
     pointer-events: none;
     outline: none;
