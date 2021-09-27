@@ -8,9 +8,9 @@
     top:0;
     left:0;
     z-index: 100000000000;
-    background-color: white;
+    background-color: black;
     transition:all .3s;
 }
 .pre-loading img {
-    width:150px;
+    width:300px;
 }

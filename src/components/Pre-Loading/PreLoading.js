@@ -1,5 +1,5 @@
 import React from 'react'
-import PreLoadingGif from 'assets/preLoading.gif'
+import PreLoadingGif from 'assets/pre-loading.gif'
 import './PrelLoading.css'
 
 export const PreLoading = () => {
