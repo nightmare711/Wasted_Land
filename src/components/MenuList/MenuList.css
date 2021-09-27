@@ -14,6 +14,7 @@
     animation-fill-mode: forwards;
     overflow: hidden;
     color:#DECFC0;
+    z-index: 100000000;
 }
 .menu-list .item {
     padding: 10px 20px;
