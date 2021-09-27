@@ -1,10 +1,6 @@
 import React from 'react'
 import Border from 'assets/home/border.png'
-import Logo from 'assets/home/footer_logo.png'
 import PartnerBG from 'assets/home/bg_partner.png'
-import TelegramIcon from 'assets/home/telegram__icon.png'
-import DiscordIcon from 'assets/home/discord__icon.png'
-import TwitterIcon from 'assets/home/twitter__icon.png'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 import FooterCharacters from 'assets/home/footer-characters.png'
 import PartnerBG_1 from 'assets/home/bg_partner_1.png'
@@ -40,7 +36,7 @@ export const Footer = () => {
 					</div>
 					<img src={Border} alt='Border' className='border__img' />
 				</div>
-				<div className=' footer-question'>
+				<div className='footer-question'>
 					<div className='flex flex-col items-start justify-start max-w-screen-xl'>
 						<div className='title__container'>
 							<span className='title'>FAQ</span>
@@ -107,44 +103,6 @@ export const Footer = () => {
 								<div className='btn-primary'>Go to Marketplace</div>
 							</div>
 							<img className='bg__character' src={FooterCharacters} alt='Footer Characters' />
-						</div>
-					</div>
-				</div>
-				<div className='footer-social__container'>
-					<div className='footer-social items=center justify-center'>
-						<div className='part part__1'>
-							<img className='logo' src={Logo} alt='Logo' />
-							<span className='content'>Copyright © 2021 Wasted Lands</span>
-						</div>
-						<div className='part part__2'>
-							<span className='title'>Contact</span>
-							<span className='content'>contact@wastedland.com</span>
-						</div>
-						<div className='flex flex-row container-social__2'>
-							<div className='part part__3'>
-								<span className='title'>About Us</span>
-								<a className='content' href='/'>
-									Our Team
-								</a>
-								<a className='content' href='/'>
-									Wasted Token
-								</a>
-								<a className='content' href='/'>
-									White Paper
-								</a>
-							</div>
-							<div className='part part__4'>
-								<span className='title'>Social</span>
-								<a className='content' href='/'>
-									<img src={TelegramIcon} alt='Telegram icon' /> Telegram
-								</a>
-								<a className='content' href='/'>
-									<img src={DiscordIcon} alt='Telegram icon' /> Discord
-								</a>
-								<a className='content' href='/'>
-									<img src={TwitterIcon} alt='Telegram icon' /> Twitter
-								</a>
-							</div>
 						</div>
 					</div>
 				</div>

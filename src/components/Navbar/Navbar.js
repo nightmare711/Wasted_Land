@@ -4,6 +4,7 @@ import { useCheckAccountActive } from 'services/useWalletProvider'
 import { useGetBalance } from 'services/useGetBalance'
 import Btn_Hover from 'assets/home/btn-primary-hover.png'
 import MenuIcon from '@material-ui/icons/Menu'
+import { Link } from 'react-router-dom'
 import Logo from 'assets/logo.png'
 import './Navbar.css'
 
@@ -14,12 +15,17 @@ export const Navbar = () => {
 		<div className='navbar'>
 			<div className='max-w-screen-xl container-md'>
 				<div className='container-left'>
-					<img src={Logo} alt='logo' />
+					<Link to='/'>
+						<img src={Logo} alt='logo' />
+					</Link>
 					<ul className='list-nav'>
 						<li>Marketplace</li>
 						<li>Staking</li>
 						<li>Gacha</li>
 						<li>Wallet</li>
+						<li>
+							<Link to='/about'>About</Link>
+						</li>
 					</ul>
 				</div>
 				<div className='flex flex-row items-center justify-center'>

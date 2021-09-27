@@ -7,9 +7,10 @@ import {
 	AccountDetail,
 	MenuList,
 	PreLoading,
+	Footer,
 } from 'components'
 import { useHideMessage } from 'services/useDevelopUI'
-import { HomepageWrapper } from 'pages'
+import { HomepageWrapper, About } from 'pages'
 import { Switch, Route } from 'react-router-dom'
 import './root.css'
 import 'animate.css/animate.min.css'
@@ -26,8 +27,10 @@ function App() {
 			<Navbar />
 			<Connect />
 			<Switch>
+				<Route component={About} path='/about' exact />
 				<Route component={HomepageWrapper} path='/' exact />
 			</Switch>
+			<Footer />
 		</React.Fragment>
 	)
 }
