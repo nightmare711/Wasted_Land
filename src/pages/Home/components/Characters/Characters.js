@@ -12,6 +12,7 @@ import GameplayIllustration from 'assets/gameplay-illustration.png'
 import FeatureIllustration from 'assets/gameplay-illustration2.png'
 import BorderAbove from 'assets/home/border-grow-up.png'
 import { AnimationWithoutMobile } from 'components'
+import Intro from 'assets/trailer.webm'
 import {
 	Faction__1,
 	Faction__2,
@@ -32,7 +33,7 @@ import {
 	Gameplay__5,
 	Gameplay__6,
 } from 'assets'
-import { YoutubeEmbed } from 'components'
+
 import './Characters.css'
 
 const settings = {
@@ -255,7 +256,10 @@ export const Characters = () => {
 							<div className='video-container'>
 								<img src={BgVideo2} alt='bg-video' />
 								<div className='absolute inset-0 video'>
-									<YoutubeEmbed embedId={'bc4q5elBEBE'} />
+									<video controls>
+										<source src={Intro} type='video/webm' />
+										Your browser does not support HTML video.
+									</video>
 								</div>
 							</div>
 						</div>
