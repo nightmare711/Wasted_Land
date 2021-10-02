@@ -12,20 +12,31 @@ import GameplayIllustration from 'assets/gameplay-illustration.png'
 import FeatureIllustration from 'assets/gameplay-illustration2.png'
 import BorderAbove from 'assets/home/border-grow-up.png'
 import { AnimationWithoutMobile } from 'components'
+import { useDispatch } from 'react-redux'
+import { requestLoading, requestUnload } from 'services/redux/loading/actions'
 import Intro from 'assets/trailer.webm'
 import {
 	Faction__1,
 	Faction__2,
 	Faction__3,
-	Character__1,
-	Character__2,
-	Character__3,
-	Character__4,
-	Character__5,
-	Character__6,
-	Character__7,
-	Character__8,
-	Character__9,
+	Crabman,
+	Octopus,
+	Sharkman,
+	Bearman,
+	Officer,
+	Wolfman,
+	Worffman_M,
+	Eagleman,
+	Inter,
+	Colonel,
+	Master,
+	Trainee,
+	Trainee_M,
+	Assistant,
+	Professor,
+	Elite,
+	Elite_M,
+	Veteran,
 	Gameplay__1,
 	Gameplay__2,
 	Gameplay__3,
@@ -66,19 +77,39 @@ const factionDescription = [
 		dropRate: 24.5,
 		characters: [
 			{
-				name: 'Farmer',
-				type: 'Master',
-				image: Character__1,
+				name: 'Crabman',
+				type: 'OceanWalker',
+				image: Crabman,
 			},
 			{
-				name: 'Worker',
-				type: 'Member',
-				image: Character__2,
+				name: 'Octopus',
+				type: 'OceanWalker',
+				image: Octopus,
 			},
 			{
-				name: 'Dockter',
-				type: 'Intern',
-				image: Character__3,
+				name: 'Sharkman',
+				type: 'OceanWalker',
+				image: Sharkman,
+			},
+			{
+				name: 'Bearman',
+				type: 'Preytracker',
+				image: Bearman,
+			},
+			{
+				name: 'Wolfman',
+				type: 'Preytracker',
+				image: Wolfman,
+			},
+			{
+				name: 'Wolfman_M',
+				type: 'Preytracker',
+				image: Worffman_M,
+			},
+			{
+				name: 'Eagleman',
+				type: 'Windrunner',
+				image: Eagleman,
 			},
 		],
 	},
@@ -89,19 +120,29 @@ const factionDescription = [
 		dropRate: 72.5,
 		characters: [
 			{
-				name: 'WIND RUNNER',
-				type: 'Eagle Man',
-				image: Character__4,
+				name: 'Inter',
+				type: 'Doctor',
+				image: Inter,
 			},
 			{
-				name: 'OCEAN WALKER',
-				type: 'Octoman',
-				image: Character__5,
+				name: 'Colonel',
+				type: 'ExSoldier',
+				image: Colonel,
 			},
 			{
-				name: 'PREY TRACKER',
-				type: 'Wolfman',
-				image: Character__6,
+				name: 'Master',
+				type: 'Farmer',
+				image: Master,
+			},
+			{
+				name: 'Trainee',
+				type: 'Farmer',
+				image: Trainee,
+			},
+			{
+				name: 'Trainee_M',
+				type: 'Farmer',
+				image: Trainee_M,
 			},
 		],
 	},
@@ -112,25 +153,41 @@ const factionDescription = [
 		dropRate: 5.0,
 		characters: [
 			{
-				name: 'SCIENTIST',
-				type: 'Associate',
-				image: Character__7,
+				name: 'Assistant',
+				type: 'Scientist',
+				image: Assistant,
 			},
 			{
-				name: 'SCIENTIST',
-				type: 'Veteran',
-				image: Character__8,
+				name: 'Professor',
+				type: 'Scientist',
+				image: Professor,
 			},
 			{
-				name: 'SECURITY',
-				type: 'Professor',
-				image: Character__9,
+				name: 'Elite',
+				type: 'Security',
+				image: Elite,
+			},
+			{
+				name: 'Elite_M',
+				type: 'Security',
+				image: Elite_M,
+			},
+			{
+				name: 'Officer',
+				type: 'Security',
+				image: Officer,
+			},
+			{
+				name: 'Veteran',
+				type: 'Security',
+				image: Veteran,
 			},
 		],
 	},
 ]
 export const Characters = () => {
 	const [activeFaction, setActiveFaction] = React.useState(0)
+	const dispatch = useDispatch()
 	return (
 		<div className='section'>
 			<div className='flex flex-col items-center justify-center w-full section-2__container'>
@@ -153,19 +210,28 @@ export const Characters = () => {
 										<span className='block mb-6'>Choose Faction</span>
 										<div className='faction-container'>
 											<img
-												onClick={() => setActiveFaction(0)}
+												onClick={() => {
+													dispatch(requestLoading())
+													setActiveFaction(0)
+												}}
 												className={activeFaction === 0 ? 'active__faction' : ''}
 												src={Faction__1}
 												alt='Faction'
 											/>
 											<img
-												onClick={() => setActiveFaction(1)}
+												onClick={() => {
+													dispatch(requestLoading())
+													setActiveFaction(1)
+												}}
 												className={activeFaction === 1 ? 'active__faction' : ''}
 												src={Faction__3}
 												alt='Faction'
 											/>
 											<img
-												onClick={() => setActiveFaction(2)}
+												onClick={() => {
+													dispatch(requestLoading())
+													setActiveFaction(2)
+												}}
 												className={activeFaction === 2 ? 'active__faction' : ''}
 												src={Faction__2}
 												alt='Faction'
@@ -212,9 +278,17 @@ export const Characters = () => {
 											alt='Btn Arrow'
 										/>
 										<Slider {...settings}>
-											{factionDescription[activeFaction].characters.map((character) => (
-												<div className='character-container'>
-													<img src={character.image} alt='Character' />
+											{factionDescription[activeFaction].characters.map((character, index) => (
+												<div key={index} className='character-container'>
+													<video
+														loop
+														muted
+														autoPlay
+														playsInline
+														onLoadedData={() => (index === 3 ? dispatch(requestUnload()) : null)}
+														src={character.image}
+													/>
+
 													<div className='character__info'>
 														<img src={IconProgress} alt='Icon' />
 														<span className='character__name'>{character.name}</span>
@@ -223,22 +297,6 @@ export const Characters = () => {
 													</div>
 												</div>
 											))}
-											<div className='character-container'>
-												<img
-													src={factionDescription[activeFaction].characters[1].image}
-													alt='Character'
-												/>
-												<div className='character__info'>
-													<img src={IconProgress} alt='Icon' />
-													<span className='character__name'>
-														{factionDescription[activeFaction].characters[1].name}
-													</span>
-													<span className='character__major'>
-														{factionDescription[activeFaction].characters[1].type}
-													</span>
-													<div className='btn-tertiary'>Buy Character</div>
-												</div>
-											</div>
 										</Slider>
 										<div className='self-center btn-primary'>Marketplace</div>
 									</div>

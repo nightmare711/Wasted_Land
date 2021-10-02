@@ -1,15 +1,24 @@
 import Faction__1 from './home/characters/Character-face/faction-1.png'
 import Faction__2 from './home/characters/Character-face/faction-2.png'
 import Faction__3 from './home/characters/Character-face/faction-3.png'
-import Character__1 from './home/characters/character-1.png'
-import Character__2 from './home/characters/character-2.png'
-import Character__3 from './home/characters/character-3.png'
-import Character__4 from './home/characters/character-4.png'
-import Character__5 from './home/characters/character-5.png'
-import Character__6 from './home/characters/character-6.png'
-import Character__7 from './home/characters/character-7.png'
-import Character__8 from './home/characters/character-8.png'
-import Character__9 from './home/characters/character-9.png'
+import Crabman from './home/characters/Hybrid_OceanWalker_Crabman_Male_Idle.mp4'
+import Octopus from './home/characters/Hybrid_OceanWalker_Octopus_Male_Idle.mp4'
+import Sharkman from './home/characters/Hybrid_OceanWalker_Sharkman_Male_Idle.mp4'
+import Bearman from './home/characters/Hybrid_Preytracker_Bearman_Male_Idle.mp4'
+import Wolfman from './home/characters/Hybrid_Preytracker_Wolfman_Female_Idle.mp4'
+import Worffman_M from './home/characters/Hybrid_Preytracker_Wolfman_Male_Idle.mp4'
+import Eagleman from './home/characters/Hybrid_Windrunner-_Eagleman_Male_Idle.mp4'
+import Inter from './home/characters/Survivor_Doctor_Inter_Female_Idle.mp4'
+import Colonel from './home/characters/Survivor_ExSoldier_Colonel_Male_Idle.mp4'
+import Master from './home/characters/Survivor_Farmer_Master_Male_Idle.mp4'
+import Trainee from './home/characters/Survivor_Farmer_Trainee_Female_Idle.mp4'
+import Trainee_M from './home/characters/Survivor_Farmer_Trainee_Male_Idle.mp4'
+import Assistant from './home/characters/TheCompany_Scientist_Assisstant_Female_Idle.mp4'
+import Professor from './home/characters/TheCompany_Scientist_Professor_Female_Idle.mp4'
+import Elite from './home/characters/TheCompany_Security_Elite-Female_Idle.mp4'
+import Elite_M from './home/characters/TheCompany_Security_Elite_Male-Idle.mp4'
+import Officer from './home/characters/TheCompany_Security_Officer_Male_Idle.mp4'
+import Veteran from './home/characters/TheCompany_Security_Veteran_Female-_Idle.mp4'
 import Gameplay__1 from './gameplay/icon__1.png'
 import Gameplay__2 from './gameplay/icon__2.png'
 import Gameplay__3 from './gameplay/icon__3.png'
@@ -21,15 +30,24 @@ export {
 	Faction__1,
 	Faction__2,
 	Faction__3,
-	Character__1,
-	Character__2,
-	Character__3,
-	Character__4,
-	Character__5,
-	Character__6,
-	Character__7,
-	Character__8,
-	Character__9,
+	Crabman,
+	Octopus,
+	Sharkman,
+	Bearman,
+	Wolfman,
+	Worffman_M,
+	Officer,
+	Eagleman,
+	Inter,
+	Colonel,
+	Master,
+	Trainee,
+	Trainee_M,
+	Assistant,
+	Professor,
+	Elite,
+	Elite_M,
+	Veteran,
 	Gameplay__1,
 	Gameplay__2,
 	Gameplay__3,
