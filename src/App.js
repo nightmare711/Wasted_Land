@@ -10,7 +10,7 @@ import {
 	Footer,
 } from 'components'
 import { useHideMessage } from 'services/useDevelopUI'
-import { HomepageWrapper, About } from 'pages'
+import { HomepageWrapper, About, SalePage } from 'pages'
 import { Switch, Route } from 'react-router-dom'
 import './root.css'
 import 'animate.css/animate.min.css'
@@ -28,6 +28,7 @@ function App() {
 			<Connect />
 			<Switch>
 				<Route component={About} path='/about' exact />
+				<Route component={SalePage} path='/sale' exact />
 				<Route component={HomepageWrapper} path='/' exact />
 			</Switch>
 			<Footer />

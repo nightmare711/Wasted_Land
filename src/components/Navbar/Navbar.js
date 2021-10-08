@@ -19,6 +19,9 @@ export const Navbar = () => {
 						<img src={Logo} alt='logo' />
 					</Link>
 					<ul className='list-nav'>
+						<li>
+							<Link to='/sale'>Sale</Link>
+						</li>
 						<li>Marketplace</li>
 						<li>Staking</li>
 						<li>Gacha</li>
