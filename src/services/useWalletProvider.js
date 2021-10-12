@@ -10,7 +10,7 @@ import React from 'react'
 
 const POLLING_INTERVAL = 12000
 const rpcUrl = getNodeUrl()
-const chainId = parseInt(56, 10)
+const chainId = parseInt(97, 10)
 
 export const provider = new WalletConnectProvider({
 	rpc: { [chainId]: rpcUrl },
@@ -18,7 +18,7 @@ export const provider = new WalletConnectProvider({
 	bridge: 'https://pancakeswap.bridge.walletconnect.org/',
 	mobileLinks: ['rainbow', 'metamask', 'argent', 'trust', 'imtoken', 'pillar'],
 	pollingInterval: POLLING_INTERVAL,
-	chainId: 0x38,
+	chainId: chainId,
 })
 
 export const connector = provider.connector
@@ -61,7 +61,7 @@ export const useConnectWallet = () => {
 		switch (active) {
 			case METAMASK: {
 				if (window.ethereum) {
-					if (parseInt(window.ethereum.networkVersion) === 56) {
+					if (parseInt(window.ethereum.networkVersion) === 97) {
 						if (wallet.status !== 'connected') {
 							try {
 								await wallet.connect()
@@ -115,8 +115,8 @@ export const useCheckAccountActive = () => {
 	const [account, setAccount] = React.useState('')
 	const wallet = useWallet()
 	React.useEffect(() => {
-		if (wallet.status === 'connected') {
-			setAccount(wallet.account)
+		if (wallet.status === 'connected' || wallet.status === 'error') {
+			setAccount(window.ethereum.selectedAddress)
 		} else if (connector.connected) {
 			setAccount(connector.accounts[0])
 		} else {
@@ -124,4 +124,30 @@ export const useCheckAccountActive = () => {
 		}
 	}, [wallet.status, connector.connected])
 	return account
+}
+export const useCheckConnected = () => {
+	const [isConnected, setIsConnected] = React.useState(false)
+	const wallet = useWallet()
+	React.useEffect(() => {
+		if (wallet.status === 'connected' || wallet.status === 'error') {
+			setIsConnected(true)
+		} else if (connector.connected) {
+			setIsConnected(true)
+		} else {
+			setIsConnected(false)
+		}
+	}, [wallet.status, connector.connected])
+	return isConnected
+}
+export const useCheckWalletType = () => {
+	const wallet = useWallet()
+	return () => {
+		if (wallet.status === 'connected' || wallet.status === 'error') {
+			return METAMASK
+		} else if (connector.connected) {
+			return WALLETCONNECT
+		} else {
+			return ''
+		}
+	}
 }

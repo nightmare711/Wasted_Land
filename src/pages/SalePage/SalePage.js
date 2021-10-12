@@ -1,128 +1,42 @@
+/* eslint-disable default-case */
 import React from 'react'
-import { BoxGold, HeaderImg, BoxRare, BoxEpic } from 'assets/sale'
+import { BoxGold, HeaderImg, BoxRare, BoxEpic, BoxFoot } from 'assets/sale'
 import { onMoveAnimation } from 'services/useDevelopUI'
-import { Male as MaleIcon } from '@mui/icons-material'
+import { Male as MaleIcon, Female as FemaleIcon } from '@mui/icons-material'
 import BorderIcon from 'assets/home/Active.png'
-import Character from 'assets/sale/character__temp.png'
 import Slider from 'react-slick'
+import { BuyOverlay } from './component'
+import { useGetPossibilities } from 'queries/useGetSale'
+import { DataContext } from 'contexts/DataContext'
+import { useCheckConnected } from 'services/useWalletProvider'
+import BtnArrow from 'assets/home/btn-arrow.png'
 import './SalePage.css'
-
-const characterInfo = [
-	{
-		title: 'Wind Runner',
-		subtitle: 'Eagle man',
-		image: Character,
-		stats: {
-			common: 1,
-			rare: 2,
-			epic: 3,
-			mystic: 4,
-		},
-	},
-	{
-		title: 'Wind Runner',
-		subtitle: 'Eagle man',
-		image: Character,
-		stats: {
-			common: 1,
-			rare: 2,
-			epic: 3,
-			mystic: 4,
-		},
-	},
-	{
-		title: 'Wind Runner',
-		subtitle: 'Eagle man',
-		image: Character,
-		stats: {
-			common: 1,
-			rare: 2,
-			epic: 3,
-			mystic: 4,
-		},
-	},
-	{
-		title: 'Wind Runner',
-		subtitle: 'Eagle man',
-		image: Character,
-		stats: {
-			common: 1,
-			rare: 2,
-			epic: 3,
-			mystic: 4,
-		},
-	},
-	{
-		title: 'Wind Runner',
-		subtitle: 'Eagle man',
-		image: Character,
-		stats: {
-			common: 1,
-			rare: 2,
-			epic: 3,
-			mystic: 4,
-		},
-	},
-	{
-		title: 'Wind Runner',
-		subtitle: 'Eagle man',
-		image: Character,
-		stats: {
-			common: 1,
-			rare: 2,
-			epic: 3,
-			mystic: 4,
-		},
-	},
-	{
-		title: 'Wind Runner',
-		subtitle: 'Eagle man',
-		image: Character,
-		stats: {
-			common: 1,
-			rare: 2,
-			epic: 3,
-			mystic: 4,
-		},
-	},
-	{
-		title: 'Wind Runner',
-		subtitle: 'Eagle man',
-		image: Character,
-		stats: {
-			common: 1,
-			rare: 2,
-			epic: 3,
-			mystic: 4,
-		},
-	},
-]
 
 const boxInfo = [
 	{
 		title: 'Plastic Package',
 		boxImage: BoxRare,
-		price: 0.15,
+		price: 0.1,
 	},
 	{
 		title: 'Steel Package',
 		boxImage: BoxEpic,
-		price: 0.2,
+		price: 0.15,
 	},
 	{
 		title: 'Gold Package',
 		boxImage: BoxGold,
+		price: 0.2,
+	},
+	{
+		title: 'Diamond Package',
+		boxImage: BoxEpic,
 		price: 0.3,
 	},
 	{
 		title: 'Diamond Package',
 		boxImage: BoxEpic,
-		price: 0.4,
-	},
-	{
-		title: 'Diamond Package',
-		boxImage: BoxEpic,
-		price: 0.4,
+		price: 0.3,
 	},
 ]
 
@@ -134,27 +48,66 @@ const settings = {
 	slidesToScroll: 1,
 	swipeToSlide: true,
 }
+const onClickNext = (action) => {
+	switch (action) {
+		case 'prev': {
+			const root = document.querySelector('.salepage .sale__box .slick-prev')
+			root.click()
+			break
+		}
+		case 'next': {
+			const root = document.querySelector('.salepage .sale__box .slick-next')
+			root.click()
+			break
+		}
+	}
+}
 
 export const SalePage = () => {
 	const [activeBox, setActiveBox] = React.useState(0)
+	const possibilities = useGetPossibilities()
+	const isConnected = useCheckConnected()
+	const context = React.useContext(DataContext)
 	return (
 		<div className='flex flex-col items-center justify-between salepage'>
+			<BuyOverlay
+				onClose={() => {
+					onMoveAnimation('buy-overlay', 'moveOutOpacity')
+				}}
+				type={boxInfo[activeBox].title}
+				image={boxInfo[activeBox].boxImage}
+				price={boxInfo[activeBox].price}
+				rarityPackage={activeBox + 1}
+			/>
 			<div className='salepage__header'>
 				<img
 					onLoad={() => onMoveAnimation('pre-loading', 'moveOutOpacity')}
 					src={HeaderImg}
 					alt='Header'
 				/>
-				<div className='header__title'>
-					<span>Get Characters</span>
-				</div>
+				<div className='header__title'></div>
 			</div>
 			<div className='flex flex-col items-center justify-center sale'>
 				<div className='flex flex-col max-w-screen-xl'>
 					<div className='sale__title'>PURCHASE PACKAGE</div>
-					<div className='flex flex-row sale__side'>
+					<div className='flex flex-row justify-between sale__side'>
 						<div className='sale__left'>
 							<div className='flex flex-row sale__box'>
+								<div className='overlay__slide' />
+								<img
+									src={BtnArrow}
+									onClick={() => onClickNext('prev')}
+									className='btn-arrow'
+									id='btn-prev'
+									alt='Btn Arrow'
+								/>
+								<img
+									onClick={() => onClickNext('next')}
+									src={BtnArrow}
+									className='btn-arrow'
+									id='btn-next'
+									alt='Btn Arrow'
+								/>
 								<Slider {...settings}>
 									{boxInfo.map((box, key) => (
 										<div
@@ -204,34 +157,39 @@ export const SalePage = () => {
 									When buying this package, you may recieve one of these characters below. You can
 									refresh to see other possibilities.
 								</span>
-								<div className='btn-secondary'>Refresh</div>
+								<div
+									onClick={() => context.setCount(context.count + 1)}
+									className='cursor-pointer btn-secondary'
+								>
+									Refresh
+								</div>
 								<div className='characters'>
-									{characterInfo.map((info) => (
-										<div className='character'>
+									{possibilities.map((info, key) => (
+										<div key={key} className='character'>
 											<div className='character__sex male'>
-												<MaleIcon />
+												{info.gender === 0 ? <MaleIcon /> : <FemaleIcon />}
 											</div>
 											<div className='flex items-center justify-center'>
 												<img src={info.image} alt='character' className='character__img' />
 											</div>
 											<div className='character__stats'>
 												<div className='stat__common'>
-													Common <span>{info.stats.common}</span>
+													Common <span>{info.parts.body_id.rarity}</span>
 												</div>
 												<div className='stat__rare'>
-													Rare <span>{info.stats.rare}</span>
+													Rare <span>{info.parts.head_id.rarity}</span>
 												</div>
 												<div className='stat__epic'>
-													Epic <span>{info.stats.epic}</span>
+													Epic <span>{info.parts.left_arm.rarity}</span>
 												</div>
 												<div className='stat__mystic'>
-													Mystic <span>{info.stats.mystic}</span>
+													Mystic <span>{info.parts.right_arm.rarity}</span>
 												</div>
 											</div>
 											<div className='character__description'>
 												<img src={BorderIcon} alt='Active' />
-												<span className='description__title'>{info.title}</span>
-												<span className='description__subtitle'>{info.subtitle}</span>
+												<span className='description__title'>{info.character}</span>
+												<span className='description__subtitle'>Eagle Man</span>
 											</div>
 										</div>
 									))}
@@ -239,8 +197,29 @@ export const SalePage = () => {
 							</div>
 						</div>
 						<div className='flex flex-col items-center justify-center sale__right'>
-							<img src={boxInfo[activeBox].boxImage} alt='Box Epic' />
-							<div className='btn-primary'>Buy this package</div>
+							<div className='box__container'>
+								<div className='z-10'>
+									<img src={BoxFoot} alt='Box' className='box__foot' />
+								</div>
+								<img src={boxInfo[activeBox].boxImage} alt='Box Epic' />
+							</div>
+							{isConnected ? (
+								<div
+									onClick={() => {
+										onMoveAnimation('buy-overlay', 'moveInOpacity')
+									}}
+									className='cursor-pointer btn-primary'
+								>
+									Buy this package
+								</div>
+							) : (
+								<div
+									onClick={() => onMoveAnimation('connect-modal', 'moveInOpacity')}
+									className='cursor-pointer btn-primary'
+								>
+									Connect Wallet
+								</div>
+							)}
 						</div>
 					</div>
 				</div>

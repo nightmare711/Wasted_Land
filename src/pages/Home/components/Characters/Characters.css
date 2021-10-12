@@ -103,7 +103,7 @@
 .character-section .right-side__img  .slick-slider {
     width:900px;
 }
-.character-section .right-side__img #btn-prev {
+#btn-prev {
     position: absolute;
     left:0%;
     top:50%;
@@ -112,7 +112,7 @@
     z-index: 10;
     cursor: pointer;
 }
-.character-section .right-side__img .btn-arrow#btn-next {
+ .btn-arrow#btn-next {
     position: absolute;
     right: 30px;
     top:50%;
@@ -121,7 +121,7 @@
     z-index: 10;
     cursor: pointer;
 }
-.character-section .right-side__img .slick-arrow {
+.slick-arrow {
     display: none !important;
 }
 .character-section  .title-container {

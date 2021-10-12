@@ -40,7 +40,7 @@ export const Banner = () => {
 					<h1>WASTED LANDS</h1>
 				</AnimationOnScroll>
 				<AnimationOnScroll delay={600} animateIn='animate__fadeInUp'>
-					<span>NFT Post Appocalypse Game</span>
+					<span>NFT Post Apocalypse Game</span>
 				</AnimationOnScroll>
 				<AnimationOnScroll delay={1000} animateIn='animate__fadeInUp'>
 					<div className='flex flex-row mt-4 btn-container'>

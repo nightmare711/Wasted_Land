@@ -32,13 +32,28 @@ export const Footer = () => {
 						</div>
 						<div className='part part__4'>
 							<span className='title'>Social</span>
-							<a className='content' href='/'>
+							<a
+								className='content'
+								target='_blank'
+								rel='noreferrer'
+								href='https://t.me/TheWastedLands'
+							>
 								<img src={TelegramIcon} alt='Telegram icon' /> Telegram
 							</a>
-							<a className='content' href='/'>
+							<a
+								className='content'
+								target='_blank'
+								rel='noreferrer'
+								href='https://discord.gg/aNPsuZb4Br'
+							>
 								<img src={DiscordIcon} alt='Telegram icon' /> Discord
 							</a>
-							<a className='content' href='/'>
+							<a
+								target='_blank'
+								rel='noreferrer'
+								className='content'
+								href='https://twitter.com/thewastedlands'
+							>
 								<img src={TwitterIcon} alt='Telegram icon' /> Twitter
 							</a>
 						</div>

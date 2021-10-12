@@ -9,6 +9,7 @@
 }
 .salepage .salepage__header  img {
     width: 100vw;
+    min-width: 1540px;
 }
 .salepage .salepage__header .header__title {
     position: absolute;
@@ -57,13 +58,33 @@
 .salepage .sale .sale__side {
 
 }
+.salepage .sale .sale__side .sale__left .sale__box .overlay__slide {
+    position: absolute;
+    width:250px;
+    right: 0;
+    top:0;
+    z-index: 1;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(22, 24, 29, 0) 0%, #16181D 100%);;
+}
 .salepage .sale .sale__side .sale__left {
     width:70%;
     max-width: 70%;
     overflow: visible;
 }
 .salepage .sale .sale__side .sale__left .sale__box {
-    
+    position:relative;
+}
+.salepage .sale .sale__side .sale__left .sale__box #btn-next {
+    right:0;
+    transform: translate(120%, -50%) rotate(180deg);
+    width:40px;
+    z-index: 1;
+}
+.salepage .sale .sale__side .sale__left .sale__box #btn-prev {
+    width:40px;
+    transform: translate(-150%, -50%);
+    z-index: 1;
 }
 .salepage .sale .sale__side .sale__left .box {
     background-image: url('../../assets/sale/bg__box.png');
@@ -164,14 +185,6 @@
 }
 .salepage .sale .sale__side .sale__left .sale__info .info .info__content {
     color: #E7E1D9;
-}
-.salepage .sale .sale__side .sale__right {
-    width:25%;
-    width:30%;
-    height:100%;
-}
-.salepage .sale .sale__side .sale__right .btn-primary {
-    margin-top: 30px;
 }
 
 .salepage .package__inside { 
@@ -278,4 +291,31 @@
 .salepage .package__inside  .characters .character  .character__description .description__subtitle {
     font-size: 14px;
     color: #DECFC0;
+}
+.salepage .sale .sale__side .sale__right {
+    width:25%;
+    height:100%;
+    margin-left: 30px;
+}
+.salepage .sale .sale__side .sale__right .btn-primary {
+    margin-top: 50px;
+    z-index: 1;
+}
+.salepage .sale .sale__side .sale__right .box__container {
+    position: relative;
+}
+.salepage .sale .sale__side .sale__right img {
+    width: 100%;
+    position:relative;
+    z-index: 1;
+}
+.salepage .sale .sale__side .sale__right img:first-child {
+
+}
+.salepage .sale .sale__side .sale__right img.box__foot {
+    position: absolute;
+    bottom:0;
+    top:100%;
+    transform: translateY(-50px);
+    left:0;
 }
