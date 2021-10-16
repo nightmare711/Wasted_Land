@@ -7,7 +7,7 @@ import IconProgress from 'assets/home/Active.png'
 import Btn_Hover from 'assets/home/btn-primary-hover.png'
 import BtnArrow from 'assets/home/btn-arrow.png'
 import BgVideo2 from 'assets/home/thumbnail_bg.png'
-import Diamond from 'assets/home/diamond.png'
+import Diamond from 'assets/logo192.png'
 import GameplayIllustration from 'assets/gameplay-illustration.png'
 import FeatureIllustration from 'assets/gameplay-illustration2.png'
 import BorderAbove from 'assets/home/border-grow-up.png'
@@ -211,7 +211,6 @@ export const Characters = () => {
 										<div className='faction-container'>
 											<img
 												onClick={() => {
-													dispatch(requestLoading())
 													setActiveFaction(0)
 												}}
 												className={activeFaction === 0 ? 'active__faction' : ''}
@@ -220,7 +219,6 @@ export const Characters = () => {
 											/>
 											<img
 												onClick={() => {
-													dispatch(requestLoading())
 													setActiveFaction(1)
 												}}
 												className={activeFaction === 1 ? 'active__faction' : ''}
@@ -229,7 +227,6 @@ export const Characters = () => {
 											/>
 											<img
 												onClick={() => {
-													dispatch(requestLoading())
 													setActiveFaction(2)
 												}}
 												className={activeFaction === 2 ? 'active__faction' : ''}
@@ -285,6 +282,7 @@ export const Characters = () => {
 														muted
 														autoPlay
 														playsInline
+														onLoadStart={() => dispatch(requestLoading())}
 														onLoadedData={() => (index === 3 ? dispatch(requestUnload()) : null)}
 														src={character.image}
 													/>

@@ -33,35 +33,7 @@ const boxInfo = [
 		boxImage: BoxEpic,
 		price: 0.3,
 	},
-	{
-		title: 'Diamond Package',
-		boxImage: BoxEpic,
-		price: 0.3,
-	},
 ]
-
-const settings = {
-	dots: true,
-	infinite: true,
-	speed: 800,
-	slidesToShow: 4,
-	slidesToScroll: 1,
-	swipeToSlide: true,
-}
-const onClickNext = (action) => {
-	switch (action) {
-		case 'prev': {
-			const root = document.querySelector('.salepage .sale__box .slick-prev')
-			root.click()
-			break
-		}
-		case 'next': {
-			const root = document.querySelector('.salepage .sale__box .slick-next')
-			root.click()
-			break
-		}
-	}
-}
 
 export const SalePage = () => {
 	const [activeBox, setActiveBox] = React.useState(0)
@@ -93,38 +65,21 @@ export const SalePage = () => {
 					<div className='flex flex-row justify-between sale__side'>
 						<div className='sale__left'>
 							<div className='flex flex-row sale__box'>
-								<div className='overlay__slide' />
-								<img
-									src={BtnArrow}
-									onClick={() => onClickNext('prev')}
-									className='btn-arrow'
-									id='btn-prev'
-									alt='Btn Arrow'
-								/>
-								<img
-									onClick={() => onClickNext('next')}
-									src={BtnArrow}
-									className='btn-arrow'
-									id='btn-next'
-									alt='Btn Arrow'
-								/>
-								<Slider {...settings}>
-									{boxInfo.map((box, key) => (
-										<div
-											key={key}
-											onClick={() => setActiveBox(key)}
-											className={`box box-${key} ${key === activeBox ? 'active__box' : ''}`}
-										>
-											<span className='box__title'>{box.title}</span>
-											<div className='flex items-center justify-center w-full'>
-												<img src={box.boxImage} alt={box.title} />
-											</div>
-											<div className='box__number'>
-												<span>{box.price}</span> BNB
-											</div>
+								{boxInfo.map((box, key) => (
+									<div
+										key={key}
+										onClick={() => setActiveBox(key)}
+										className={`box box-${key} ${key === activeBox ? 'active__box' : ''}`}
+									>
+										<span className='box__title'>{box.title}</span>
+										<div className='flex items-center justify-center w-full'>
+											<img src={box.boxImage} alt={box.title} />
 										</div>
-									))}
-								</Slider>
+										<div className='box__number'>
+											<span>{box.price}</span> BNB
+										</div>
+									</div>
+								))}
 							</div>
 							<div className=' sale__info'>
 								<div className='info'>
