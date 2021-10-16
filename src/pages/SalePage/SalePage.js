@@ -4,12 +4,11 @@ import { BoxGold, HeaderImg, BoxRare, BoxEpic, BoxFoot } from 'assets/sale'
 import { onMoveAnimation } from 'services/useDevelopUI'
 import { Male as MaleIcon, Female as FemaleIcon } from '@mui/icons-material'
 import BorderIcon from 'assets/home/Active.png'
-import Slider from 'react-slick'
 import { BuyOverlay } from './component'
+import Dice from 'assets/dice.png'
 import { useGetPossibilities } from 'queries/useGetSale'
 import { DataContext } from 'contexts/DataContext'
 import { useCheckConnected } from 'services/useWalletProvider'
-import BtnArrow from 'assets/home/btn-arrow.png'
 import './SalePage.css'
 
 const boxInfo = [
@@ -170,13 +169,31 @@ export const SalePage = () => {
 							) : (
 								<div
 									onClick={() => onMoveAnimation('connect-modal', 'moveInOpacity')}
-									className='cursor-pointer btn-primary'
+									className='cursor-pointer font-lightbold btn-primary'
 								>
 									Connect Wallet
 								</div>
 							)}
 						</div>
 					</div>
+				</div>
+			</div>
+			<div className='flex flex-row items-center justify-center max-w-4xl git__container'>
+				<img src={Dice} alt='Dice' />
+				<div className='source'>
+					<span className=' title'>RANDOM ALGORITHM</span>
+					<span className='block max-w-xl subtitle'>
+						As for random mechanism, we always want to treat fair for all user. Each packge has the
+						equal droping with their price, the more you spend the better you get. For more clarity,
+					</span>
+					<a
+						className='block mt-2'
+						href='https://github.com/thewastedlandsdev/wl-nft-random'
+						target='_blank'
+						rel='noreferrer'
+					>
+						<div className='btn-primary'>Our github</div>
+					</a>
 				</div>
 			</div>
 		</div>

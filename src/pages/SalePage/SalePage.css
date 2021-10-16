@@ -301,6 +301,9 @@
     margin-top: 50px;
     z-index: 1;
 }
+.salepage  .btn-primary {
+    font-weight: 600;
+}
 .salepage .sale .sale__side .sale__right .box__container {
     position: relative;
 }
@@ -318,4 +321,20 @@
     top:100%;
     transform: translateY(-50px);
     left:0;
+}
+.salepage .git__container {
+    height:400px;
+
+}
+.salepage .git__container img {
+    width:200px;
+    margin-right: 20px;
+}
+.salepage .git__container .title {
+    display: block;
+    font-family: 'Chakra Petch';
+    font-size: 40px;
+    letter-spacing: 10px;
+    font-weight: 700;
+    color: white;
 }
