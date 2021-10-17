@@ -17,12 +17,6 @@ import 'animate.css/animate.min.css'
 
 function App() {
 	useHideMessage()
-	React.useEffect(() => {
-		const description = document.querySelector('meta[name="description"]')
-		if (description) {
-			description.remove()
-		}
-	}, [])
 	return (
 		<React.Fragment>
 			<AccountDetail />
