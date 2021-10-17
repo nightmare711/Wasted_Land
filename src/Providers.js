@@ -6,6 +6,7 @@ import bsc, { UseWalletProvider } from '@binance-chain/bsc-use-wallet'
 import { getNodeUrl } from 'services/utils/getRpcUrl'
 import { Provider as ReduxProvider } from 'react-redux'
 // import { REACT_APP_CHAIN_ID } from 'constants/rpc'
+import { HelmetProvider } from 'react-helmet-async'
 import { store } from 'services/redux/store'
 import { BrowserRouter as Router } from 'react-router-dom'
 
@@ -23,13 +24,15 @@ function Providers({ children }) {
 			}}
 		>
 			<Router>
-				<QueryClientProvider client={queryClient}>
-					<RefreshContextProvider>
-						<ReduxProvider store={store}>
-							<DataContext.Provider value={{ count, setCount }}>{children}</DataContext.Provider>
-						</ReduxProvider>
-					</RefreshContextProvider>
-				</QueryClientProvider>
+				<HelmetProvider>
+					<QueryClientProvider client={queryClient}>
+						<RefreshContextProvider>
+							<ReduxProvider store={store}>
+								<DataContext.Provider value={{ count, setCount }}>{children}</DataContext.Provider>
+							</ReduxProvider>
+						</RefreshContextProvider>
+					</QueryClientProvider>
+				</HelmetProvider>
 			</Router>
 		</UseWalletProvider>
 	)
