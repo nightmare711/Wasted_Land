@@ -47,13 +47,22 @@ export const SalePage = () => {
 		<div className='flex flex-col items-center justify-between salepage'>
 			<Helmet>
 				<title>Wasted Lands | Sale</title>
-				<meta property='og:title' content='Wasted Lands' />
+				<meta property='og:title' content='Wasted Lands' data-react-helmet='true' />
 				<meta
 					property='og:image'
 					content='https://res.cloudinary.com/mapimage/image/upload/v1632402233/bg_pmxk7r.png'
+					data-react-helmet='true'
 				/>
-				<meta property='og:description' content='Sale page testing description.' />
-				<meta name='description' content='Sale page testing description.' />
+				<meta
+					property='og:description'
+					content='Sale page testing description.'
+					data-react-helmet='true'
+				/>
+				<meta
+					name='description'
+					content='Sale page testing description.'
+					data-react-helmet='true'
+				/>
 			</Helmet>
 
 			<BuyOverlay
