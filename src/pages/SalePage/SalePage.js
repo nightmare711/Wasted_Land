@@ -6,6 +6,7 @@ import { Male as MaleIcon, Female as FemaleIcon } from '@mui/icons-material'
 import BorderIcon from 'assets/home/Active.png'
 import { BuyOverlay } from './component'
 import Dice from 'assets/dice.png'
+import { Helmet } from 'react-helmet'
 import { useGetPossibilities } from 'queries/useGetSale'
 import { DataContext } from 'contexts/DataContext'
 import { useCheckConnected } from 'services/useWalletProvider'
@@ -44,6 +45,17 @@ export const SalePage = () => {
 	const dispatch = useDispatch()
 	return (
 		<div className='flex flex-col items-center justify-between salepage'>
+			<Helmet>
+				<title>Wasted Lands | Sale</title>
+				<meta property='og:title' content='Wasted Lands' />
+				<meta
+					property='og:image'
+					content='https://res.cloudinary.com/mapimage/image/upload/v1632402233/bg_pmxk7r.png'
+				/>
+				<meta property='og:description' content='Sale page testing description.' />
+				<meta name='description' content='Sale page testing description.' />
+			</Helmet>
+
 			<BuyOverlay
 				onClose={() => {
 					onMoveAnimation('buy-overlay', 'moveOutOpacity')
