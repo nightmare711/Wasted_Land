@@ -10,7 +10,7 @@ import {
 	Footer,
 } from 'components'
 import { useHideMessage } from 'services/useDevelopUI'
-import { HomepageWrapper, About, SalePage } from 'pages'
+import { HomepageWrapper, About, SalePage, Roadmap } from 'pages'
 import { Switch, Route } from 'react-router-dom'
 import './root.css'
 import 'animate.css/animate.min.css'
@@ -30,6 +30,7 @@ function App() {
 				<Route component={About} path='/about' exact />
 				<Route component={SalePage} path='/sale' exact />
 				<Route component={HomepageWrapper} path='/' exact />
+				<Route component={Roadmap} path='/roadmap' exact />
 			</Switch>
 			<Footer />
 		</React.Fragment>

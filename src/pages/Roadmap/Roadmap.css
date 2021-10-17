@@ -1,0 +1,31 @@
+.roadmap-container {
+    padding-top: 65px;
+    color: #E7E1D9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.roadmap-container .tokenomics {
+    width:100%;
+}
+.roadmap-container .title {
+    margin-top: 80px;
+    padding: 25px 70px;
+    background: url('../../assets/sale/bg__title.png');
+    background-size: 100% 100%;
+    font-size: 24px;
+    font-weight: 900;
+    font-family: 'Chakra Petch';
+    letter-spacing: 5px;
+}
+.roadmap-container .subtitle {
+    text-align: center;
+    margin-top: 30px;
+}
+.roadmap-container .tokenomics img {
+    width:90%;
+}
+.roadmap-container .roadmap .title {
+    margin:0;
+}

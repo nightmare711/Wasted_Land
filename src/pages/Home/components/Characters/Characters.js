@@ -240,10 +240,6 @@ export const Characters = () => {
 										<span className='mt-2 faction__description'>
 											{factionDescription[activeFaction].description}
 										</span>
-										<div className='mt-2 faction__droprate'>
-											Droprate:{' '}
-											<span>{factionDescription[activeFaction].dropRate.toString() + '%'}</span>
-										</div>
 										<div className='mt-14 btn-primary'>
 											<a href='/marketplace'>
 												<div className='btn-primary_hover'>

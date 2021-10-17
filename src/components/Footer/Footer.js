@@ -1,5 +1,6 @@
 import React from 'react'
 import Logo from 'assets/home/footer_logo.png'
+import FooterBorder from 'assets/footer_border.png'
 import TelegramIcon from 'assets/home/telegram__icon.png'
 import DiscordIcon from 'assets/home/discord__icon.png'
 import TwitterIcon from 'assets/home/twitter__icon.png'
@@ -8,6 +9,7 @@ export const Footer = () => {
 	return (
 		<div className=''>
 			<div className='footer-social__container'>
+				<img className='footer__border' src={FooterBorder} alt='Border' />
 				<div className='footer-social items=center justify-center'>
 					<div className='part part__1'>
 						<img className='logo' src={Logo} alt='Logo' />

@@ -157,7 +157,15 @@
    background-size: cover;
    background-position: center;
    background-repeat: no-repeat;
+   position:relative;
    padding-top:30px;
+}
+.footer-social__container .footer__border {
+    position: absolute;
+    top:0;
+    left:0;
+    transform:translateY(-40%);
+    width: 100%;
 }
 .footer-social .part.part__1 {
     flex:1.5;
