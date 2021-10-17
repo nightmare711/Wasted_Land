@@ -102,7 +102,7 @@ const factionDescription = [
 				image: Wolfman,
 			},
 			{
-				name: 'Wolfman_M',
+				name: 'Wolfman',
 				type: 'Preytracker',
 				image: Worffman_M,
 			},
@@ -140,7 +140,7 @@ const factionDescription = [
 				image: Trainee,
 			},
 			{
-				name: 'Trainee_M',
+				name: 'Trainee',
 				type: 'Farmer',
 				image: Trainee_M,
 			},
@@ -168,7 +168,7 @@ const factionDescription = [
 				image: Elite,
 			},
 			{
-				name: 'Elite_M',
+				name: 'Elite',
 				type: 'Security',
 				image: Elite_M,
 			},
@@ -389,7 +389,7 @@ export const Characters = () => {
 							<div className='brief-content'>
 								<AnimationWithoutMobile delay={400} animateIn='animate__fadeInUp'>
 									<div className='flex flex-col items-center justify-start'>
-										<img src={Gameplay__1} alt='Brife' />
+										<img src={Gameplay__3} alt='Brife' />
 										<span className='brief__title'>PvP Mode</span>
 										<span className='brief__content'>
 											Gather your crew, take on an adventure and discover the secret of the
@@ -414,7 +414,7 @@ export const Characters = () => {
 							<div className='brief-content'>
 								<AnimationWithoutMobile delay={800} animateIn='animate__fadeInUp'>
 									<div className='flex flex-col items-center justify-start'>
-										<img src={Gameplay__3} alt='Brife' />
+										<img src={Gameplay__1} alt='Brife' />
 										<span className='brief__title'>Mating</span>
 										<span className='brief__content'>
 											The world first game that allows LGBT to have children. Mating easily with 2

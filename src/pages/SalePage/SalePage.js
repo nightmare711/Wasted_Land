@@ -9,6 +9,8 @@ import Dice from 'assets/dice.png'
 import { useGetPossibilities } from 'queries/useGetSale'
 import { DataContext } from 'contexts/DataContext'
 import { useCheckConnected } from 'services/useWalletProvider'
+import { requestLoading, requestUnload } from 'services/redux/loading/actions'
+import { useDispatch } from 'react-redux'
 import './SalePage.css'
 
 const boxInfo = [
@@ -39,6 +41,7 @@ export const SalePage = () => {
 	const possibilities = useGetPossibilities()
 	const isConnected = useCheckConnected()
 	const context = React.useContext(DataContext)
+	const dispatch = useDispatch()
 	return (
 		<div className='flex flex-col items-center justify-between salepage'>
 			<BuyOverlay
@@ -52,7 +55,11 @@ export const SalePage = () => {
 			/>
 			<div className='salepage__header'>
 				<img
-					onLoad={() => onMoveAnimation('pre-loading', 'moveOutOpacity')}
+					onLoadStart={() => dispatch(requestLoading())}
+					onLoad={() => {
+						dispatch(requestUnload())
+						onMoveAnimation('pre-loading', 'moveOutOpacity')
+					}}
 					src={HeaderImg}
 					alt='Header'
 				/>
@@ -169,7 +176,7 @@ export const SalePage = () => {
 							) : (
 								<div
 									onClick={() => onMoveAnimation('connect-modal', 'moveInOpacity')}
-									className='cursor-pointer font-lightbold btn-primary'
+									className='cursor-pointer btn-primary'
 								>
 									Connect Wallet
 								</div>

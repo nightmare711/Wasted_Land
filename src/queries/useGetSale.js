@@ -57,13 +57,14 @@ export const useClaimHero = () => {
 							dispatch(requestErrorMessage('Failed', 'Something went wrong'))
 						}
 						onMoveAnimation('buy-overlay', 'moveOutOpacity')
-						dispatch(requestUnload())
 					} else {
 						dispatch(requestErrorMessage('Order', 'Something went wrong'))
 					}
+					dispatch(requestUnload())
 				})
 				.catch((err) => {
 					dispatch(requestErrorMessage('Order', 'Something went wrong'))
+					dispatch(requestUnload())
 				})
 		}
 	}
