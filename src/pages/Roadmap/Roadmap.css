@@ -29,3 +29,26 @@
 .roadmap-container .roadmap .title {
     margin:0;
 }
+.roadmap-container .roadmap .roadmap__content {
+    margin-top: 120px;
+    padding-bottom:40px;
+}
+.roadmap-container .roadmap .roadmap__content .time {
+    font-size: 30px;
+    font-weight: 600;
+    color: #E7C060;
+    font-family: 'Chakra Petch';
+
+}
+.roadmap-container .roadmap .roadmap__content img {
+    width:30px;
+    margin:10px 0px;
+}
+.roadmap-container .roadmap .roadmap__content ul {
+    list-style-type: circle;
+    margin-left: 30px;
+}
+.roadmap-container .roadmap .roadmap__content .content {
+    transform: translateY(-70px);
+    font-size: 15px;
+}
