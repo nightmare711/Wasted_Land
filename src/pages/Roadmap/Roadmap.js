@@ -63,7 +63,7 @@ export const Roadmap = () => {
 			</div>
 			<div className='flex flex-col items-center justify-center w-full roadmap'>
 				<div className='title'>Roadmap</div>
-				<div className='flex items-center justify-center w-full bg-black roadmap__content'>
+				<div className='flex items-center justify-center w-full roadmap__content'>
 					<div className='flex flex-row w-full max-w-screen-xl'>
 						{roadmapInfo.map((roadmap, index) => (
 							<div key={index} className='content'>

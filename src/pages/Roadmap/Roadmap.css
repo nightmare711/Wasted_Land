@@ -32,6 +32,7 @@
 .roadmap-container .roadmap .roadmap__content {
     margin-top: 120px;
     padding-bottom:40px;
+    background: #130C09;
 }
 .roadmap-container .roadmap .roadmap__content .time {
     font-size: 30px;

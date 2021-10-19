@@ -53,6 +53,7 @@ export const useClaimHero = () => {
 						const status = await onCheckStatusOfTransaction(res)
 						if (status) {
 							dispatch(requestSuccessMessage('Successful', 'Claim wasted hero successfully'))
+							onMoveAnimation('success-overlay', 'moveInOpacity')
 						} else {
 							dispatch(requestErrorMessage('Failed', 'Something went wrong'))
 						}

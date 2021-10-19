@@ -1,10 +1,10 @@
 /* eslint-disable default-case */
 import React from 'react'
-import { BoxGold, HeaderImg, BoxRare, BoxEpic, BoxFoot } from 'assets/sale'
+import { BoxNormal, BoxEpic, BoxMystic, BoxRare, BoxFoot, HeaderImg } from 'assets/sale'
 import { onMoveAnimation } from 'services/useDevelopUI'
 import { Male as MaleIcon, Female as FemaleIcon } from '@mui/icons-material'
 import BorderIcon from 'assets/home/Active.png'
-import { BuyOverlay } from './component'
+import { BuyOverlay, SuccessOverlay } from './component'
 import Dice from 'assets/dice.png'
 import { useGetPossibilities } from 'queries/useGetSale'
 import { DataContext } from 'contexts/DataContext'
@@ -16,22 +16,22 @@ import './SalePage.css'
 const boxInfo = [
 	{
 		title: 'Plastic Package',
-		boxImage: BoxRare,
+		boxImage: BoxNormal,
 		price: 0.1,
 	},
 	{
 		title: 'Steel Package',
-		boxImage: BoxEpic,
+		boxImage: BoxRare,
 		price: 0.15,
 	},
 	{
 		title: 'Gold Package',
-		boxImage: BoxGold,
+		boxImage: BoxEpic,
 		price: 0.2,
 	},
 	{
 		title: 'Diamond Package',
-		boxImage: BoxEpic,
+		boxImage: BoxMystic,
 		price: 0.3,
 	},
 ]
@@ -52,6 +52,10 @@ export const SalePage = () => {
 				image={boxInfo[activeBox].boxImage}
 				price={boxInfo[activeBox].price}
 				rarityPackage={activeBox + 1}
+			/>
+			<SuccessOverlay
+				onClose={() => onMoveAnimation('success-overlay', 'moveOutOpacity')}
+				image={boxInfo[activeBox].boxImage}
 			/>
 			<div className='salepage__header'>
 				<img
@@ -159,10 +163,9 @@ export const SalePage = () => {
 						</div>
 						<div className='flex flex-col items-center justify-center sale__right'>
 							<div className='box__container'>
-								<div className='z-10'>
-									<img src={BoxFoot} alt='Box' className='box__foot' />
-								</div>
-								<img src={boxInfo[activeBox].boxImage} alt='Box Epic' />
+								<img src={BoxFoot} alt='Box' className='box__foot' />
+								<img src={boxInfo[activeBox].boxImage} className='box__info' alt='Box Epic' />
+								<span className='block box__price'>{boxInfo[activeBox].price} BNB</span>
 							</div>
 							{isConnected ? (
 								<div

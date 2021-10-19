@@ -296,6 +296,8 @@
     width:25%;
     height:100%;
     margin-left: 30px;
+    position:sticky;
+    top:80px;
 }
 .salepage .sale .sale__side .sale__right .btn-primary {
     margin-top: 50px;
@@ -307,6 +309,21 @@
 .salepage .sale .sale__side .sale__right .box__container {
     position: relative;
 }
+.salepage .sale .sale__side .sale__right .box__container .box__info {
+    position: absolute;
+    top:-20px;
+    left:0;
+}
+.salepage .sale .sale__side .sale__right .box__container .box__price {
+    position: absolute;
+    right:60px;
+    bottom:35px;
+    z-index: 100;
+    font-size: 20px;
+    color:white;
+    font-weight: 600;
+    font-family: 'Chakra Petch';
+}
 .salepage .sale .sale__side .sale__right img {
     width: 100%;
     position:relative;
@@ -316,11 +333,7 @@
 
 }
 .salepage .sale .sale__side .sale__right img.box__foot {
-    position: absolute;
-    bottom:0;
-    top:100%;
-    transform: translateY(-50px);
-    left:0;
+    
 }
 .salepage .git__container {
     height:400px;
