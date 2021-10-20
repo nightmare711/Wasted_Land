@@ -20,19 +20,20 @@ export const Navbar = () => {
 					</Link>
 					<ul className='list-nav'>
 						<li>
-							<Link to='/get-warriors'>Get Warriors</Link>
-						</li>
-						<li>
 							<a href='https://pancakeswap.finance/' target='_blank' rel='noreferrer'>
 								Buy WAL
 							</a>
 						</li>
 						<li>
-							<Link to='/roadmap'>Toknemics & Roadmap</Link>
+							<Link to='/summon-warriors'>Summon Warriors</Link>
 						</li>
 						<li>
-							<Link to='/about'>About</Link>
+							<Link to='/about-us'>About Us</Link>
 						</li>
+						<li>
+							<Link to='/about-us'>Gallery</Link>
+						</li>
+						<li>More</li>
 					</ul>
 				</div>
 				<div className='flex flex-row items-center justify-center'>

@@ -73,9 +73,9 @@ const onClickNext = (action) => {
 }
 const factionDescription = [
 	{
-		type: 'SURVIVORS',
+		type: 'HYBRIDS',
 		description:
-			'Those who are not infected by the virus know that they must gather in small communities to survive. They’ve learnt to defend themselves.',
+			'Those who adapted to the virus became mutants. They are much faster, stronger and some extremely dangerous.',
 		dropRate: 24.5,
 		characters: [
 			{
@@ -116,9 +116,9 @@ const factionDescription = [
 		],
 	},
 	{
-		type: 'EX-COMPANY',
+		type: 'SURVIVORS',
 		description:
-			'Those who escaped from The Company knows the secret of the pandemic and the cure. They hold the key to unveil the truth.',
+			'Those who are not infected by the virus know that they must gather in small communities to survive. They’ve learnt to defend themselves.',
 		dropRate: 72.5,
 		characters: [
 			{
@@ -149,9 +149,9 @@ const factionDescription = [
 		],
 	},
 	{
-		type: 'HYBRIDS',
+		type: 'EX-COMPANY',
 		description:
-			'Those who adapted to the virus became mutants. They are much faster, stronger and some extremely dangerous.',
+			'Those who escaped from The Company knows the secret of the pandemic and the cure. They hold the key to unveil the truth.',
 		dropRate: 5.0,
 		characters: [
 			{
@@ -226,7 +226,7 @@ export const Characters = () => {
 													setActiveFaction(0)
 												}}
 												className={activeFaction === 0 ? 'active__faction' : ''}
-												src={Faction__1}
+												src={Faction__2}
 												alt='Faction'
 											/>
 											<img
@@ -234,7 +234,7 @@ export const Characters = () => {
 													setActiveFaction(1)
 												}}
 												className={activeFaction === 1 ? 'active__faction' : ''}
-												src={Faction__3}
+												src={Faction__1}
 												alt='Faction'
 											/>
 											<img
@@ -242,7 +242,7 @@ export const Characters = () => {
 													setActiveFaction(2)
 												}}
 												className={activeFaction === 2 ? 'active__faction' : ''}
-												src={Faction__2}
+												src={Faction__3}
 												alt='Faction'
 											/>
 										</div>
@@ -312,7 +312,7 @@ export const Characters = () => {
 					</div>
 					<AnimationWithoutMobile animateIn='animate__fadeIn' animateOut='animate__fadeOut'>
 						<div className='flex flex-col items-center justify-center descript-video'>
-							<span className='title'>NFT PLAY TO EARN GAME</span>
+							<span className='title'>NFTs PLAY TO EARN GAME</span>
 							<span className='description-extend'>
 								Gather your warrior, explore the new world of fury and disorder, build your
 								shelters, communities, equipments and vehicles. All in one game.

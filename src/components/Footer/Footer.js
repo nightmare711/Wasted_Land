@@ -26,7 +26,7 @@ export const Footer = () => {
 								Our Team
 							</a>
 							<a className='content' href='/'>
-								Wasted Token
+								WAL Token
 							</a>
 							<a className='content' href='/'>
 								White Paper

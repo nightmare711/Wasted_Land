@@ -51,10 +51,15 @@ export const Banner = () => {
 							Join Discord
 						</div>
 						<div
-							onClick={() => window.open('https://t.me/TheWastedLands', '_blank')}
+							onClick={() =>
+								window.open(
+									'https://gleam.io/oqFVi/the-wasted-lands-community-airdrop-of-20000',
+									'_blank'
+								)
+							}
 							className='ml-4 cursor-pointer btn-secondary'
 						>
-							Join Telegram
+							Airdrop
 						</div>
 					</div>
 				</AnimationOnScroll>

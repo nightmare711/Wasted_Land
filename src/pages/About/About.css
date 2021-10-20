@@ -1,19 +1,9 @@
 .about {
-    padding-top: 65px;
-    padding-bottom: 65px;
-    color:white;
-    background: url('../../assets/team/text-bg.png');
-    background-size: 1800px 100px;
-    background-repeat: no-repeat;
-    background-position: 0px 125px;
+    background-color: #130c09;
 }
 .about .title {
-    margin: 70px 0px;
-    font-size: 40px;
-    letter-spacing: 15px;
-    font-family: 'Chakra Petch';
-    font-weight: 600;
-    display: block;
+    align-self: center;
+    margin:0 !important;
 }
 .about .grid-team__container {
     width:100%;
