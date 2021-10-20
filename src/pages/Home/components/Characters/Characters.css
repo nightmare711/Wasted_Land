@@ -234,6 +234,7 @@
     letter-spacing: 15px;
     font-weight: 600;
     text-align:center;
+    text-transform: uppercase;
 }
 .descript-video .description-extend {
     @apply max-w-2xl;
@@ -353,15 +354,7 @@
     
 }
 .gameplay .illustration__container {
-    margin: 20px 0px;
-    position:relative; 
-    width:50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height:100%;
-    flex-direction: row;
-    max-height: 400px;
+    position: relative;
 }
 .gameplay .illustration__container .bg-ill {
     width:100%;
@@ -387,7 +380,7 @@
 }
 .gameplay .front-side .illustration__container .illustration {
     z-index:1;
-    width:94%;
+    width:100%;
     height: 90%;
 }
 .gameplay .front-side .title__container {

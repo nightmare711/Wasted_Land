@@ -1,0 +1,19 @@
+.video-embed {
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    animation: moveInOpacity 0.3s;
+    animation-fill-mode: forwards; 
+}
+.video-embed .embed {
+    width:70%;
+    height: 80%;
+}

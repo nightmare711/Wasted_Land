@@ -40,12 +40,22 @@ export const Banner = () => {
 					<h1>WASTED LANDS</h1>
 				</AnimationOnScroll>
 				<AnimationOnScroll delay={600} animateIn='animate__fadeInUp'>
-					<span>NFT Post Apocalypse Game</span>
+					<span>Team up and rule the new world.</span>
 				</AnimationOnScroll>
 				<AnimationOnScroll delay={1000} animateIn='animate__fadeInUp'>
-					<div className='flex flex-row mt-4 btn-container'>
-						<div className='mr-4 btn-primary'>Buy Character</div>
-						<div className='ml-4 btn-secondary'>Buy Character</div>
+					<div className='flex flex-row mt-4 cursor-pointer btn-container'>
+						<div
+							onClick={() => window.open('https://discord.gg/YrmJgFY8gK', '_blank')}
+							className='mr-4 btn-primary'
+						>
+							Join Discord
+						</div>
+						<div
+							onClick={() => window.open('https://t.me/TheWastedLands', '_blank')}
+							className='ml-4 cursor-pointer btn-secondary'
+						>
+							Join Telegram
+						</div>
 					</div>
 				</AnimationOnScroll>
 			</div>

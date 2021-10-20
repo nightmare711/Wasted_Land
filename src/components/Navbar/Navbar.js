@@ -20,14 +20,15 @@ export const Navbar = () => {
 					</Link>
 					<ul className='list-nav'>
 						<li>
-							<Link to='/sale'>Sale</Link>
+							<Link to='/get-warriors'>Get Warriors</Link>
 						</li>
-						<li>Marketplace</li>
-						<li>Staking</li>
-						<li>Gacha</li>
-						<li>Wallet</li>
 						<li>
-							<Link to='/roadmap'>Roadmap</Link>
+							<a href='https://pancakeswap.finance/' target='_blank' rel='noreferrer'>
+								Buy WAL
+							</a>
+						</li>
+						<li>
+							<Link to='/roadmap'>Toknemics & Roadmap</Link>
 						</li>
 						<li>
 							<Link to='/about'>About</Link>

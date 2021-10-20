@@ -28,7 +28,7 @@ function App() {
 			<Connect />
 			<Switch>
 				<Route component={About} path='/about' exact />
-				<Route component={SalePage} path='/sale' exact />
+				<Route component={SalePage} path='/get-warriors' exact />
 				<Route component={HomepageWrapper} path='/' exact />
 				<Route component={Roadmap} path='/roadmap' exact />
 			</Switch>

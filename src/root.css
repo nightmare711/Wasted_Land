@@ -10,6 +10,23 @@
     background-color: rgba(0,0,0,0.5);
     
 }
+.btn-play {
+    width:100px;
+    height:100px;
+    background-color: rgba(255,255,255,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    color:white;
+}
+.btn-play svg {
+  font-size: 70px;
+}
 .btn-primary {
     width:188px;
     padding:10px 0px;

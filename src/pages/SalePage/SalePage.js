@@ -1,6 +1,17 @@
 /* eslint-disable default-case */
 import React from 'react'
-import { BoxNormal, BoxEpic, BoxMystic, BoxRare, BoxFoot, HeaderImg } from 'assets/sale'
+import {
+	BoxNormal,
+	BoxEpic,
+	BoxMystic,
+	BoxRare,
+	BoxFoot,
+	HeaderImg,
+	StaticNormal,
+	StaticRare,
+	StaticEpic,
+	StaticMystic,
+} from 'assets/sale'
 import { onMoveAnimation } from 'services/useDevelopUI'
 import { Male as MaleIcon, Female as FemaleIcon } from '@mui/icons-material'
 import BorderIcon from 'assets/home/Active.png'
@@ -17,21 +28,25 @@ const boxInfo = [
 	{
 		title: 'Plastic Package',
 		boxImage: BoxNormal,
+		static: StaticNormal,
 		price: 0.1,
 	},
 	{
 		title: 'Steel Package',
 		boxImage: BoxRare,
+		static: StaticRare,
 		price: 0.15,
 	},
 	{
 		title: 'Gold Package',
 		boxImage: BoxEpic,
+		static: StaticEpic,
 		price: 0.2,
 	},
 	{
 		title: 'Diamond Package',
 		boxImage: BoxMystic,
+		static: StaticMystic,
 		price: 0.3,
 	},
 ]
@@ -83,7 +98,7 @@ export const SalePage = () => {
 									>
 										<span className='box__title'>{box.title}</span>
 										<div className='flex items-center justify-center w-full'>
-											<img src={box.boxImage} alt={box.title} />
+											<img src={key === activeBox ? box.boxImage : box.static} alt={box.title} />
 										</div>
 										<div className='box__number'>
 											<span>{box.price}</span> BNB

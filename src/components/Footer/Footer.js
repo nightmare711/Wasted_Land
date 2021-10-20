@@ -17,7 +17,7 @@ export const Footer = () => {
 					</div>
 					<div className='part part__2'>
 						<span className='title'>Contact</span>
-						<span className='content'>contact@wastedland.com</span>
+						<span className='content'>contact@thewastedlands.io</span>
 					</div>
 					<div className='flex flex-row container-social__2'>
 						<div className='part part__3'>

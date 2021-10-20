@@ -1,5 +1,6 @@
 import React from 'react'
 import { TokenomicsImage } from 'assets/roadmap'
+import { onMoveAnimation } from 'services/useDevelopUI'
 import BorderIcon from 'assets/home/Active.png'
 import './Roadmap.css'
 
@@ -59,7 +60,11 @@ export const Roadmap = () => {
 					At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
 					voluptatum deleniti.
 				</span>
-				<img src={TokenomicsImage} alt='tokenomics' />
+				<img
+					onLoad={() => onMoveAnimation('pre-loading', 'moveOutOpacity')}
+					src={TokenomicsImage}
+					alt='tokenomics'
+				/>
 			</div>
 			<div className='flex flex-col items-center justify-center w-full roadmap'>
 				<div className='title'>Roadmap</div>

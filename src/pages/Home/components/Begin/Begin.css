@@ -35,12 +35,13 @@
     text-transform: none;
 }
 .begin-section .character__strip {
-    max-width:100vw;
+    width:200vw;
     overflow: hidden;
-    /* animation: moveInfinity 10s;
+    animation: moveInfinity 3s;
+    animation-direction: alternate;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
-    animation-timing-function: linear; */
+    animation-timing-function: linear;
 
 
 }
@@ -77,9 +78,9 @@
 }
 @keyframes moveInfinity {
     from {
-        transform: translateX(100%);
+        transform: translateX(0);
     }
     to {
-        transform: translateX(-100%);
+        transform: translateX(50vw);
     }
 }

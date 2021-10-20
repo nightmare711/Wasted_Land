@@ -26,6 +26,15 @@ const Members = [
 		],
 	},
 	{
+		image: member_5,
+		name: 'Bang Mai',
+		position: 'Co-Founder',
+		profile: [
+			'CEO Dizitech - Growth Hacking Agency.',
+			'Experienced in marketing & growth hacking (for crypto industry since 2017).',
+		],
+	},
+	{
 		image: member_2,
 		name: 'Huy Vu',
 		position: 'CPO',
@@ -44,24 +53,17 @@ const Members = [
 		],
 	},
 	{
-		image: member_4,
-		name: 'Hai Vu',
-		position: 'Game Adviser',
+		image: member_7,
+		name: 'Henry Van',
+		position: 'CMO',
 		profile: [
-			'Technical Leader at Zitga Game Vietnam.',
-			'Lead Technical team with 30+ members, developing and maintaining 7 Mid-core games.',
-			'7 years exp of game programming and technical management.',
+			'5 years exp expert in building community & establish partnerships.',
+			'Fundraising on different platforms (both crypto & non crypto like Kickstarter, Indiegogo).',
+			'Token listings & Content strategist.',
+			'Strong relationship with crypto influencers around the world.',
 		],
 	},
-	{
-		image: member_5,
-		name: 'Bang Mai',
-		position: 'Co-Founder',
-		profile: [
-			'CEO Dizitech - Growth Hacking Agency.',
-			'Experienced in marketing & growth hacking (for crypto industry since 2017).',
-		],
-	},
+
 	{
 		image: member_6,
 		name: 'Tai Nguyen',
@@ -71,17 +73,6 @@ const Members = [
 			'4 years experienced in building DeFi apps (Light Shadow Box, Arise Finance) NFT market place (Arise NFTs marketplace) & an NFT Guru himself.',
 			'DeFi & NFT games (Ari Bird).',
 			'Smart contract experts.',
-		],
-	},
-	{
-		image: member_7,
-		name: 'Henry Van',
-		position: 'CGO',
-		profile: [
-			'5 years exp expert in building community & establish partnerships.',
-			'Fundraising on different platforms (both crypto & non crypto like Kickstarter, Indiegogo).',
-			'Token listings & Content strategist.',
-			'Strong relationship with crypto influencers around the world.',
 		],
 	},
 
@@ -102,6 +93,16 @@ const Members = [
 		profile: [
 			'3 years in blockchain & excel at smart contract development.',
 			'Full-stack, highly experienced in building blockchain game.',
+		],
+	},
+	{
+		image: member_4,
+		name: 'Hai Vu',
+		position: 'Game Adviser',
+		profile: [
+			'Technical Leader at Zitga Game Vietnam.',
+			'Lead Technical team with 30+ members, developing and maintaining 7 Mid-core games.',
+			'7 years exp of game programming and technical management.',
 		],
 	},
 ]
