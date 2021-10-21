@@ -59,7 +59,7 @@ export const Banner = () => {
 							}
 							className='ml-4 cursor-pointer btn-secondary'
 						>
-							Airdrop
+							Join Airdrop
 						</div>
 					</div>
 				</AnimationOnScroll>

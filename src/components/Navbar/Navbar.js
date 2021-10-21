@@ -30,9 +30,9 @@ export const Navbar = () => {
 						<li>
 							<Link to='/about-us'>About Us</Link>
 						</li>
-						<li>
+						{/* <li>
 							<Link to='/about-us'>Gallery</Link>
-						</li>
+						</li> */}
 						<li>More</li>
 					</ul>
 				</div>

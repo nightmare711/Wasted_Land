@@ -7,7 +7,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 100;
     color:white;
     width:0%;
     height:0%;
@@ -17,6 +16,7 @@
     z-index: 100000000;
 }
 .menu-list .item {
+    min-width: 200px;
     padding: 10px 20px;
     font-weight: 600;
     text-align: center;

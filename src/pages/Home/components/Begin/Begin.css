@@ -8,6 +8,8 @@
     background-position: center;
     color: #F6E9D9;
     height:100vh;
+    width:100vw;
+    overflow: hidden;
 }
 
 .begin-section .sub-title {
@@ -35,13 +37,13 @@
     text-transform: none;
 }
 .begin-section .character__strip {
-    width:200vw;
+    width:100%;
     overflow: hidden;
-    animation: moveInfinity 3s;
+    /* animation: moveInfinity 3s;
     animation-direction: alternate;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation-timing-function: linear; */
 
 
 }

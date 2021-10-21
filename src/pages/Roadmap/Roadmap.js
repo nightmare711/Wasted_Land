@@ -1,7 +1,12 @@
 import React from 'react'
-import { TokenomicsImage, SaleChart } from 'assets/roadmap'
+import {
+	TokenomicsImage,
+	SaleChart,
+	RoadmapMobile,
+	TokenomicsMobile,
+	Tokenomics2Mobile,
+} from 'assets/roadmap'
 import { onMoveAnimation } from 'services/useDevelopUI'
-import Active from 'assets/home/Active.png'
 import {
 	member_1,
 	member_2,
@@ -112,26 +117,26 @@ const Members = [
 const tokenomics = [
 	{
 		allocation: 'Seed Sale',
-		percentage: 10,
-		amount: '100,000,000',
-		price: 0.08,
+		percentage: 8,
+		amount: '80,000,000',
+		price: 0.1,
 		raiseValue: '800,000',
-		vesting: '10% on TGE, then monthly unlock in 8 month',
+		vesting: '10% on TGE, then monthly unlock in 10 months',
 	},
 	{
 		allocation: 'Private Sale',
-		percentage: 18,
-		amount: '180,000,000',
-		price: 0.1,
+		percentage: 15,
+		amount: '150,000,000',
+		price: 0.12,
 		raiseValue: '1,800,000',
-		vesting: '10% on TGE, then monthly unlock in 6 month',
+		vesting: '10% on TGE, then monthly unlock in 8 months',
 	},
 	{
 		allocation: 'Public Sale',
 		percentage: 1,
 		amount: '10,000,000',
-		price: 0.12,
-		raiseValue: '120,000',
+		price: 0.15,
+		raiseValue: '150,000',
 		vesting: '100% on TGE',
 	},
 	{
@@ -140,15 +145,15 @@ const tokenomics = [
 		amount: '80,000,000',
 		price: '',
 		raiseValue: '',
-		vesting: '6 months full locked, then 10% monthly',
+		vesting: '1 year full locked, then 10% monthly',
 	},
 	{
 		allocation: 'Advisors',
-		percentage: 2,
-		amount: '20,000,000',
+		percentage: 5,
+		amount: '50,000,000',
 		price: '',
 		raiseValue: '',
-		vesting: '6 months full locked, then 10% monthly',
+		vesting: '1 year full locked, then 10% monthly',
 	},
 	{
 		allocation: 'Liquidity',
@@ -168,16 +173,16 @@ const tokenomics = [
 	},
 	{
 		allocation: 'Marketing',
-		percentage: 12,
-		amount: '120,000,000',
+		percentage: 13,
+		amount: '130,000,000',
 		price: '',
 		raiseValue: '',
 		vesting: '1 month full locked, then 5% monthly',
 	},
 	{
 		allocation: 'Development',
-		percentage: 15,
-		amount: '150,000,000',
+		percentage: 16,
+		amount: '160,000,000',
 		price: '',
 		raiseValue: '',
 		vesting: '1 month full locked, then 5% monthly',
@@ -210,6 +215,8 @@ const roadmapInfo = [
 		time: 'Jan 2022',
 		info: ['Pets system.', 'Upgrade & merge equipments.', 'Governance release.'],
 	},
+]
+const roadmapInfo2 = [
 	{
 		time: 'Feb 2022',
 		info: ['Fusion & Breeding warrior.', 'World map release.'],
@@ -218,6 +225,14 @@ const roadmapInfo = [
 		time: 'Mar 2022',
 		info: ['The Wasted Lands official release.', 'Mobile & PC.'],
 	},
+	{
+		time: 'Q2 2022',
+		info: ['Rent warrior & Scholar system.', 'Land & Shelter system.'],
+	},
+	{
+		time: 'Q3 2022',
+		info: ['Wasted Lands metaverse.', 'Upgrading UX Vehicles System.'],
+	},
 ]
 export const Roadmap = () => {
 	return (
@@ -225,35 +240,78 @@ export const Roadmap = () => {
 			<div className='flex items-center justify-center tokenomics'>
 				<div className='flex flex-col items-center justify-center max-w-screen-xl '>
 					<div className='title'>TOKENOMICS DISTRIBUTION</div>
-					<span className='max-w-md subtitle'>
-						At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
-						voluptatum deleniti.
-					</span>
-					<span className='mt-4 chart__label'>Token Allocations</span>
-					<img src={TokenomicsImage} alt='tokenomics' />
-					<span className='mb-8 chart__label'>Use of Sale Proceeds</span>
+					<span className=' chart__label'>Token Allocations</span>
+
+					<img
+						src={window.innerWidth >= 560 ? TokenomicsImage : TokenomicsMobile}
+						alt='tokenomics'
+					/>
+					<div className='percent__container'>
+						<div className='text-percent'>
+							Seed Sale: <b>8.0%</b>
+						</div>
+						<div className='text-percent'>
+							Private Sale: <b>15.0%</b>
+						</div>
+						<div className='text-percent'>
+							Public Sale: <b>1.0%</b>
+						</div>
+						<div className='text-percent'>
+							Team: <b>8.0%</b>
+						</div>
+						<div className='text-percent'>
+							Advisor: <b>5.0%</b>
+						</div>
+						<div className='text-percent'>
+							Liquidity: <b>4.0%</b>
+						</div>
+						<div className='text-percent'>
+							Development: <b>16.0%</b>
+						</div>
+						<div className='text-percent'>
+							Marketing: <b>13.0%</b>
+						</div>
+						<div className='text-percent'>
+							Treasury: <b>30.0%</b>
+						</div>
+					</div>
+					<span className=' chart__label proceeds'>Use of Sale Proceeds</span>
 					<img
 						onLoad={() => onMoveAnimation('pre-loading', 'moveOutOpacity')}
-						src={SaleChart}
+						src={window.innerWidth >= 560 ? SaleChart : Tokenomics2Mobile}
 						className='mb-8'
 						alt='tokenomics'
 					/>
-					<table className='my-10'>
+					<div className='percent__container'>
+						<div className='text-percent'>
+							Seed Sale: <b>8%</b>
+						</div>
+						<div className='text-percent'>
+							Seed Sale: <b>8%</b>
+						</div>
+						<div className='text-percent'>
+							Seed Sale: <b>8%</b>
+						</div>
+						<div className='text-percent'>
+							Seed Sale: <b>8%</b>
+						</div>
+					</div>
+					<table className='my-16'>
 						<tr>
 							<th>Allocation</th>
 							<th>Percentage</th>
-							<th>Amount</th>
+							<th className='hide__mobile'>Amount</th>
 							<th>Price</th>
-							<th>Raise value</th>
+							<th className='hide__mobile'>Raise value</th>
 							<th>Vesting</th>
 						</tr>
 						{tokenomics.map((info, index) => (
 							<tr key={index}>
 								<td>{info.allocation}</td>
 								<td>{info.percentage}%</td>
-								<td>{info.amount}</td>
+								<td className='hide__mobile'>{info.amount}</td>
 								<td>{info.price}</td>
-								<td>{info.raiseValue ? `$${info.raiseValue}` : ''}</td>
+								<td className='hide__mobile'>{info.raiseValue ? `$${info.raiseValue}` : ''}</td>
 								<td>{info.vesting}</td>
 							</tr>
 						))}
@@ -262,21 +320,42 @@ export const Roadmap = () => {
 			</div>
 			<div className='flex flex-col items-center justify-center w-full roadmap'>
 				<div className='title'>Roadmap</div>
-				<div className='flex items-center justify-center w-full roadmap__content'>
-					<div className='flex flex-row w-full max-w-screen-xl'>
-						{roadmapInfo.map((roadmap, index) => (
-							<div key={index} className='content'>
-								<span className='time'>{roadmap.time}</span>
-								<img src={BorderIcon} alt='BorderIcon' />
-								<ul>
-									{roadmap.info.map((info, key) => (
-										<li key={key}>{info}</li>
-									))}
-								</ul>
+				{window.innerWidth >= 560 ? (
+					<>
+						<div className='flex items-center justify-center w-full roadmap__content roadmap__content--1'>
+							<div className='flex flex-row w-full max-w-screen-xl'>
+								{roadmapInfo.map((roadmap, index) => (
+									<div key={index} className='content'>
+										<span className='time'>{roadmap.time}</span>
+										<img src={BorderIcon} alt='BorderIcon' />
+										<ul>
+											{roadmap.info.map((info, key) => (
+												<li key={key}>{info}</li>
+											))}
+										</ul>
+									</div>
+								))}
 							</div>
-						))}
-					</div>
-				</div>
+						</div>
+						<div className='flex items-center justify-center w-full roadmap__content roadmap__content--2'>
+							<div className='flex flex-row w-full max-w-screen-xl'>
+								{roadmapInfo2.map((roadmap, index) => (
+									<div key={index} className='content'>
+										<span className='time'>{roadmap.time}</span>
+										<img src={BorderIcon} alt='BorderIcon' />
+										<ul>
+											{roadmap.info.map((info, key) => (
+												<li key={key}>{info}</li>
+											))}
+										</ul>
+									</div>
+								))}
+							</div>
+						</div>
+					</>
+				) : (
+					<img className='my-10 ml-4' src={RoadmapMobile} alt='Roadmap' />
+				)}
 			</div>
 			<div className='flex items-center justify-center w-full about'>
 				<div className='flex flex-col w-full max-w-screen-xl'>
@@ -292,7 +371,7 @@ export const Roadmap = () => {
 									/>
 									<div className='grid-team__member--content'>
 										<div className='grid-team__member-front'>
-											<img src={Active} alt='active' />
+											<img src={BorderIcon} alt='active' />
 											<span className='name'>{member.name}</span>
 											<span className='position'>{member.position}</span>
 										</div>

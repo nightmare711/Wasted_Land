@@ -8,6 +8,7 @@ import {
 	MenuList,
 	PreLoading,
 	Footer,
+	Coming,
 } from 'components'
 import { useHideMessage } from 'services/useDevelopUI'
 import { HomepageWrapper, Roadmap } from 'pages'
@@ -29,6 +30,7 @@ function App() {
 			<Switch>
 				<Route component={Roadmap} path='/about-us' exact />
 				<Route component={HomepageWrapper} path='/' exact />
+				<Route component={Coming} />
 			</Switch>
 			<Footer />
 		</React.Fragment>

@@ -392,18 +392,16 @@ export const Characters = () => {
 				<div className='flex items-center justify-center gameplay'>
 					<div className='w-full max-w-screen-xl '>
 						<div className='front-side'>
-							<div className='illustration__container'>
+							<div
+								onClick={() => {
+									setActiveVideo('K_Wcxtgmngw')
+								}}
+								className='cursor-pointer illustration__container'
+							>
 								<AnimationWithoutMobile animateIn='animate__fadeIn' animateOut='animate__fadeOut'>
-									<div
-										onClick={() => {
-											setActiveVideo('K_Wcxtgmngw')
-										}}
-										className='cursor-pointer illustration__container'
-									>
-										<img className='illustration' src={GameplayIllustration} alt='Illustration' />
-										<div className='btn-play'>
-											<PlayArrowIcon />
-										</div>
+									<img className='illustration' src={GameplayIllustration} alt='Illustration' />
+									<div className='btn-play'>
+										<PlayArrowIcon />
 									</div>
 								</AnimationWithoutMobile>
 							</div>

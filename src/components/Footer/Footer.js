@@ -4,6 +4,7 @@ import FooterBorder from 'assets/footer_border.png'
 import TelegramIcon from 'assets/home/telegram__icon.png'
 import DiscordIcon from 'assets/home/discord__icon.png'
 import TwitterIcon from 'assets/home/twitter__icon.png'
+import { Link } from 'react-router-dom'
 
 export const Footer = () => {
 	return (
@@ -22,13 +23,18 @@ export const Footer = () => {
 					<div className='flex flex-row container-social__2'>
 						<div className='part part__3'>
 							<span className='title'>About Us</span>
-							<a className='content' href='/'>
+							<Link className='content' to='/about-us'>
+								Tokenomics
+							</Link>
+							<Link className='content' to='/about-us'>
 								Our Team
-							</a>
-							<a className='content' href='/'>
-								WAL Token
-							</a>
-							<a className='content' href='/'>
+							</Link>
+							<a
+								className='content'
+								href='https://docs.google.com/presentation/d/e/2PACX-1vSUuyoSKy5ZBxqEJ4OHaD1Ao1-a_8kPVyYTSw4mzFsio6EvTF8UUFCfJu-1rjJv2Q/pub?start=false&loop=false&delayms=3000&slide=id.p1'
+								target='_blank'
+								rel='noreferrer'
+							>
 								White Paper
 							</a>
 						</div>

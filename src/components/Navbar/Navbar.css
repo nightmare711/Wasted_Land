@@ -58,6 +58,10 @@
 .navbar .list-nav li {
     margin-left:25px;
     text-transform: capitalize;
+    transition: all .3s;
+}
+.navbar .list-nav li:hover {
+    color:#DCB85C;
 }
 .navbar .btn-primary {
     font-weight: 600;
