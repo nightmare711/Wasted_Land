@@ -9,8 +9,10 @@ import {
 	PreLoading,
 	Footer,
 	Coming,
+	ScrollButton,
+	ComingBuy,
 } from 'components'
-import { useHideMessage } from 'services/useDevelopUI'
+import { useHideMessage, useShowButtonScroll } from 'services/useDevelopUI'
 import { HomepageWrapper, Roadmap } from 'pages'
 import { Switch, Route } from 'react-router-dom'
 import './root.css'
@@ -18,8 +20,10 @@ import 'animate.css/animate.min.css'
 
 function App() {
 	useHideMessage()
+	useShowButtonScroll()
 	return (
 		<React.Fragment>
+			<ScrollButton />
 			<AccountDetail />
 			<PreLoading />
 			<ListMessage />
@@ -28,6 +32,7 @@ function App() {
 			<Navbar />
 			<Connect />
 			<Switch>
+				<Route component={ComingBuy} path='/summon-warriors' exact />
 				<Route component={Roadmap} path='/about-us' exact />
 				<Route component={HomepageWrapper} path='/' exact />
 				<Route component={Coming} />

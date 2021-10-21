@@ -19,21 +19,33 @@ export const Navbar = () => {
 						<img src={Logo} alt='logo' />
 					</Link>
 					<ul className='list-nav'>
-						<li>
-							<a href='https://pancakeswap.finance/' target='_blank' rel='noreferrer'>
-								Buy WAL
-							</a>
+						<li className='nav-link'>
+							<Link to='/buy-token'>Buy WAL</Link>
 						</li>
-						<li>
+						<li className='nav-link'>
 							<Link to='/summon-warriors'>Summon Warriors</Link>
 						</li>
-						<li>
+						<li className='nav-link'>
 							<Link to='/about-us'>About Us</Link>
 						</li>
 						{/* <li>
 							<Link to='/about-us'>Gallery</Link>
 						</li> */}
-						<li>More</li>
+						<li className='nav-link'>
+							<span>More</span>
+							<ul className='nav-hover'>
+								<li
+									onClick={() =>
+										window.open(
+											'https://docs.google.com/presentation/d/e/2PACX-1vSUuyoSKy5ZBxqEJ4OHaD1Ao1-a_8kPVyYTSw4mzFsio6EvTF8UUFCfJu-1rjJv2Q/pub?start=false&loop=false&delayms=3000&slide=id.p1',
+											'_blank'
+										)
+									}
+								>
+									White paper
+								</li>
+							</ul>
+						</li>
 					</ul>
 				</div>
 				<div className='flex flex-row items-center justify-center'>

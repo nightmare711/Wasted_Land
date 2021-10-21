@@ -55,12 +55,36 @@
     margin:0;
     padding:0;
 }
-.navbar .list-nav li {
+.navbar .list-nav .nav-link {
     margin-left:25px;
     text-transform: capitalize;
     transition: all .3s;
+    position: relative;
 }
-.navbar .list-nav li:hover {
+
+.navbar .list-nav .nav-link .nav-hover {
+    position: absolute;
+    padding-top:10px;
+    top:100%;
+    width:130px;
+    left:0;
+    margin-left:0px;
+    display: none;
+}
+.navbar .list-nav .nav-link .nav-hover  li {
+    margin-left:0px;
+    font-size: 15px;
+    color:white;
+    text-align: center;
+    padding: 10px 0px;
+    background-color: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    
+}
+.navbar .list-nav .nav-link:hover .nav-hover{
+    display: block;
+} 
+.navbar .list-nav .nav-link:hover {
     color:#DCB85C;
 }
 .navbar .btn-primary {

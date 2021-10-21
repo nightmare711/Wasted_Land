@@ -49,3 +49,23 @@ export const onTriggerMenu = () => {
 		}
 	}
 }
+export const onScrollTop = () => {
+	window.scrollTo({
+		top: 0,
+		behavior: 'smooth',
+	})
+}
+
+const toggleVisibility = () => {
+	const btn = document.querySelector('#btn-scroll')
+	if (window.pageYOffset > 300) {
+		btn.style.transform = 'translateY(0)'
+	} else {
+		btn.style.transform = 'translateY(200px)'
+	}
+}
+export const useShowButtonScroll = () => {
+	React.useEffect(() => {
+		window.addEventListener('scroll', toggleVisibility)
+	}, [])
+}

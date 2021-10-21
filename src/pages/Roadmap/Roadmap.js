@@ -1,11 +1,5 @@
 import React from 'react'
-import {
-	TokenomicsImage,
-	SaleChart,
-	RoadmapMobile,
-	TokenomicsMobile,
-	Tokenomics2Mobile,
-} from 'assets/roadmap'
+import { TokenomicsImage, RoadmapMobile, TokenomicsMobile } from 'assets/roadmap'
 import { onMoveAnimation } from 'services/useDevelopUI'
 import {
 	member_1,
@@ -223,7 +217,7 @@ const roadmapInfo2 = [
 	},
 	{
 		time: 'Mar 2022',
-		info: ['The Wasted Lands official release.', 'Mobile & PC.'],
+		info: ['The Wasted Lands official release.', 'Release Mobile & PC version.'],
 	},
 	{
 		time: 'Q2 2022',
@@ -231,7 +225,7 @@ const roadmapInfo2 = [
 	},
 	{
 		time: 'Q3 2022',
-		info: ['Wasted Lands metaverse.', 'Upgrading UX Vehicles System.'],
+		info: ['Wasted Lands metaverse.', 'Upgrading UX.', 'Vehicles System.'],
 	},
 ]
 export const Roadmap = () => {
@@ -275,7 +269,7 @@ export const Roadmap = () => {
 							Treasury: <b>30.0%</b>
 						</div>
 					</div>
-					<span className=' chart__label proceeds'>Use of Sale Proceeds</span>
+					{/* <span className=' chart__label proceeds'>Use of Sale Proceeds</span>
 					<img
 						onLoad={() => onMoveAnimation('pre-loading', 'moveOutOpacity')}
 						src={window.innerWidth >= 560 ? SaleChart : Tokenomics2Mobile}
@@ -284,7 +278,10 @@ export const Roadmap = () => {
 					/>
 					<div className='percent__container'>
 						<div className='text-percent'>
-							Seed Sale: <b>8%</b>
+							Marketing: <b>27.2%</b>
+						</div>
+						<div className='text-percent'>
+							Liquidity: <b>17.6%</b>
 						</div>
 						<div className='text-percent'>
 							Seed Sale: <b>8%</b>
@@ -292,10 +289,7 @@ export const Roadmap = () => {
 						<div className='text-percent'>
 							Seed Sale: <b>8%</b>
 						</div>
-						<div className='text-percent'>
-							Seed Sale: <b>8%</b>
-						</div>
-					</div>
+					</div> */}
 					<table className='my-16'>
 						<tr>
 							<th>Allocation</th>

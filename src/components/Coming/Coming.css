@@ -9,6 +9,12 @@
     color: #DECFC0;
     text-align: center;
 }
+.coming-page.coming-buy {
+    background: url('../../assets/coming/bg__coming.png');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 .coming-page img {
     width:150px;
 }
