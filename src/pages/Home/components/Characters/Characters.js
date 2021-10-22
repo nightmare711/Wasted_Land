@@ -312,9 +312,9 @@ export const Characters = () => {
 					</div>
 					<AnimationWithoutMobile animateIn='animate__fadeIn' animateOut='animate__fadeOut'>
 						<div className='flex flex-col items-center justify-center descript-video'>
-							<span className='title'>NFTs PLAY TO EARN GAME</span>
+							<span className='title'>A JOURNEY IN THE POST-APOCALYPTIC WORLD</span>
 							<span className='description-extend'>
-								Gather your warrior, explore the new world of fury and disorder, build your
+								Gather your warriors, explore the new world of fury and disorder, build your
 								shelters, communities, equipments and vehicles. All in one game.
 							</span>
 							<div className='video-container'>

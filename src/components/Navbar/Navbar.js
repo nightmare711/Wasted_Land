@@ -33,18 +33,20 @@ export const Navbar = () => {
 						</li> */}
 						<li className='nav-link'>
 							<span>More</span>
-							<ul className='nav-hover'>
-								<li
-									onClick={() =>
-										window.open(
-											'https://docs.google.com/presentation/d/e/2PACX-1vSUuyoSKy5ZBxqEJ4OHaD1Ao1-a_8kPVyYTSw4mzFsio6EvTF8UUFCfJu-1rjJv2Q/pub?start=false&loop=false&delayms=3000&slide=id.p1',
-											'_blank'
-										)
-									}
-								>
-									White paper
-								</li>
-							</ul>
+							<div className='nav-hover'>
+								<ul>
+									<li
+										onClick={() =>
+											window.open(
+												'https://docs.google.com/presentation/d/e/2PACX-1vSUuyoSKy5ZBxqEJ4OHaD1Ao1-a_8kPVyYTSw4mzFsio6EvTF8UUFCfJu-1rjJv2Q/pub?start=false&loop=false&delayms=3000&slide=id.p1',
+												'_blank'
+											)
+										}
+									>
+										White paper
+									</li>
+								</ul>
+							</div>
 						</li>
 					</ul>
 				</div>

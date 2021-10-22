@@ -66,21 +66,32 @@
     position: absolute;
     padding-top:10px;
     top:100%;
-    width:130px;
+    width:180px;
     left:0;
     margin-left:0px;
+    transform: translateX(-40%);
     display: none;
+}
+.navbar .list-nav .nav-link .nav-hover ul {
+    background: url('../../assets/bg__dropdown.png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #2C1B05;
 }
 .navbar .list-nav .nav-link .nav-hover  li {
     margin-left:0px;
     font-size: 15px;
-    color:white;
     text-align: center;
-    padding: 10px 0px;
-    background-color: rgba(0, 0, 0, 0.6);
+    padding: 15px 0px;
     cursor: pointer;
+    transition: all .3s;
     
 }
+.navbar .list-nav .nav-link .nav-hover  li:hover {
+    color:#DCB85C;
+}
+
 .navbar .list-nav .nav-link:hover .nav-hover{
     display: block;
 } 
