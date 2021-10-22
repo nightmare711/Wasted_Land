@@ -1,5 +1,11 @@
 import React from 'react'
-import { TokenomicsImage, RoadmapMobile, TokenomicsMobile } from 'assets/roadmap'
+import {
+	TokenomicsImage,
+	RoadmapMobile,
+	TokenomicsMobile,
+	SaleChart,
+	Tokenomics2Mobile,
+} from 'assets/roadmap'
 import { onMoveAnimation } from 'services/useDevelopUI'
 import {
 	member_1,
@@ -111,18 +117,18 @@ const Members = [
 const tokenomics = [
 	{
 		allocation: 'Seed Sale',
-		percentage: 8,
-		amount: '80,000,000',
+		percentage: 6,
+		amount: '60,000,000',
 		price: 0.1,
-		raiseValue: '800,000',
+		raiseValue: '600,000',
 		vesting: '10% on TGE, then monthly unlock in 10 months',
 	},
 	{
 		allocation: 'Private Sale',
-		percentage: 15,
-		amount: '150,000,000',
+		percentage: 11,
+		amount: '110,000,000',
 		price: 0.12,
-		raiseValue: '1,800,000',
+		raiseValue: '1,320,000',
 		vesting: '10% on TGE, then monthly unlock in 8 months',
 	},
 	{
@@ -131,12 +137,12 @@ const tokenomics = [
 		amount: '10,000,000',
 		price: 0.15,
 		raiseValue: '150,000',
-		vesting: '100% on TGE',
+		vesting: '50% on TGE, then monthly unlock in 2 months',
 	},
 	{
 		allocation: 'Team',
-		percentage: 8,
-		amount: '80,000,000',
+		percentage: 9,
+		amount: '90,000,000',
 		price: '',
 		raiseValue: '',
 		vesting: '1 year full locked, then 10% monthly',
@@ -167,16 +173,16 @@ const tokenomics = [
 	},
 	{
 		allocation: 'Marketing',
-		percentage: 13,
-		amount: '130,000,000',
+		percentage: 16,
+		amount: '160,000,000',
 		price: '',
 		raiseValue: '',
 		vesting: '1 month full locked, then 5% monthly',
 	},
 	{
 		allocation: 'Development',
-		percentage: 16,
-		amount: '160,000,000',
+		percentage: 18,
+		amount: '180,000,000',
 		price: '',
 		raiseValue: '',
 		vesting: '1 month full locked, then 5% monthly',
@@ -242,16 +248,16 @@ export const Roadmap = () => {
 					/>
 					<div className='percent__container'>
 						<div className='text-percent'>
-							Seed Sale: <b>8.0%</b>
+							Seed Sale: <b>6.0%</b>
 						</div>
 						<div className='text-percent'>
-							Private Sale: <b>15.0%</b>
+							Private Sale: <b>11.0%</b>
 						</div>
 						<div className='text-percent'>
 							Public Sale: <b>1.0%</b>
 						</div>
 						<div className='text-percent'>
-							Team: <b>8.0%</b>
+							Team: <b>9.0%</b>
 						</div>
 						<div className='text-percent'>
 							Advisor: <b>5.0%</b>
@@ -260,36 +266,36 @@ export const Roadmap = () => {
 							Liquidity: <b>4.0%</b>
 						</div>
 						<div className='text-percent'>
-							Development: <b>16.0%</b>
+							Development: <b>18.0%</b>
 						</div>
 						<div className='text-percent'>
-							Marketing: <b>13.0%</b>
+							Marketing: <b>16.0%</b>
 						</div>
 						<div className='text-percent'>
 							Treasury: <b>30.0%</b>
 						</div>
 					</div>
-					{/* <span className=' chart__label proceeds'>Use of Sale Proceeds</span>
+					<span className=' chart__label proceeds'>Use of Sale Proceeds</span>
 					<img
 						onLoad={() => onMoveAnimation('pre-loading', 'moveOutOpacity')}
 						src={window.innerWidth >= 560 ? SaleChart : Tokenomics2Mobile}
 						className='mb-8'
 						alt='tokenomics'
 					/>
-					<div className='percent__container'>
+					<div className='percent__container percent__proceed'>
 						<div className='text-percent'>
-							Marketing: <b>27.2%</b>
+							Ecosystem Growth & Treasury Reverse: <b>24.0%</b>
 						</div>
 						<div className='text-percent'>
-							Liquidity: <b>17.6%</b>
+							Liquidity & Exchange: <b>29.0%</b>
 						</div>
 						<div className='text-percent'>
-							Seed Sale: <b>8%</b>
+							Product Development & Marketing: <b>39.0%</b>
 						</div>
 						<div className='text-percent'>
-							Seed Sale: <b>8%</b>
+							Operation: <b>8.0%</b>
 						</div>
-					</div> */}
+					</div>
 					<table className='my-16'>
 						<tr>
 							<th>Allocation</th>

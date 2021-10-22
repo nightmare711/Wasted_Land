@@ -44,7 +44,12 @@ export const Footer = () => {
 								<span className='glitch' data-text='GET YOUR CHARACTERS NOW'>
 									GET YOUR CHARACTERS NOW
 								</span>
-								<div className='btn-primary'>Go to Marketplace</div>
+								<div
+									onClick={() => window.open('https://discord.gg/thewastedlands', '_blank')}
+									className='cursor-pointer btn-primary'
+								>
+									Join Discord
+								</div>
 							</div>
 							<img className='bg__character' src={FooterCharacters} alt='Footer Characters' />
 						</div>

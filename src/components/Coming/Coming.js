@@ -1,6 +1,5 @@
 import React from 'react'
 import Logo from '../../assets/coming/logo__opacity.png'
-import { Link } from 'react-router-dom'
 import { onMoveAnimation } from 'services/useDevelopUI'
 import './Coming.css'
 
@@ -55,9 +54,9 @@ export const ComingBuy = () => {
 					Join Telegram
 				</div>
 			</div>
-			<span className='back'>
+			{/* <span className='back'>
 				Or you can check out our awesome artworks <Link to='/'>right here</Link>
-			</span>
+			</span> */}
 		</div>
 	)
 }

@@ -4,6 +4,7 @@ import { useCheckAccountActive } from 'services/useWalletProvider'
 import { useGetBalance } from 'services/useGetBalance'
 import Btn_Hover from 'assets/home/btn-primary-hover.png'
 import MenuIcon from '@material-ui/icons/Menu'
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
 import { Link } from 'react-router-dom'
 import Logo from 'assets/logo.png'
 import './Navbar.css'
@@ -29,10 +30,13 @@ export const Navbar = () => {
 							<Link to='/about-us'>About Us</Link>
 						</li>
 						{/* <li>
+
 							<Link to='/about-us'>Gallery</Link>
 						</li> */}
 						<li className='nav-link'>
-							<span>More</span>
+							<span>
+								More <KeyboardArrowDownIcon />
+							</span>
 							<div className='nav-hover'>
 								<ul>
 									<li
