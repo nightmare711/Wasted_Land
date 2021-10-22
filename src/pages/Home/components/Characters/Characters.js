@@ -312,7 +312,7 @@ export const Characters = () => {
 					</div>
 					<AnimationWithoutMobile animateIn='animate__fadeIn' animateOut='animate__fadeOut'>
 						<div className='flex flex-col items-center justify-center descript-video'>
-							<span className='title'>A JOURNEY IN THE POST-APOCALYPTIC WORLD</span>
+							<span className='title'>THE POST-APOCALYPTIC WORLD</span>
 							<span className='description-extend'>
 								Gather your warriors, explore the new world of fury and disorder, build your
 								shelters, communities, equipments and vehicles. All in one game.

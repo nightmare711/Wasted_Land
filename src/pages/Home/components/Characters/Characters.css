@@ -599,7 +599,7 @@
     }
     
 }
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 450px) {
     .utilities-section .grid-utilities {
         grid-template-columns: 1fr;
     }
