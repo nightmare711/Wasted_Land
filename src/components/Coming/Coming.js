@@ -10,11 +10,12 @@ export const Coming = () => {
 			<img onLoad={() => onMoveAnimation('pre-loading', 'moveOutOpacity')} src={Logo} alt='Logo' />
 			<span className='title'>Coming soon</span>
 			<span className='subtitle'>
-				In the meantine, you can fill in your email so you’ll get informed when our token is ready
+				Our token $WAL will be released soon, make you check out our Discord server and Airdrop
+				Campaign below.
 			</span>
 			<div className='flex flex-row btn-container'>
 				<div
-					onClick={() => window.open('https://discord.gg/YrmJgFY8gK', '_blank')}
+					onClick={() => window.open('https://discord.gg/thewastedlands', '_blank')}
 					className='mr-4 cursor-pointer btn-primary'
 				>
 					Join Discord
@@ -26,9 +27,9 @@ export const Coming = () => {
 					Join Telegram
 				</div>
 			</div>
-			<span className='back'>
+			{/* <span className='back'>
 				Or you can check out our awesome artworks <Link to='/'>right here</Link>
-			</span>
+			</span> */}
 		</div>
 	)
 }
@@ -37,8 +38,8 @@ export const ComingBuy = () => {
 		<div className='coming-page coming-buy'>
 			<span className='title'>Coming soon</span>
 			<span className='subtitle'>
-				In the meantine, you can fill in your email so you’ll get informed when our warriors are
-				ready
+				Warriors are approaching The Wasted Lands. Stay connected to the headquarter at Discord
+				Server for latest news.
 			</span>
 			<div className='flex flex-row btn-container'>
 				<div

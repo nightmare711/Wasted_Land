@@ -35,7 +35,7 @@ export const Banner = () => {
 				<AnimationOnScroll delay={1000} animateIn='animate__fadeInUp'>
 					<div className='flex flex-row mt-4 cursor-pointer btn-container'>
 						<div
-							onClick={() => window.open('https://discord.gg/YrmJgFY8gK', '_blank')}
+							onClick={() => window.open('https://discord.gg/thewastedlands', '_blank')}
 							className='mr-4 btn-primary'
 						>
 							Join Discord

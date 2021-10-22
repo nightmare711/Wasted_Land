@@ -52,7 +52,7 @@ export const Footer = () => {
 								className='content'
 								target='_blank'
 								rel='noreferrer'
-								href='https://discord.gg/aNPsuZb4Br'
+								href='https://discord.gg/thewastedlands'
 							>
 								<img src={DiscordIcon} alt='Telegram icon' /> Discord
 							</a>
