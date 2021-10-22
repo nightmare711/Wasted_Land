@@ -4,7 +4,6 @@ import BannerGif from 'assets/home/banner.mp4'
 import BannerPoster from 'assets/home/bg.png'
 import { onMoveAnimation } from 'services/useDevelopUI'
 import BannerGradient from 'assets/home/banner__gradient.png'
-import 'video-react/dist/video-react.css'
 
 import './Banner.css'
 
@@ -21,7 +20,15 @@ export const Banner = () => {
 	return (
 		<div className='banner-home section'>
 			<div className='banner__container'>
-				<video loop muted autoplay playsinline src={BannerGif} poster={BannerPoster} />
+				<video
+					loop
+					muted
+					autoPlay
+					playsInline
+					type='video/mp4'
+					src={BannerGif}
+					poster={BannerPoster}
+				/>
 				<img className='banner__gradient' src={BannerGradient} alt='Gradient' />
 			</div>
 

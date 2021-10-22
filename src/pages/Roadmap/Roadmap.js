@@ -20,6 +20,7 @@ import {
 } from 'assets/team'
 import BorderIcon from 'assets/home/Active.png'
 import './Roadmap.css'
+import '../About/About.css'
 
 const Members = [
 	{
@@ -393,3 +394,5 @@ export const Roadmap = () => {
 		</div>
 	)
 }
+
+export default Roadmap

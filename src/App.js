@@ -8,21 +8,24 @@ import {
 	MenuList,
 	PreLoading,
 	Footer,
-	Coming,
 	ScrollButton,
-	ComingBuy,
 } from 'components'
 import { useHideMessage, useShowButtonScroll } from 'services/useDevelopUI'
-import { HomepageWrapper, Roadmap } from 'pages'
 import { Switch, Route } from 'react-router-dom'
 import './root.css'
 import 'animate.css/animate.min.css'
+
+const HomePage = React.lazy(() => import('./pages/Home'))
+
+const RoadmapPage = React.lazy(() => import('./pages/Roadmap/Roadmap'))
+const ComingPage = React.lazy(() => import('./components/Coming/Coming'))
+const ComingBuyPage = React.lazy(() => import('./components/Coming/ComingBuy'))
 
 function App() {
 	useHideMessage()
 	useShowButtonScroll()
 	return (
-		<React.Fragment>
+		<React.Suspense fallback={<PreLoading />}>
 			<ScrollButton />
 			<AccountDetail />
 			<PreLoading />
@@ -32,13 +35,13 @@ function App() {
 			<Navbar />
 			<Connect />
 			<Switch>
-				<Route component={ComingBuy} path='/summon-warriors' exact />
-				<Route component={Roadmap} path='/about-us' exact />
-				<Route component={HomepageWrapper} path='/' exact />
-				<Route component={Coming} />
+				<Route component={ComingBuyPage} path='/summon-warriors' exact />
+				<Route component={RoadmapPage} path='/about-us' exact />
+				<Route component={HomePage} path='/' exact />
+				<Route component={ComingPage} />
 			</Switch>
 			<Footer />
-		</React.Fragment>
+		</React.Suspense>
 	)
 }
 

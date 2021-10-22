@@ -1,7 +1,7 @@
 import React from 'react'
 import { Banner, DescriptionSection, Begin, Characters, Footer } from './components'
 
-export const HomepageWrapper = () => (
+const HomepageWrapper = () => (
 	<div className='home-container'>
 		<Banner />
 		<DescriptionSection />
@@ -10,3 +10,4 @@ export const HomepageWrapper = () => (
 		<Footer />
 	</div>
 )
+export default HomepageWrapper

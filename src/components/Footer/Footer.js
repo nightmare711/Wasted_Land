@@ -5,6 +5,7 @@ import TelegramIcon from 'assets/home/telegram__icon.png'
 import DiscordIcon from 'assets/home/discord__icon.png'
 import TwitterIcon from 'assets/home/twitter__icon.png'
 import { Link } from 'react-router-dom'
+import '../../pages/Home/components/Footer/Footer.css'
 
 export const Footer = () => {
 	return (
