@@ -285,16 +285,16 @@ export const Roadmap = () => {
 					/>
 					<div className='percent__container percent__proceed'>
 						<div className='text-percent'>
-							Ecosystem Growth & Treasury Reverse: <b>24.0%</b>
+							Ecosystem Growth & Treasury Reverse: <b>24.75%</b>
 						</div>
 						<div className='text-percent'>
-							Liquidity & Exchange: <b>29.0%</b>
+							Liquidity & Exchange: <b>29.70%</b>
 						</div>
 						<div className='text-percent'>
-							Product Development & Marketing: <b>39.0%</b>
+							Product Development & Marketing: <b>39.60%</b>
 						</div>
 						<div className='text-percent'>
-							Operation: <b>8.0%</b>
+							Operation: <b>5.94%</b>
 						</div>
 					</div>
 					<table className='my-16'>
