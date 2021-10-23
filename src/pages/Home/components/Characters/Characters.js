@@ -257,7 +257,7 @@ export const Characters = () => {
 												<div className='btn-primary_hover'>
 													<img src={Btn_Hover} alt='Shadow' />
 												</div>
-												Go to Marketplace
+												Summon Warriors
 											</a>
 										</div>
 									</div>
@@ -299,12 +299,12 @@ export const Characters = () => {
 														<img src={IconProgress} alt='Icon' />
 														<span className='character__name'>{character.name}</span>
 														<span className='character__major'>{character.type}</span>
-														<div className='btn-tertiary'>Buy Character</div>
+														<div className='btn-tertiary'>Warrior</div>
 													</div>
 												</div>
 											))}
 										</Slider>
-										<div className='self-center btn-primary'>Marketplace</div>
+										<div className='self-center btn-primary'>Summon Warriors</div>
 									</div>
 								</AnimationWithoutMobile>
 							</div>
