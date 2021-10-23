@@ -118,11 +118,11 @@ const Members = [
 const tokenomics = [
 	{
 		allocation: 'Seed Sale',
-		percentage: 6,
-		amount: '60,000,000',
+		percentage: 4,
+		amount: '40,000,000',
 		price: 0.1,
-		raiseValue: '600,000',
-		vesting: '10% on TGE, then monthly unlock in 10 months',
+		raiseValue: '400,000',
+		vesting: '8% on TGE, then monthly unlock in 10 months',
 	},
 	{
 		allocation: 'Private Sale',
@@ -134,16 +134,16 @@ const tokenomics = [
 	},
 	{
 		allocation: 'Public Sale',
-		percentage: 1,
-		amount: '10,000,000',
+		percentage: 2,
+		amount: '20,000,000',
 		price: 0.15,
-		raiseValue: '150,000',
-		vesting: '50% on TGE, then monthly unlock in 2 months',
+		raiseValue: '300,000',
+		vesting: '25% on TGE, then monthly unlock in 2 months',
 	},
 	{
 		allocation: 'Team',
-		percentage: 9,
-		amount: '90,000,000',
+		percentage: 10,
+		amount: '100,000,000',
 		price: '',
 		raiseValue: '',
 		vesting: '1 year full locked, then 10% monthly',
@@ -249,16 +249,16 @@ export const Roadmap = () => {
 					/>
 					<div className='percent__container'>
 						<div className='text-percent'>
-							Seed Sale: <b>6.0%</b>
+							Seed Sale: <b>4.0%</b>
 						</div>
 						<div className='text-percent'>
 							Private Sale: <b>11.0%</b>
 						</div>
 						<div className='text-percent'>
-							Public Sale: <b>1.0%</b>
+							Public Sale: <b>2.0%</b>
 						</div>
 						<div className='text-percent'>
-							Team: <b>9.0%</b>
+							Team: <b>10.0%</b>
 						</div>
 						<div className='text-percent'>
 							Advisor: <b>5.0%</b>
