@@ -8,27 +8,27 @@ import BannerGradient from 'assets/home/banner__gradient.png'
 import './Banner.css'
 
 export const Banner = () => {
-	React.useEffect(() => {
-		const root = document.querySelector('.banner-home video')
-		if (root) {
-			root.addEventListener('loadeddata', () => {
-				root.play()
-				onMoveAnimation('pre-loading', 'moveOutOpacity')
-			})
-		}
-	}, [])
 	return (
 		<div className='banner-home section'>
 			<div className='banner__container'>
-				<video
-					loop
-					muted
-					autoPlay
-					playsInline
-					type='video/mp4'
-					src={BannerGif}
-					poster={BannerPoster}
-				/>
+				{window.innerWidth > 450 ? (
+					<video
+						onLoadedData={() => onMoveAnimation('pre-loading', 'moveOutOpacity')}
+						loop
+						muted
+						autoPlay
+						playsInline
+						type='video/mp4'
+						src={BannerGif}
+						poster={BannerPoster}
+					/>
+				) : (
+					<img
+						onLoad={() => onMoveAnimation('pre-loading', 'moveOutOpacity')}
+						src={BannerPoster}
+						alt='Banner'
+					/>
+				)}
 				<img className='banner__gradient' src={BannerGradient} alt='Gradient' />
 			</div>
 

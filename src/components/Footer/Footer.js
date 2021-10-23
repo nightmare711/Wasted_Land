@@ -32,7 +32,7 @@ export const Footer = () => {
 							</Link>
 							<a
 								className='content'
-								href='https://docs.google.com/presentation/d/e/2PACX-1vSUuyoSKy5ZBxqEJ4OHaD1Ao1-a_8kPVyYTSw4mzFsio6EvTF8UUFCfJu-1rjJv2Q/pub?start=false&loop=false&delayms=3000&slide=id.p1'
+								href='https://the-wasted-lands.gitbook.io/the-wasted-lands/'
 								target='_blank'
 								rel='noreferrer'
 							>

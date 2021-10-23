@@ -20,10 +20,15 @@ export const ComingBuy = () => {
 					Join Discord
 				</div>
 				<div
-					onClick={() => window.open('https://t.me/TheWastedLands', '_blank')}
+					onClick={() =>
+						window.open(
+							'https://gleam.io/oqFVi/the-wasted-lands-community-airdrop-of-20000',
+							'_blank'
+						)
+					}
 					className='cursor-pointer btn-secondary'
 				>
-					Join Telegram
+					Join Airdrop
 				</div>
 			</div>
 			{/* <span className='back'>

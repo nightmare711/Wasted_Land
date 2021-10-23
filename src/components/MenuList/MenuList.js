@@ -1,11 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { onTriggerMenu } from 'services/useDevelopUI'
+import CloseIcon from '@mui/icons-material/Close'
 import './MenuList.css'
 
 export const MenuList = () => {
 	return (
 		<div onClick={() => onTriggerMenu()} id={'menu'} className='menu-list'>
+			<CloseIcon style={{ position: 'fixed', top: '20px', right: '20px', zIndex: 100 }} />
 			<div className='list'>
 				<Link to='/buy-wal'>
 					<div className='item'>Buy WAL</div>
@@ -14,7 +16,7 @@ export const MenuList = () => {
 					<div className='item'>Summon Warriors</div>
 				</Link>
 				<a
-					href='https://docs.google.com/presentation/d/e/2PACX-1vSUuyoSKy5ZBxqEJ4OHaD1Ao1-a_8kPVyYTSw4mzFsio6EvTF8UUFCfJu-1rjJv2Q/pub?start=false&loop=false&delayms=3000&slide=id.p1'
+					href='https://the-wasted-lands.gitbook.io/the-wasted-lands/'
 					target='_blank'
 					rel='noreferrer'
 				>
