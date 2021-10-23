@@ -7,16 +7,16 @@ import IconProgress from 'assets/home/Active.png'
 import Btn_Hover from 'assets/home/btn-primary-hover.png'
 import BtnArrow from 'assets/home/btn-arrow.png'
 import BgVideo2 from 'assets/home/thumbnail_bg.png'
+import { Link } from 'react-router-dom'
 import Diamond from 'assets/logo192.png'
 import GameplayIllustration from 'assets/gameplay-illustration.png'
 import FeatureIllustration from 'assets/gameplay-illustration2.png'
 import PlayArrowIcon from '@mui/icons-material/PlayArrow'
 import BorderAbove from 'assets/home/border-grow-up.png'
-import { AnimationWithoutMobile, VideoContainer } from 'components'
+import { AnimationWithoutMobile, VideoContainer, YoutubeEmbed } from 'components'
 import { onMoveAnimation } from 'services/useDevelopUI'
 import { useDispatch } from 'react-redux'
 import { requestLoading, requestUnload } from 'services/redux/loading/actions'
-import Intro from 'assets/trailer.webm'
 import {
 	Faction__1,
 	Faction__2,
@@ -39,6 +39,24 @@ import {
 	Elite,
 	Elite_M,
 	Veteran,
+	CrabmanImage,
+	OctopusImage,
+	SharkmanImage,
+	BearmanImage,
+	OfficerImage,
+	WolfmanImage,
+	Worffman_MImage,
+	EaglemanImage,
+	InterImage,
+	ColonelImage,
+	MasterImage,
+	TraineeImage,
+	Trainee_MImage,
+	AssistantImage,
+	ProfessorImage,
+	EliteImage,
+	Elite_MImage,
+	VeteranImage,
 	Gameplay__1,
 	Gameplay__2,
 	Gameplay__3,
@@ -52,7 +70,7 @@ import './Characters.css'
 const settings = {
 	dots: false,
 	infinite: true,
-	speed: 800,
+	speed: 400,
 	slidesToShow: 3,
 	slidesToScroll: 1,
 	swipeToSlide: true,
@@ -82,36 +100,43 @@ const factionDescription = [
 				name: 'Crabman',
 				type: 'OceanWalker',
 				image: Crabman,
+				static: CrabmanImage,
 			},
 			{
 				name: 'Octopus',
 				type: 'OceanWalker',
 				image: Octopus,
+				static: OctopusImage,
 			},
 			{
 				name: 'Sharkman',
 				type: 'OceanWalker',
 				image: Sharkman,
+				static: SharkmanImage,
 			},
 			{
 				name: 'Bearman',
 				type: 'Preytracker',
 				image: Bearman,
+				static: BearmanImage,
 			},
 			{
 				name: 'Wolfman',
 				type: 'Preytracker',
 				image: Wolfman,
+				static: WolfmanImage,
 			},
 			{
 				name: 'Wolfman',
 				type: 'Preytracker',
 				image: Worffman_M,
+				static: Worffman_MImage,
 			},
 			{
 				name: 'Eagleman',
 				type: 'Windrunner',
 				image: Eagleman,
+				static: EaglemanImage,
 			},
 		],
 	},
@@ -125,26 +150,31 @@ const factionDescription = [
 				name: 'Inter',
 				type: 'Doctor',
 				image: Inter,
+				static: InterImage,
 			},
 			{
 				name: 'Colonel',
 				type: 'ExSoldier',
 				image: Colonel,
+				static: ColonelImage,
 			},
 			{
 				name: 'Master',
 				type: 'Farmer',
 				image: Master,
+				static: MasterImage,
 			},
 			{
 				name: 'Trainee',
 				type: 'Farmer',
 				image: Trainee,
+				static: TraineeImage,
 			},
 			{
 				name: 'Trainee',
 				type: 'Farmer',
 				image: Trainee_M,
+				static: Trainee_MImage,
 			},
 		],
 	},
@@ -158,31 +188,37 @@ const factionDescription = [
 				name: 'Assistant',
 				type: 'Scientist',
 				image: Assistant,
+				static: AssistantImage,
 			},
 			{
 				name: 'Professor',
 				type: 'Scientist',
 				image: Professor,
+				static: ProfessorImage,
 			},
 			{
 				name: 'Elite',
 				type: 'Security',
 				image: Elite,
+				static: EliteImage,
 			},
 			{
 				name: 'Elite',
 				type: 'Security',
 				image: Elite_M,
+				static: Elite_MImage,
 			},
 			{
 				name: 'Officer',
 				type: 'Security',
 				image: Officer,
+				static: OfficerImage,
 			},
 			{
 				name: 'Veteran',
 				type: 'Security',
 				image: Veteran,
+				static: VeteranImage,
 			},
 		],
 	},
@@ -252,14 +288,14 @@ export const Characters = () => {
 										<span className='mt-2 faction__description'>
 											{factionDescription[activeFaction].description}
 										</span>
-										<div className='mt-14 btn-primary'>
-											<a href='/marketplace'>
+										<Link to='/marketplace'>
+											<div className='mt-14 btn-primary'>
 												<div className='btn-primary_hover'>
 													<img src={Btn_Hover} alt='Shadow' />
 												</div>
 												Summon Warriors
-											</a>
-										</div>
+											</div>
+										</Link>
 									</div>
 								</AnimationWithoutMobile>
 
@@ -285,26 +321,38 @@ export const Characters = () => {
 										<Slider {...settings}>
 											{factionDescription[activeFaction].characters.map((character, index) => (
 												<div key={index} className='character-container'>
-													<video
-														loop
-														muted
-														autoPlay
-														playsInline
-														onLoadStart={() => dispatch(requestLoading())}
-														onLoadedData={() => (index === 3 ? dispatch(requestUnload()) : null)}
-														src={character.image}
-													/>
+													{window.innerWidth > 450 ? (
+														<video
+															loop
+															muted
+															autoPlay
+															playsInline
+															onLoadStart={() => dispatch(requestLoading())}
+															onLoadedData={() => (index === 3 ? dispatch(requestUnload()) : null)}
+															src={character.image}
+														/>
+													) : (
+														<img
+															className='character__image'
+															src={character.static}
+															alt='Character'
+														/>
+													)}
 
 													<div className='character__info'>
 														<img src={IconProgress} alt='Icon' />
 														<span className='character__name'>{character.name}</span>
 														<span className='character__major'>{character.type}</span>
-														<div className='btn-tertiary'>Warrior</div>
+														<Link to='/summon-warriors'>
+															<div className='btn-tertiary'>Warrior</div>
+														</Link>
 													</div>
 												</div>
 											))}
 										</Slider>
-										<div className='self-center btn-primary'>Summon Warriors</div>
+										<Link to='/summon-warriors'>
+											<div className='self-center btn-primary'>Summon Warriors</div>
+										</Link>
 									</div>
 								</AnimationWithoutMobile>
 							</div>
@@ -320,10 +368,7 @@ export const Characters = () => {
 							<div className='video-container'>
 								<img src={BgVideo2} alt='bg-video' />
 								<div className='absolute inset-0 video'>
-									<video controls>
-										<source src={Intro} type='video/webm' />
-										Your browser does not support HTML video.
-									</video>
+									<YoutubeEmbed embedId='XZr5wZCyxic' />
 								</div>
 							</div>
 						</div>
@@ -394,7 +439,7 @@ export const Characters = () => {
 						<div className='front-side'>
 							<div
 								onClick={() => {
-									setActiveVideo('K_Wcxtgmngw')
+									setActiveVideo('5u2No7aG0ec')
 								}}
 								className='cursor-pointer illustration__container'
 							>

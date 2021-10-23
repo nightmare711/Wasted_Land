@@ -19,6 +19,24 @@ import Elite from './home/characters/TheCompany_Security_Elite-Female_Idle.mp4'
 import Elite_M from './home/characters/TheCompany_Security_Elite_Male-Idle.mp4'
 import Officer from './home/characters/TheCompany_Security_Officer_Male_Idle.mp4'
 import Veteran from './home/characters/TheCompany_Security_Veteran_Female-_Idle.mp4'
+import CrabmanImage from './home/characters/Hybrid_OceanWalker_Crabman_Male_Idle.png'
+import OctopusImage from './home/characters/Hybrid_OceanWalker_Octopus_Male_Idle.png'
+import SharkmanImage from './home/characters/Hybrid_OceanWalker_Sharkman_Male_Idle.png'
+import BearmanImage from './home/characters/Hybrid_Preytracker_Bearman_Male_Idle.png'
+import WolfmanImage from './home/characters/Hybrid_Preytracker_Wolfman_Female_Idle.png'
+import Worffman_MImage from './home/characters/Hybrid_Preytracker_Wolfman_Male_Idle.png'
+import EaglemanImage from './home/characters/Hybrid_Windrunner-_Eagleman_Male_Idle.png'
+import InterImage from './home/characters/Survivor_Doctor_Inter_Female_Idle.png'
+import ColonelImage from './home/characters/Survivor_ExSoldier_Colonel_Male_Idle.png'
+import MasterImage from './home/characters/Survivor_Farmer_Master_Male_Idle.png'
+import TraineeImage from './home/characters/Survivor_Farmer_Trainee_Female_Idle.png'
+import Trainee_MImage from './home/characters/Survivor_Farmer_Trainee_Male_Idle.png'
+import AssistantImage from './home/characters/TheCompany_Scientist_Assisstant_Female_Idle.png'
+import ProfessorImage from './home/characters/TheCompany_Scientist_Professor_Female_Idle.png'
+import EliteImage from './home/characters/TheCompany_Security_Elite-Female_Idle.png'
+import Elite_MImage from './home/characters/TheCompany_Security_Elite_Male-Idle.png'
+import OfficerImage from './home/characters/TheCompany_Security_Officer_Male_Idle.png'
+import VeteranImage from './home/characters/TheCompany_Security_Veteran_Female-_Idle.png'
 import Gameplay__1 from './gameplay/icon__1.png'
 import Gameplay__2 from './gameplay/icon__2.png'
 import Gameplay__3 from './gameplay/icon__3.png'
@@ -48,6 +66,24 @@ export {
 	Elite,
 	Elite_M,
 	Veteran,
+	CrabmanImage,
+	OctopusImage,
+	SharkmanImage,
+	BearmanImage,
+	WolfmanImage,
+	Worffman_MImage,
+	OfficerImage,
+	EaglemanImage,
+	InterImage,
+	ColonelImage,
+	MasterImage,
+	TraineeImage,
+	Trainee_MImage,
+	AssistantImage,
+	ProfessorImage,
+	EliteImage,
+	Elite_MImage,
+	VeteranImage,
 	Gameplay__1,
 	Gameplay__2,
 	Gameplay__3,

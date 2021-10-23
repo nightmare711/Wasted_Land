@@ -122,4 +122,7 @@
         bottom:0;
         left:0;
     }
+    .banner-home .banner-content {
+        bottom:100px;
+    }
  }
