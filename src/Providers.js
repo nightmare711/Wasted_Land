@@ -16,7 +16,7 @@ function Providers({ children }) {
 	const [count, setCount] = React.useState(0)
 	return (
 		<UseWalletProvider
-			chainId={parseInt(97)}
+			chainId={parseInt(56)}
 			connectors={{
 				walletconnect: { rpcUrl },
 				bsc,

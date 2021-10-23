@@ -47,7 +47,7 @@ export const AccountDetail = () => {
 					</div>
 					<div className='flex flex-col text-end'>
 						<span className='text-lg'>{parseFloat(balance).toFixed(2)}</span>
-						<span className='font-normal'>$23232</span>
+						{/* <span className='font-normal'>$0</span> */}
 					</div>
 				</div>
 				<div className='flex flex-row mt-8 text-sm'>

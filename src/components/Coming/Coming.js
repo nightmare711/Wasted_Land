@@ -9,7 +9,7 @@ export const Coming = () => {
 			<img onLoad={() => onMoveAnimation('pre-loading', 'moveOutOpacity')} src={Logo} alt='Logo' />
 			<span className='title'>Coming soon</span>
 			<span className='subtitle'>
-				Our token $WAL will be released soon, make you check out our Discord server and Airdrop
+				Our token $WAL will be released soon, make sure you check out our Discord server and Airdrop
 				Campaign below.
 			</span>
 			<div className='flex flex-row btn-container'>

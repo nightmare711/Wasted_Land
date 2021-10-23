@@ -288,7 +288,7 @@ export const Characters = () => {
 										<span className='mt-2 faction__description'>
 											{factionDescription[activeFaction].description}
 										</span>
-										<Link to='/marketplace'>
+										<Link to='/summon-warriors'>
 											<div className='mt-14 btn-primary'>
 												<div className='btn-primary_hover'>
 													<img src={Btn_Hover} alt='Shadow' />

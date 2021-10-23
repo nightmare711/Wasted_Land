@@ -1,7 +1,7 @@
 import random from 'lodash/random'
-import { BSC_TESTNET_1, BSC_TESTNET_2, BSC_TESTNET_3 } from 'constants/rpc'
+import { REACT_APP_NODE_1, REACT_APP_NODE_2, REACT_APP_NODE_3 } from 'constants/rpc'
 
-const nodes = [BSC_TESTNET_1, BSC_TESTNET_2, BSC_TESTNET_3]
+const nodes = [REACT_APP_NODE_1, REACT_APP_NODE_2, REACT_APP_NODE_3]
 
 export const getNodeUrl = () => {
 	const randomIndex = random(0, nodes.length - 1)

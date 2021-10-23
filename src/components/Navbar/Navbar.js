@@ -21,7 +21,7 @@ export const Navbar = () => {
 					</Link>
 					<ul className='list-nav'>
 						<li className='nav-link'>
-							<Link to='/buy-token'>Buy WAL</Link>
+							<Link to='/buy-token'>Buy $WAL</Link>
 						</li>
 						<li className='nav-link'>
 							<Link to='/summon-warriors'>Summon Warriors</Link>

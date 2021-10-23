@@ -8,7 +8,7 @@ export const useGetBalance = () => {
 	React.useEffect(() => {
 		if (window.ethereum?.selectedAddress) {
 			web3.eth.getBalance(window.ethereum.selectedAddress, (err, balance) => {
-				setBalance(web3.utils.fromWei(balance))
+				setBalance(web3.utils.fromWei(web3.utils.toBN(parseInt(balance))))
 			})
 		}
 	})
