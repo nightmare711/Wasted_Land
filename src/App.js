@@ -26,7 +26,6 @@ const WhitePaper = React.lazy(() => import('./pages/WhitePaper/WhitePaper'))
 function App() {
 	useHideMessage()
 	useShowButtonScroll()
-	const location = useLocation()
 	return (
 		<React.Suspense fallback={<PreLoading />}>
 			<ScrollButton />
