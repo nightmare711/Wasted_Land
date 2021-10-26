@@ -45,7 +45,7 @@ function App() {
 				<Route component={HomePage} path='/' exact />
 				<Route component={ComingPage} />
 			</Switch>
-			{location.pathname !== '/gallery' ? <Footer /> : null}
+			<Footer />
 		</React.Suspense>
 	)
 }
