@@ -1,0 +1,26 @@
+.header-text {
+    position: fixed;
+    top:65px;
+    left:0;
+    width:100vw;
+    z-index: 100;
+    background: #DECFC0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 15px;
+    padding:10px;
+    text-align: center;
+}
+.header-text .title {
+    font-weight: 600;
+    color: #2C1B05;
+}
+.header-text svg {
+    font-size: 15px;
+}
+.header-text  .subtitle a {
+    color: #b14c12;
+    font-weight: 600;
+}

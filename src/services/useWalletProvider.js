@@ -115,7 +115,7 @@ export const useCheckAccountActive = () => {
 	const [account, setAccount] = React.useState('')
 	const wallet = useWallet()
 	React.useEffect(() => {
-		if (wallet.status === 'connected' || wallet.status === 'error') {
+		if (wallet.status === 'connected') {
 			setAccount(window.ethereum.selectedAddress)
 		} else if (connector.connected) {
 			setAccount(connector.accounts[0])

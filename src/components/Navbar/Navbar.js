@@ -44,8 +44,11 @@ export const Navbar = () => {
 											window.open('https://the-wasted-lands.gitbook.io/the-wasted-lands/', '_blank')
 										}
 									>
-										White paper
+										Gitbook
 									</li>
+									<Link to='/white-paper'>
+										<li>White paper</li>
+									</Link>
 								</ul>
 							</div>
 						</li>

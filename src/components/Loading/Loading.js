@@ -4,8 +4,9 @@ import LoadingGif from 'assets/loading.gif'
 export const Loading = () => {
 	return (
 		<div
+			style={{ zIndex: 10000000 }}
 			id='loading'
-			className='fixed inset-0 z-50 flex items-center justify-center invisible w-screen h-screen text-white opacity-0 '
+			className='fixed inset-0 flex items-center justify-center invisible w-screen h-screen text-white opacity-0 '
 		>
 			<div className='overlay'></div>
 			<div

@@ -119,7 +119,7 @@ const tokenomics = [
 	{
 		allocation: 'Seed Sale',
 		percentage: 4,
-		amount: '40,000,000',
+		amount: '4,000,000',
 		price: 0.1,
 		raiseValue: '400,000',
 		vesting: '8% on TGE, then monthly unlock in 10 months',
@@ -127,7 +127,7 @@ const tokenomics = [
 	{
 		allocation: 'Private Sale',
 		percentage: 11,
-		amount: '110,000,000',
+		amount: '11,000,000',
 		price: 0.12,
 		raiseValue: '1,320,000',
 		vesting: '10% on TGE, then monthly unlock in 8 months',
@@ -135,7 +135,7 @@ const tokenomics = [
 	{
 		allocation: 'Public Sale',
 		percentage: 2,
-		amount: '20,000,000',
+		amount: '2,000,000',
 		price: 0.15,
 		raiseValue: '300,000',
 		vesting: '25% on TGE, then monthly unlock in 2 months',
@@ -143,7 +143,7 @@ const tokenomics = [
 	{
 		allocation: 'Team',
 		percentage: 10,
-		amount: '100,000,000',
+		amount: '10,000,000',
 		price: '',
 		raiseValue: '',
 		vesting: '1 year full locked, then 10% monthly',
@@ -151,7 +151,7 @@ const tokenomics = [
 	{
 		allocation: 'Advisors',
 		percentage: 5,
-		amount: '50,000,000',
+		amount: '5,000,000',
 		price: '',
 		raiseValue: '',
 		vesting: '1 year full locked, then 10% monthly',
@@ -159,7 +159,7 @@ const tokenomics = [
 	{
 		allocation: 'Liquidity',
 		percentage: 4,
-		amount: '40,000,000',
+		amount: '4,000,000',
 		price: '',
 		raiseValue: '',
 		vesting: '1 year full locked',
@@ -167,7 +167,7 @@ const tokenomics = [
 	{
 		allocation: 'Treasury',
 		percentage: 30,
-		amount: '300,000,000',
+		amount: '30,000,000',
 		price: '',
 		raiseValue: '',
 		vesting: '1 month full locked, then 5% monthly',
@@ -175,7 +175,7 @@ const tokenomics = [
 	{
 		allocation: 'Marketing',
 		percentage: 16,
-		amount: '160,000,000',
+		amount: '16,000,000',
 		price: '',
 		raiseValue: '',
 		vesting: '1 month full locked, then 5% monthly',
@@ -183,10 +183,18 @@ const tokenomics = [
 	{
 		allocation: 'Development',
 		percentage: 18,
-		amount: '180,000,000',
+		amount: '18,000,000',
 		price: '',
 		raiseValue: '',
 		vesting: '1 month full locked, then 5% monthly',
+	},
+	{
+		allocation: 'Total Supply',
+		percentage: 100,
+		amount: '100,000,000',
+		price: '',
+		raiseValue: '',
+		vesting: '',
 	},
 ]
 
