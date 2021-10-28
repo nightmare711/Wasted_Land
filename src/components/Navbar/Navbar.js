@@ -49,6 +49,9 @@ export const Navbar = () => {
 									<Link to='/white-paper'>
 										<li>White paper</li>
 									</Link>
+									<Link to='/gallery'>
+										<li>Gallery</li>
+									</Link>
 								</ul>
 							</div>
 						</li>

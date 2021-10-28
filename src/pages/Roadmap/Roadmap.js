@@ -30,7 +30,7 @@ const Members = [
 		profile: [
 			'CEO at E-lite Limited - Casual and Hyper-casual Mobile Game Studio.',
 			'Ex-CMO at Zitga Mobile Game Vietnam.',
-			'Leader game development at Amanotes - Successful launch Magic Tiles 3 and Tiles Hop, which are now having more than 500M downloads on IOS and Android.',
+			'Leader game publishing at Amanotes - Successfully launched Magic Tiles 3 and Tiles Hop, which are now having 500M+ downloads on iOS and android.',
 		],
 	},
 	{
@@ -57,7 +57,7 @@ const Members = [
 		position: 'CTO',
 		profile: [
 			'CTO at E-lite Limited.',
-			'10 years+ exp in Technical Lead and CTO for Gameloft: Modern Combat, Dungeon Hunter, Asphalt, BlackStar, TOH Game.',
+			'10 years+ exp in Technical Lead and CTO for Gameloft (Modern Combat, Dungeon Hunter, Asphalt... ), BlackStar and TOH Game.',
 		],
 	},
 	{
