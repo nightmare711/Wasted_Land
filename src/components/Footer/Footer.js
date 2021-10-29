@@ -30,12 +30,7 @@ export const Footer = () => {
 							<Link className='content' to='/about-us'>
 								Our Team
 							</Link>
-							<a
-								className='content'
-								href='https://the-wasted-lands.gitbook.io/the-wasted-lands/'
-								target='_blank'
-								rel='noreferrer'
-							>
+							<a className='content' href='/white-paper'>
 								White Paper
 							</a>
 						</div>

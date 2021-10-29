@@ -60,6 +60,7 @@ const toggleVisibility = () => {
 	const btn = document.querySelector('#btn-scroll')
 	if (window.pageYOffset > 300) {
 		btn.style.transform = 'translateY(0)'
+		onMoveAnimation('header-text', 'moveOutOpacity')
 	} else {
 		btn.style.transform = 'translateY(200px)'
 	}

@@ -15,12 +15,18 @@ export const MenuList = () => {
 				<Link to='/summon-warriors'>
 					<div className='item'>Summon Warriors</div>
 				</Link>
+				<Link to='/gallery'>
+					<div className='item'>Gallery</div>
+				</Link>
+				<Link to='/gallery'>
+					<div className='item'>White Paper</div>
+				</Link>
 				<a
 					href='https://the-wasted-lands.gitbook.io/the-wasted-lands/'
 					target='_blank'
 					rel='noreferrer'
 				>
-					<div className='item'>White paper</div>
+					<div className='item'>Gitbook</div>
 				</a>
 				<Link to='/about-us'>
 					<div className='item'>About Us</div>

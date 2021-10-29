@@ -168,10 +168,10 @@
     width: 100%;
 }
 .footer-social .part.part__1 {
-    flex:1.5;
+    flex:1.2;
 }
 .footer-social .part.part__4 {
-    flex:0.5;
+    flex:0.8;
 }
 .footer-social .part {
     flex:1;
@@ -184,7 +184,7 @@
 
 }
 .footer-social .container-social__2 {
-    flex:2;
+    flex:1.8;
 }
 .footer-social .part.part__1 .content  {
     margin-top:10px;

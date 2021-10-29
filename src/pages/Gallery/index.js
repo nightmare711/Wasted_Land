@@ -14,6 +14,7 @@ import {
 	Art11,
 	Art12,
 } from 'assets/gallery'
+import ArrowButton from 'assets/home/arrow_button.png'
 import { onMoveAnimation } from 'services/useDevelopUI'
 import './Gallery.css'
 
@@ -58,6 +59,9 @@ const galleryInfo = [
 
 export const Gallery = () => {
 	const [activeBox, setActiveBox] = React.useState(0)
+	React.useEffect(() => {
+		document.querySelector('#overlay-gallery').focus()
+	}, [])
 	return (
 		<div className='flex items-center justify-center gallery'>
 			<div
@@ -71,6 +75,30 @@ export const Gallery = () => {
 					<CloseIcon />
 				</div>
 				<div className='overlay'></div>
+				<img
+					onClick={() => {
+						if (activeBox >= 1) {
+							setActiveBox(activeBox - 1)
+						} else {
+							setActiveBox(galleryInfo.length - 1)
+						}
+					}}
+					className='btn-arrow'
+					src={ArrowButton}
+					alt='Arrow Button'
+				/>
+				<img
+					onClick={() => {
+						if (activeBox < galleryInfo.length - 1) {
+							setActiveBox(activeBox + 1)
+						} else {
+							setActiveBox(0)
+						}
+					}}
+					className=' btn__right'
+					src={ArrowButton}
+					alt='Arrow Button'
+				/>
 				<img className='main__image' src={galleryInfo[activeBox].mainImage} alt='Art1' />
 			</div>
 			<div className='max-w-screen-xl'>
