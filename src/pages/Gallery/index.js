@@ -58,6 +58,25 @@ const galleryInfo = [
 ]
 
 export const Gallery = () => {
+	const handerKeyPress = (e) => {
+		if (e.keyCode === 37) {
+			if (activeBox >= 1) {
+				setActiveBox(activeBox - 1)
+			} else {
+				setActiveBox(galleryInfo.length - 1)
+			}
+		}
+		if (e.keyCode === 39) {
+			if (activeBox < galleryInfo.length - 1) {
+				setActiveBox(activeBox + 1)
+			} else {
+				setActiveBox(0)
+			}
+		}
+		if (e.keyCode === 27) {
+			onMoveAnimation('overlay-gallery', 'moveOutOpacity')
+		}
+	}
 	const [activeBox, setActiveBox] = React.useState(0)
 	React.useEffect(() => {
 		document.querySelector('#overlay-gallery').focus()
@@ -65,6 +84,8 @@ export const Gallery = () => {
 	return (
 		<div className='flex items-center justify-center gallery'>
 			<div
+				onKeyDown={handerKeyPress}
+				tabIndex='0'
 				id='overlay-gallery'
 				className='flex flex-col items-center justify-center gallery__detail'
 			>
@@ -109,6 +130,9 @@ export const Gallery = () => {
 							onClick={() => {
 								setActiveBox(index)
 								onMoveAnimation('overlay-gallery', 'moveInOpacity')
+								setTimeout(() => {
+									document.querySelector('#overlay-gallery').focus()
+								}, 300)
 							}}
 							onLoad={() => onMoveAnimation('pre-loading', 'moveOutOpacity')}
 							key={index}
