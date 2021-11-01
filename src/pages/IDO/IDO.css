@@ -7,6 +7,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-repeat: no-repeat;
 }
 .ido-page .ido-bottom .ido-content {
     padding: 100px;
@@ -36,4 +37,26 @@
     transform:translate(50%, -50%);
     width:300px;
 }
-
+@media only screen and (max-width: 1200px){
+    .ido-page .ido-bottom .ido-content{
+        padding: 60px;
+        width: 75%;
+        margin: 120px 0px;
+    }
+    .ido-page .ido-bottom{
+        background-attachment: fixed;
+        background-size: auto 100vh;
+    }
+    .ido-page .ido-bottom .ido-content .ido-axe {
+        width: 200px;
+    }
+}
+@media only screen and (max-width: 560px){
+    .ido-page .ido-bottom .ido-content .ido-axe{
+        width: 120px;
+    }
+    .ido-page .ido-bottom .ido-content{
+        width: 80%;
+        margin: 50px 0px;
+    }
+}
