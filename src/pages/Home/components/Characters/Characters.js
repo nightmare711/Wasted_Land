@@ -321,7 +321,7 @@ export const Characters = () => {
 										<Slider {...settings}>
 											{factionDescription[activeFaction].characters.map((character, index) => (
 												<div key={index} className='character-container'>
-													{window.innerWidth > 450 ? (
+													{window.innerWidth > 850 ? (
 														<video
 															loop
 															muted

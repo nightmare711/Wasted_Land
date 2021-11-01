@@ -18,7 +18,7 @@ export const MenuList = () => {
 				<Link to='/gallery'>
 					<div className='item'>Gallery</div>
 				</Link>
-				<Link to='/gallery'>
+				<Link to='/white-paper'>
 					<div className='item'>White Paper</div>
 				</Link>
 				<a

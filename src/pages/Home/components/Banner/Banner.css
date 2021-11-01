@@ -71,13 +71,32 @@
 .banner-home .btn-primary {
     filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.8));
 }
-
-@media only screen and (max-width: 750px) {
-    .banner-home .banner-content h1  {
-        letter-spacing: 0.4em;
+@media only screen and (max-width: 850px) {
+    .banner-home .banner__gradient {
+        position: absolute;
+        z-index: 1;
+        bottom:0;
+        left:0;
+    }
+    .banner-home .banner__container {
+        overflow: hidden;
+        height:fit-content;
+        position: relative;
     }
     .banner-home .banner-content {
-        bottom:70px;
+        bottom:100px;
+    }
+}
+@media only screen and (max-width: 750px) {
+    
+    .banner-home .banner__gradient {
+        position: absolute;
+        z-index: 1;
+        bottom:0;
+        left:0;
+    }
+    .banner-home .banner-content {
+        bottom:100px;
     }
 }
 @media only screen and (max-width: 560px) {

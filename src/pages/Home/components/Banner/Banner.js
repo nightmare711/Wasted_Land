@@ -11,7 +11,7 @@ export const Banner = () => {
 	return (
 		<div className='banner-home section'>
 			<div className='banner__container'>
-				{window.innerWidth > 450 ? (
+				{window.innerWidth > 850 ? (
 					<video
 						onLoadedData={() => onMoveAnimation('pre-loading', 'moveOutOpacity')}
 						loop
