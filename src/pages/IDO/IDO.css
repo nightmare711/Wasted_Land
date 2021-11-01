@@ -1,0 +1,39 @@
+.ido-page {
+    margin-top:65px;
+}
+.ido-page .ido-bottom {
+    background: url('../../assets/ido/bg_bottom.jpeg');
+    background-size: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ido-page .ido-bottom .ido-content {
+    padding: 100px;
+    background: url('../../assets/ido/paper.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    margin: 120px 0px;;
+
+}
+.ido-page .ido-bottom .ido-content .title {
+    font-size: 50px;
+    font-weight: 600;
+    font-family: 'Chakra Petch';
+    letter-spacing: 10px;
+
+}
+.ido-page .ido-bottom .ido-content .ido-axe {
+    position: absolute;
+    top:0;
+    right:0;
+    transform:translate(50%, -50%);
+    width:300px;
+}
+

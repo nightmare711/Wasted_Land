@@ -23,6 +23,7 @@ const ComingPage = React.lazy(() => import('./components/Coming/Coming'))
 const ComingBuyPage = React.lazy(() => import('./components/Coming/ComingBuy'))
 const WhitePaper = React.lazy(() => import('./pages/WhitePaper/WhitePaper'))
 const Quests = React.lazy(() => import('./pages/Quests/Quests'))
+const IDOPage = React.lazy(() => import('./pages/IDO'))
 
 function App() {
 	useHideMessage()
@@ -45,6 +46,7 @@ function App() {
 				<Route component={RoadmapPage} path='/about-us' exact />
 				<Route component={HomePage} path='/' exact />
 				<Route component={Quests} exact path='/quests' />
+				<Route component={IDOPage} exact path='/ido-page' />
 				<Route component={ComingPage} />
 			</Switch>
 			<Footer />
