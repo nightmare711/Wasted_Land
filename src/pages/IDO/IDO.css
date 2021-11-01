@@ -1,16 +1,30 @@
 .ido-page {
     margin-top:65px;
 }
+.ido-page .banner {
+    width:100vw;
+}
 .ido-page .ido-bottom {
-    background: url('../../assets/ido/bg_bottom.jpeg');
     background-size: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
     background-repeat: no-repeat;
+    position:relative;
+}
+.ido-page .ido-bottom .bg-bottom {
+    width:100vw;
+}
+.ido-page .ido-bottom  .ido-container {
+    position:absolute;
+    top:0%;
+    left:50%;
+    transform: translateX(-50%);
+    height: 100%;
 }
 .ido-page .ido-bottom .ido-content {
     padding: 100px;
+    max-height: 850px;;
     background: url('../../assets/ido/paper.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -19,8 +33,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height:65%;
     width: 70%;
-    margin: 120px 0px;;
 
 }
 .ido-page .ido-bottom .ido-content .title {
@@ -30,14 +44,73 @@
     letter-spacing: 10px;
 
 }
+.ido-page .ido-bottom .ido-content .content {
+    display: block;
+    height:85%;
+    overflow-y: auto;
+}
 .ido-page .ido-bottom .ido-content .ido-axe {
     position: absolute;
     top:0;
     right:0;
-    transform:translate(50%, -50%);
+    transform:translate(20%, -20%);
     width:300px;
 }
-@media only screen and (max-width: 1200px){
+@media only screen and (max-width: 1050px){
+    .ido-page .ido-bottom .ido-content {
+        padding: 100px;
+        height:85%;
+        width: 80%;
+    
+    }
+    .ido-page .ido-bottom .ido-content .ido-axe {
+        width:200px;
+    }
+    .ido-page .ido-bottom .ido-content .title {
+        font-size: 35px;
+        letter-spacing: 5px;
+    
+    }
+    .ido-page .ido-bottom .ido-content .content { 
+        font-size: 15px;
+    }
+}
+@media only screen and (max-width: 750px){
+    .ido-page .ido-bottom .ido-content {
+        padding:50px ;
+    }
+}
+@media only screen and (max-width: 560px){
+    .ido-page .ido-bottom .ido-content .ido-axe {
+        width:100px;
+    }
+    .ido-page .ido-bottom .ido-content {
+        padding:15px 40px ;
+    }
+    .ido-page .ido-bottom .ido-content .title {
+        font-size: 25px;
+        letter-spacing: 5px;
+    
+    }
+    .ido-page .ido-bottom .ido-content .content { 
+        font-size: 12px;
+    }
+    .ido-page .ido-bottom .btn-container {
+        margin-top:10px;
+    }
+    .ido-page .ido-bottom .btn-container .btn-primary {
+        width:100px;
+    }
+    .ido-page .ido-bottom .btn-container .btn-secondary {
+        width:100px;
+    }
+}
+@media only screen and (max-width: 420px){ 
+    .ido-page .ido-bottom .ido-content {
+        padding:15px 30px ;
+    }
+}
+/* @media only screen and (max-width: 1200px){
     .ido-page .ido-bottom .ido-content{
         padding: 60px;
         width: 75%;
@@ -58,4 +131,4 @@
         width: 80%;
         margin: 50px 0px;
     }
-}
+} */

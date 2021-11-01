@@ -1,19 +1,34 @@
 import React from 'react'
-import { Banner, Axe } from 'assets/ido'
+import { Banner, Axe, BannerPoster, Bg_Bottom } from 'assets/ido'
 import { onMoveAnimation } from 'services/useDevelopUI'
 import './IDO.css'
 
 export const IDOPage = () => {
 	return (
 		<div className='ido-page'>
-			<img
-				onLoad={() => onMoveAnimation('pre-loading', 'moveOutOpacity')}
-				className='banner'
-				src={Banner}
-				alt='Banner'
-			/>
+			{window.innerWidth > 850 ? (
+				<video
+					className='banner'
+					onLoadedData={() => onMoveAnimation('pre-loading', 'moveOutOpacity')}
+					loop
+					muted
+					autoPlay
+					playsInline
+					type='video/mp4'
+					src={Banner}
+					poster={BannerPoster}
+				/>
+			) : (
+				<img
+					className='banner'
+					onLoad={() => onMoveAnimation('pre-loading', 'moveOutOpacity')}
+					src={BannerPoster}
+					alt='Banner'
+				/>
+			)}
 			<div className='flex items-center justify-center ido-bottom'>
-				<div className='flex items-center justify-center w-full max-w-screen-xl'>
+				<img className='bg-bottom' src={Bg_Bottom} alt='Background' />
+				<div className='flex items-center justify-center w-full max-w-screen-xl ido-container'>
 					<div className='w-full ido-content'>
 						<img className='ido-axe' src={Axe} alt='Axe' />
 						<span className='title'>IDO Page</span>
@@ -41,6 +56,10 @@ export const IDOPage = () => {
 							uncover many web sites still in their infancy. Various versions have evolved over the
 							years, sometimes by accident, sometimes on purpose (injected humour and the like).
 						</span>
+						<div className='btn-container flex flex-row mt-8'>
+							<div className='mr-4 btn-primary'>Join Us</div>
+							<div className='btn-secondary'>Join Airdrop</div>
+						</div>
 					</div>
 				</div>
 			</div>
