@@ -1,6 +1,8 @@
 import React from 'react'
 import { Banner, Axe, BannerPoster, Bg_Bottom } from 'assets/ido'
+import { OBJModel, DirectionLight } from 'react-3d-viewer'
 import { onMoveAnimation } from 'services/useDevelopUI'
+import Obj from 'assets/ido/WLCoin.obj'
 import './IDO.css'
 
 export const IDOPage = () => {
@@ -26,6 +28,21 @@ export const IDOPage = () => {
 					alt='Banner'
 				/>
 			)}
+			<OBJModel
+				width='1000'
+				height='1000'
+				position={{ x: 0, y: 0, z: 0 }}
+				src={Obj}
+				onLoad={() => {
+					console.log('Loading')
+				}}
+				onProgress={(xhr) => {
+					console.log('Loaded')
+				}}
+			>
+				<DirectionLight color={0xffffff} />
+				<DirectionLight position={{ x: 180, y: 100, z: 100 }} color={0xffffff} />
+			</OBJModel>
 			<div className='flex items-center justify-center ido-bottom'>
 				<img className='bg-bottom' src={Bg_Bottom} alt='Background' />
 				<div className='flex items-center justify-center w-full max-w-screen-xl ido-container'>
@@ -56,7 +73,7 @@ export const IDOPage = () => {
 							uncover many web sites still in their infancy. Various versions have evolved over the
 							years, sometimes by accident, sometimes on purpose (injected humour and the like).
 						</span>
-						<div className='btn-container flex flex-row mt-8'>
+						<div className='flex flex-row mt-8 btn-container'>
 							<div className='mr-4 btn-primary'>Join Us</div>
 							<div className='btn-secondary'>Join Airdrop</div>
 						</div>
