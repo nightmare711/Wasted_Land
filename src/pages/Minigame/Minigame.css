@@ -1,0 +1,40 @@
+.minigame{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../../assets/minigame/menu/_bg.png');
+}
+.minigame .btn-prev{
+    width: 101px;
+    height: 75px;
+    background-image: url(../../assets/minigame/menu/btn_prev.png);
+}
+.minigame .minigame-card .mission-icon{
+    width: 253px;
+    height: 291px;
+    background-image: url('../../assets//minigame/menu/icon_mission.png');
+}
+.minigame .minigame-card .market-icon{
+    width: 253px;
+    height: 291px;
+    background-image: url('../../assets//minigame/menu/icon_market.png');
+}
+.minigame .minigame-card .warrior-icon{
+    width: 253px;
+    height: 291px;
+    background-image: url('../../assets//minigame/menu/icon_warrior.png');
+}
+.minigame .minigame-card .btn-mission {
+    width: 260px;
+    height: 80px;
+    background-image: url('../../assets/minigame/menu/button_mission.png');
+}
+.minigame .minigame-card .btn-market {
+    width: 260px;
+    height: 80px;
+    background-image: url('../../assets/minigame/menu/button_market.png');
+}
+.minigame .minigame-card .btn-warrior{
+    width: 260px;
+    height: 80px;
+    background-image: url('../../assets/minigame/menu/button_warrior.png');
+}

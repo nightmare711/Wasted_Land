@@ -1,0 +1,10 @@
+root[0]/btn_back[8],69.5,1024.5,101,75
+root[0]/title_worldmap[7]/text_worldmap[1],965.5,1006,379,34
+root[0]/title_worldmap[7]/title_sprite[0],956.5,1006.5,547,137
+root[0]/text_city_3[6],1620.5,459,267,38
+root[0]/City_3[5],1619.5,546.5,213,217
+root[0]/text_city_2[4],702.5,641,125,38
+root[0]/City_2[3],701.5,728,213,218
+root[0]/text_city_1[2],363,324,212,38
+root[0]/City_1[1],363.5,412,213,218
+root[0]/world_maps[0],960,540,1920,1080
