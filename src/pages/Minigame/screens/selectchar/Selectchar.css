@@ -1,0 +1,39 @@
+.selectchar-container{
+    width: 100vw;
+    height: 100vh;
+    background: url('../../../../assets/minigame/selecthero/_bg.png');
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+    grid-gap: 20px;
+    overflow-y: scroll;
+    padding-top: 20px;
+    background-size: cover;
+}
+.selectchar-container .selectchar-plate{
+    width: 300px;
+    height: 400px;
+    background-image: url('../../../../assets/minigame/selecthero/panel_hero.png'),url('../../../../assets/minigame/selecthero/hero.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.selectchar-container .selectchar-plate .btn-pick-char{
+    width: 176px;
+    height: 68px;
+    background-image: url('../../../../assets/minigame/selecthero/button_pick.png');
+    bottom: 0;
+    left: 50%;
+    transform:translateX(-50%);
+}
+.selectchar-container .selectchar-plate  .iconleft{
+    width: 40px;
+    height: 40px;
+    bottom: 18px;
+    left: 10px;
+    background-image: url('../../../../assets/minigame/selecthero/Icon_Class_Farmer.png');
+    background-size: contain;
+}
+.selectchar-container .btn-prev{
+    width: 101px;
+    height: 75px;
+    background-image: url('../../../../assets/minigame/selectmission/btn_back.png');
+}

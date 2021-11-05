@@ -1,0 +1,29 @@
+.mission-plate-slot{
+    width: 136px;
+    height: 168px;
+    background-image: url('../../../assets/minigame/selectmission/plate_slot_char.png');
+}
+
+.mission-btn-go{
+    width: 196px;
+    height: 68px;
+    background-image: url('../../../assets/minigame/selectmission/button_go.png');
+}
+.mission-plate-slot .mission-icon{
+    width: 48px;
+    height: 55px;
+    background-image: url('../../../assets/minigame/selectmission/icon_coin.png');
+    position: absolute;
+    bottom: 0px;
+}
+.mission-plate-slot .mission-character{
+    width: 136px;
+    height: 168px;
+    background: url('../../../assets/minigame/selectmission/char.png') no-repeat center ;
+}
+
+.mission-plate-slot .mission-add-char{
+    width: 136px;
+    height: 168px;
+    background: url('../../../assets/minigame/selectmission/icon_add.png') center no-repeat
+}

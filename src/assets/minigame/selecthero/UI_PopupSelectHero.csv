@@ -1,0 +1,98 @@
+root[1]/Pack8[9]/Speed[7]/6886[1],1638,144.5,72,17
+root[1]/Pack8[9]/Speed[7]/icon_Speed[0],1569,145,32,38
+root[1]/Pack8[9]/Int[6]/6886 [1],1470,144.5,72,17
+root[1]/Pack8[9]/Int[6]/icon_Int[0],1404,145,32,38
+root[1]/Pack8[9]/Dmg[5]/6886 [1],1638,187.5,72,17
+root[1]/Pack8[9]/Dmg[5]/icon_Dmg[0],1569,188,32,38
+root[1]/Pack8[9]/Health[4]/6886 [1],1470,187.5,72,17
+root[1]/Pack8[9]/Health[4]/icon_Health[0],1404,188,32,38
+root[1]/Pack8[9]/Button_Pick[3],1527,74,176,68
+root[1]/Pack8[9]/Icon_Class_Security[2],1388,75.5,50,49
+root[1]/Pack8[9]/Panel_Hero[1],1526.5,269,351,472
+root[1]/Pack8[9]/Hero[0],1527.5,269,331,426
+root[1]/Pack7[8]/Speed[7]/6886[1],1260,144.5,72,17
+root[1]/Pack7[8]/Speed[7]/icon_Speed[0],1191,145,32,38
+root[1]/Pack7[8]/Int[6]/6886 [1],1092,144.5,72,17
+root[1]/Pack7[8]/Int[6]/icon_Int[0],1026,145,32,38
+root[1]/Pack7[8]/Dmg[5]/6886 [1],1260,187.5,72,17
+root[1]/Pack7[8]/Dmg[5]/icon_Dmg[0],1191,188,32,38
+root[1]/Pack7[8]/Health[4]/6886 [1],1092,187.5,72,17
+root[1]/Pack7[8]/Health[4]/icon_Health[0],1026,188,32,38
+root[1]/Pack7[8]/Button_Pick[3],1149,74,176,68
+root[1]/Pack7[8]/Icon_Class_Security[2],1010,75.5,50,49
+root[1]/Pack7[8]/Panel_Hero[1],1148.5,269,351,472
+root[1]/Pack7[8]/Hero[0],1149.5,269,331,426
+root[1]/Pack6[7]/Speed[7]/6886[1],882,144.5,72,17
+root[1]/Pack6[7]/Speed[7]/icon_Speed[0],813,145,32,38
+root[1]/Pack6[7]/Int[6]/6886 [1],714,144.5,72,17
+root[1]/Pack6[7]/Int[6]/icon_Int[0],648,145,32,38
+root[1]/Pack6[7]/Dmg[5]/6886 [1],882,187.5,72,17
+root[1]/Pack6[7]/Dmg[5]/icon_Dmg[0],813,188,32,38
+root[1]/Pack6[7]/Health[4]/6886 [1],714,187.5,72,17
+root[1]/Pack6[7]/Health[4]/icon_Health[0],648,188,32,38
+root[1]/Pack6[7]/Button_Pick[3],771,74,176,68
+root[1]/Pack6[7]/Icon_Class_Security[2],632,75.5,50,49
+root[1]/Pack6[7]/Panel_Hero[1],770.5,269,351,472
+root[1]/Pack6[7]/Hero[0],771.5,269,331,426
+root[1]/Pack5[6]/Speed[7]/6886[1],504,144.5,72,17
+root[1]/Pack5[6]/Speed[7]/icon_Speed[0],435,145,32,38
+root[1]/Pack5[6]/Int[6]/6886 [1],336,144.5,72,17
+root[1]/Pack5[6]/Int[6]/icon_Int[0],270,145,32,38
+root[1]/Pack5[6]/Dmg[5]/6886 [1],504,187.5,72,17
+root[1]/Pack5[6]/Dmg[5]/icon_Dmg[0],435,188,32,38
+root[1]/Pack5[6]/Health[4]/6886 [1],336,187.5,72,17
+root[1]/Pack5[6]/Health[4]/icon_Health[0],270,188,32,38
+root[1]/Pack5[6]/Button_Pick[3],393,74,176,68
+root[1]/Pack5[6]/Icon_Class_Security[2],254,75.5,50,49
+root[1]/Pack5[6]/Panel_Hero[1],392.5,269,351,472
+root[1]/Pack5[6]/Hero[0],393.5,269,331,426
+root[1]/Pack4[5]/Speed[7]/6886[1],1638,642.5,72,17
+root[1]/Pack4[5]/Speed[7]/icon_Speed[0],1569,643,32,38
+root[1]/Pack4[5]/Int[6]/6886 [1],1470,642.5,72,17
+root[1]/Pack4[5]/Int[6]/icon_Int[0],1404,643,32,38
+root[1]/Pack4[5]/Dmg[5]/6886 [1],1638,685.5,72,17
+root[1]/Pack4[5]/Dmg[5]/icon_Dmg[0],1569,686,32,38
+root[1]/Pack4[5]/Health[4]/6886 [1],1470,685.5,72,17
+root[1]/Pack4[5]/Health[4]/icon_Health[0],1404,686,32,38
+root[1]/Pack4[5]/Button_Pick[3],1527,572,176,68
+root[1]/Pack4[5]/Icon_Class_Security[2],1388,573.5,50,49
+root[1]/Pack4[5]/Panel_Hero[1],1526.5,767,351,472
+root[1]/Pack4[5]/Hero[0],1527.5,767,331,426
+root[1]/Pack3[4]/Speed[7]/6886[1],1260,642.5,72,17
+root[1]/Pack3[4]/Speed[7]/icon_Speed[0],1191,643,32,38
+root[1]/Pack3[4]/Int[6]/6886 [1],1092,642.5,72,17
+root[1]/Pack3[4]/Int[6]/icon_Int[0],1026,643,32,38
+root[1]/Pack3[4]/Dmg[5]/6886 [1],1260,685.5,72,17
+root[1]/Pack3[4]/Dmg[5]/icon_Dmg[0],1191,686,32,38
+root[1]/Pack3[4]/Health[4]/6886 [1],1092,685.5,72,17
+root[1]/Pack3[4]/Health[4]/icon_Health[0],1026,686,32,38
+root[1]/Pack3[4]/Button_Pick[3],1149,572,176,68
+root[1]/Pack3[4]/Icon_Class_Security[2],1010,573.5,50,49
+root[1]/Pack3[4]/Panel_Hero[1],1148.5,767,351,472
+root[1]/Pack3[4]/Hero[0],1149.5,767,331,426
+root[1]/Pack2[3]/Speed[7]/6886[1],882,642.5,72,17
+root[1]/Pack2[3]/Speed[7]/icon_Speed[0],813,643,32,38
+root[1]/Pack2[3]/Int[6]/6886 [1],714,642.5,72,17
+root[1]/Pack2[3]/Int[6]/icon_Int[0],648,643,32,38
+root[1]/Pack2[3]/Dmg[5]/6886 [1],882,685.5,72,17
+root[1]/Pack2[3]/Dmg[5]/icon_Dmg[0],813,686,32,38
+root[1]/Pack2[3]/Health[4]/6886 [1],714,685.5,72,17
+root[1]/Pack2[3]/Health[4]/icon_Health[0],648,686,32,38
+root[1]/Pack2[3]/Icon_Class_Security[3],632,573.5,50,49
+root[1]/Pack2[3]/Button_Pick[2],771,572,176,68
+root[1]/Pack2[3]/Panel_Hero[1],770.5,767,351,472
+root[1]/Pack2[3]/Hero[0],770.5,767,331,426
+root[1]/Pack1[2]/Speed[7]/6886[1],504,642.5,72,17
+root[1]/Pack1[2]/Speed[7]/icon_Speed[0],435,643,32,38
+root[1]/Pack1[2]/Int[6]/6886 [1],336,642.5,72,17
+root[1]/Pack1[2]/Int[6]/icon_Int[0],270,643,32,38
+root[1]/Pack1[2]/Dmg[5]/6886 [1],504,685.5,72,17
+root[1]/Pack1[2]/Dmg[5]/icon_Dmg[0],435,686,32,38
+root[1]/Pack1[2]/Health[4]/6886 [1],336,685.5,72,17
+root[1]/Pack1[2]/Health[4]/icon_Health[0],270,686,32,38
+root[1]/Pack1[2]/Button_Pick[3],393,572,176,68
+root[1]/Pack1[2]/Icon_Class_Security[2],254,573.5,50,49
+root[1]/Pack1[2]/Panel_Hero[1],392.5,767,351,472
+root[1]/Pack1[2]/Hero[0],392.5,767,331,426
+root[1]/btn_back[1],69.5,1024.5,101,75
+root[1]/_BG[0],960,540,1920,1080

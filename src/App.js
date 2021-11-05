@@ -24,13 +24,15 @@ const ComingBuyPage = React.lazy(() => import('./components/Coming/ComingBuy'))
 const WhitePaper = React.lazy(() => import('./pages/WhitePaper/WhitePaper'))
 const Quests = React.lazy(() => import('./pages/Quests/Quests'))
 const IDOPage = React.lazy(() => import('./pages/IDO'))
+const MiniGame = React.lazy(() => import('./pages/Minigame'))
 
 function App() {
 	useHideMessage()
 	useShowButtonScroll()
 	return (
 		<React.Suspense fallback={<PreLoading />}>
-			<ScrollButton />
+			<Route component={MiniGame} path='/minigame' exact />
+			{/* <ScrollButton />
 			<AccountDetail />
 			<PreLoading />
 			<ListMessage />
@@ -49,7 +51,7 @@ function App() {
 				<Route component={IDOPage} exact path='/ido-page' />
 				<Route component={ComingPage} />
 			</Switch>
-			<Footer />
+			<Footer /> */}
 		</React.Suspense>
 	)
 }

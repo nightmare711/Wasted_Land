@@ -120,4 +120,12 @@
   ::-webkit-scrollbar-thumb:hover {
     background: #e2b43f; 
   }
+
+  /* minigame-css */
+  .btn-primary-minigame{
+    transition: transform .2s;
+  }
+  .btn-primary-minigame:hover{
+    transform: scale(1.1);
+  }
   

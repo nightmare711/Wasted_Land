@@ -1,0 +1,29 @@
+.modal-confirm-container {
+    width: 100%;
+    height: 100%;
+    background-image: url('../../../assets/minigame/popuprerollmission/Layer_opacity.png');
+    position: relative;
+}
+.modal-confirm-container .modal-confirm-popup{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 874px;
+    height: 398px;
+    background-image: url('../../../assets/minigame/popuprerollmission/pop-up_panel.png');
+}
+.modal-confirm-container .modal-confirm-popup .modal__info{
+    font-size: 28px;
+    margin-top: 125px;
+}
+.modal-confirm-container .modal-confirm-popup .confirm__btn-yes{
+    width: 232px;
+    height: 80px;
+    background-image: url('../../../assets/minigame/popuprerollmission/button_yes.png');
+}
+.modal-confirm-container .modal-confirm-popup .confirm__btn-no{
+    width: 232px;
+    height: 80px;
+    background-image: url('../../../assets/minigame/popuprerollmission/button_no.png');
+}

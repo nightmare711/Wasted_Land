@@ -1,0 +1,41 @@
+.selectfight-container{
+    width: 100vw;
+    height: 100vh;
+    background: url('../../../../assets/minigame/selecthero/_bg.png');
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    justify-content: center;
+    grid-gap: 20px;
+    padding-top: 20px;
+    background-size: cover;
+}
+.selectfight-container .selectfight-plate{
+    width: 744px;
+    height: 292px;
+    background-image: url('../../../../assets/minigame/fightslot/pop-up_panel.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.selectfight-container .selectfight-plate .selectfight-iconslot{
+    width: 144px;
+    height: 118px;
+    background-image: url('../../../../assets/minigame/fightslot/panel_slot.png');
+    background-repeat: no-repeat;
+}
+.selectfight-container .selectfight-plate .selectfight-iconslot .selectfight-slottiltle{
+    font-size: 35px;
+}
+.selectfight-container .selectfight-plate .selectfight-iconslot .selectfight-slot{
+    font-size: 35px;
+}
+.selectfight-container .selectfight-plate .btn-fight{
+    width: 142px;
+    height: 49px;
+    background-image: url('../../../../assets/minigame/fightslot/button_fight.png');
+    background-repeat: no-repeat;
+}
+.selectfight-container .btn-prev{
+    width: 101px;
+    height: 75px;
+    background-image: url('../../../../assets/minigame/selectmission/btn_back.png');
+}

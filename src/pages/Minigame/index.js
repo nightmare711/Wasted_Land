@@ -1,31 +1,36 @@
 import React from 'react'
+import MissionScreen from './screens/mission'
+import StartScreen from './screens/start'
+
 import './Minigame.css'
+import SelectChar from './screens/selectchar'
+import SelectMap from './screens/selectmap'
+import { useGetMinigameData } from 'queries/useMinigame.query'
+import SelectFight from './screens/selectfight'
+
 /**
  * @author
  * @function MiniGame
  **/
 
 export const MiniGame = (props) => {
+	const { data: minigameData } = useGetMinigameData()
 	return (
-		<div>
-			<div className='minigame flex flex-col items-center'>
-				<div className='btn-primary fixed top-5 left-5 btn-prev'></div>
-				<div className='w-full max-w-screen-xl h-full'>
-					<div className=' flex  items-center justify-between h-full px-40'>
-						<div className='minigame-card flex flex-col'>
-							<div className='mission-icon mb-3'></div>
-							<div className='btn-primary btn-mission'></div>
-						</div>
-						<div className='minigame-card'>
-							<div className='market-icon mb-3'></div>
-							<div className='btn-primary btn-market'></div>
-						</div>
-						<div className='minigame-card'>
-							<div className='warrior-icon mb-3'></div>
-							<div className='btn-primary btn-warrior'></div>
-						</div>
-					</div>
-				</div>
+		<div className='minigame w-full h-full'>
+			<div className=''>
+				<StartScreen />
+			</div>
+			<div id='overlay-missionscreen' className='overlay'>
+				<MissionScreen minigameData={minigameData} />
+			</div>
+			<div id='overlay-selectcharscreen' className='overlay'>
+				<SelectChar />
+			</div>
+			<div id='overlay-selectmapscreen' className='overlay'>
+				<SelectMap minigameData={minigameData} />
+			</div>
+			<div id='overlay-selectfightscreen' className='overlay'>
+				<SelectFight />
 			</div>
 		</div>
 	)

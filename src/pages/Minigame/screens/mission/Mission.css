@@ -1,0 +1,125 @@
+.mission-screen{
+    top:50%;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../../../../assets/minigame/selectmission/_bg.png');
+    background-size: cover;
+}
+.mission-screen .modal-reroll{
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 874px;
+    height: 398px;
+    background-image: url('../../../../assets/minigame/popuprerollmission/pop-up_panel.png');
+}
+.mission-screen .modal-reroll .reroll__info{
+    font-size: 28px;
+    margin-top: 125px;
+}
+.mission-screen .modal-reroll .reroll__btn-yes{
+    width: 232px;
+    height: 80px;
+    background-image: url('../../../../assets/minigame/popuprerollmission/button_yes.png');
+}
+.mission-screen .modal-reroll .reroll__btn-no{
+    width: 232px;
+    height: 80px;
+    background-image: url('../../../../assets/minigame/popuprerollmission/button_no.png');
+}
+.mission-screen .btn-prev{
+    width: 101px;
+    height: 75px;
+    background-image: url('../../../../assets/minigame/selectmission/btn_back.png');
+}
+.mission-screen .mission-txt{
+    font-size: 30px;
+}
+.mission-screen .mission-screen__container .tiltle{
+    font-size: 47px;
+    color: white;
+    width: 547px;
+    height: 137px;
+    background-image: url('../../../../assets/minigame/selectmission/title_sprite.png');
+    background-repeat: no-repeat ;
+    background-size: contain;
+    position: relative;
+}
+.mission-screen .mission-screen__container .tiltle span{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.mission-screen .mission-screen__container .mission-screen__reroll .btn-reroll{
+    width: 260px;
+    height: 80px;
+    background-image:  url('../../../../assets/minigame/selectmission/button_reroll.png');
+}
+.mission-screen .mission-screen__container .reroll-cost{
+    width: 145px;
+    height: 24px;
+    background: url('../../../../assets/minigame/selectmission/txt_500_wl.png') no-repeat center;
+}
+.mission-screen .mission-screen__container .mission-card .mission-pannel{
+    width: 425px;
+    height: 386px;
+    
+}
+.mission-screen .mission-screen__container .mission-card .mission-level-S{
+    background: url('../../../../assets/minigame/selectmission/missionpanel_s.png');
+}
+.mission-screen .mission-screen__container .mission-card .mission-level-D{
+    background: url('../../../../assets/minigame/selectmission/missionpanel_d.png');
+}
+.mission-screen .mission-screen__container .mission-card .mission-level-A{
+    background-image: url('../../../../assets/minigame/selectmission/missionpanel_c.png');
+}
+.mission-screen .mission-screen__container .mission-card .mission-pannel .mission-name{
+    font-size: 30px;
+    position: absolute;
+    top: 25px;
+    text-align: center;
+    left: 0px;
+    right: 0px;
+}
+.mission-screen .mission-screen__container .mission-card .mission-pannel .mission-req{
+    position: absolute;
+    top: 300px;
+    left: 25px;
+}
+.mission-screen .mission-screen__container .mission-card .mission-pannel .mission-rate{
+    position: absolute;
+    top: 300px;
+    right: 15px;
+}
+
+.mission-screen .mission-screen__container .mission-card .mission-plate-slot{
+    width: 136px;
+    height: 168px;
+    background-image: url('../../../../assets/minigame/selectmission/plate_slot_char.png');
+}
+
+.mission-screen .mission-screen__container .mission-card .mission-btn-go{
+    width: 196px;
+    height: 68px;
+    background-image: url('../../../../assets/minigame/selectmission/button_go.png');
+}
+.mission-screen .mission-screen__container .mission-card .mission-plate-slot .mission-icon{
+    width: 48px;
+    height: 55px;
+    background-image: url('../../../../assets/minigame/selectmission/icon_coin.png');
+    position: absolute;
+    bottom: 0px;
+}
+.mission-screen .mission-screen__container .mission-card .mission-plate-slot .mission-character{
+    width: 136px;
+    height: 168px;
+    background: url('../../../../assets/minigame/selectmission/char.png') no-repeat center ;
+}
+
+.mission-screen .mission-screen__container .mission-card .mission-plate-slot .mission-add-char{
+    width: 136px;
+    height: 168px;
+    background: url('../../../../assets/minigame/selectmission/icon_add.png') center no-repeat
+}

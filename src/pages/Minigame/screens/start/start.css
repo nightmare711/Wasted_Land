@@ -1,58 +1,43 @@
-.start-screen{
+.start{
     width: 100vw;
     height: 100vh;
-    background-image: url('../../../../assets/minigame/selectmission/_bg.png');
+    background-image: url('../../../../assets/minigame/menu/_bg.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
-.start-screen .btn-prev{
+.start .btn-prev{
     width: 101px;
     height: 75px;
-    background-image: url('../../../../assets/minigame/selectmission/btn_back.png');
+    background-image: url('../../../../assets/minigame/menu/btn_prev.png');
 }
-.start-screen .start-screen__container .tiltle{
-    width: 547px;
-    height: 137px;
-    background-image: url('../../../../assets/minigame/selectmission/text_mission.png'), url('../../../../assets/minigame/selectmission/title_sprite.png');
-    background-repeat: no-repeat  no-repeat;
-    background-position: center center;
+.start .start-card .mission-icon{
+    max-width: 253px;
+    height: 291px;
+    background-image: url('../../../../assets//minigame/menu/icon_mission.png');
+    background-size: contain;
 }
-
-.start-screen .start-screen__container .start-screen__reroll .btn-reroll{
+.start .start-card .market-icon{
+    width: 253px;
+    height: 291px;
+    background-image: url('../../../../assets//minigame/menu/icon_market.png');
+}
+.start .start-card .warrior-icon{
+    width: 253px;
+    height: 291px;
+    background-image: url('../../../../assets//minigame/menu/icon_warrior.png');
+}
+.start .start-card .btn-mission {
     width: 260px;
     height: 80px;
-    background-image:  url('../../../../assets/minigame/selectmission/button_reroll.png');
+    background-image: url('../../../../assets/minigame/menu/button_mission.png');
 }
-.start-screen .start-screen__container .reroll-cost{
-    width: 145px;
-    height: 24px;
-    background: url('../../../../assets/minigame/selectmission/txt_500_wl.png') no-repeat center;
+.start .start-card .btn-market {
+    width: 260px;
+    height: 80px;
+    background-image: url('../../../../assets/minigame/menu/button_market.png');
 }
-.start-screen .start-screen__container .mission-card .mission-pannel{
-    width: 425px;
-    height: 386px;
-    background: url('../../../../assets/minigame/selectmission/missionpanel_s.png');
-}
-.start-screen .start-screen__container .mission-card .mission-pannel .mission-name{
-    width: 341px;
-    height: 20px;
-    position: absolute;
-    left: 50%;
-    top: 36px;
-    background-image: url('../../../../assets/minigame/selectmission/title_missionname.png');
-    transform: translateX(-50%);
-}
-.start-screen .start-screen__container .mission-card .mission-pannel .mission-req{
-    width: 110px;
-    height: 55px;
-    position: absolute;
-    top: 300px;
-    left: 25px;
-    background-image: url('../../../../assets/minigame/selectmission/title_missionreq.png');
-}
-.start-screen .start-screen__container .mission-card .mission-pannel .mission-rate{
-    width: 110px;
-    height: 55px;
-    position: absolute;
-    top: 300px;
-    right: -30px;
-    background: url('../../../../assets/minigame/selectmission/txt_rate.png') no-repeat;
+.start .start-card .btn-warrior{
+    width: 260px;
+    height: 80px;
+    background-image: url('../../../../assets/minigame/menu/button_warrior.png');
 }

@@ -1,0 +1,28 @@
+.selectmap-screen{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../../../../assets/minigame/worldmap/world_maps.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.selectmap-screen .worldmap{
+    color: white;
+    font-size: 28px;
+}
+.selectmap-screen .btn-prev{
+    width: 101px;
+    height: 75px;
+    background-image: url('../../../../assets/minigame/selectmission/btn_back.png');
+}
+.selectmap-screen .map-1{
+    top: 50%;
+    left: 13%;
+}
+.selectmap-screen .map-2{
+    top: 20%;
+    left: 30%;
+}
+.selectmap-screen .map-3{
+    top: 40%;
+    right: 13%;
+}

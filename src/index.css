@@ -45,3 +45,7 @@ code {
   tablet-small: 560px;
   mobile: 320px;
 */
+@font-face {
+  font-family: 'Squares Bold';
+  src: local('Squares Bold'), url(./assets/minigame/fonts/Squares\ Bold\ Free.otf) format('truetype');
+}
