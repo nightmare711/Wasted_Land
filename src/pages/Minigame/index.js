@@ -14,6 +14,20 @@ import SelectFight from './screens/selectfight'
  **/
 
 export const MiniGame = (props) => {
+	const playeraddress = '0x320CA81698b298A4Fb25192d57F967395462FCb8'
+	const [activeSlot, setActiveSlot] = React.useState(0)
+	const [arrSlot, setArrSlot] = React.useState([
+		{ type: 'mission-add-char', level: '', icon: '', id: '' },
+		{ type: 'mission-add-char', level: '', icon: '', id: '' },
+		{ type: 'mission-add-char', level: '', icon: '', id: '' },
+		{ type: 'mission-add-char', level: '', icon: '', id: '' },
+		{ type: 'mission-add-char', level: '', icon: '', id: '' },
+		{ type: 'mission-add-char', level: '', icon: '', id: '' },
+		{ type: 'mission-add-char', level: '', icon: '', id: '' },
+		{ type: 'mission-add-char', level: '', icon: '', id: '' },
+		{ type: 'mission-add-char', level: '', icon: '', id: '' },
+	])
+	const [activeCity, setActiveCity] = React.useState('3')
 	const { data: minigameData } = useGetMinigameData()
 	return (
 		<div className='minigame w-full h-full'>
@@ -21,16 +35,26 @@ export const MiniGame = (props) => {
 				<StartScreen />
 			</div>
 			<div id='overlay-missionscreen' className='overlay'>
-				<MissionScreen minigameData={minigameData} />
+				<MissionScreen
+					minigameData={minigameData}
+					setActiveSlot={setActiveSlot}
+					arrSlot={arrSlot}
+					playeraddress={playeraddress}
+				/>
 			</div>
 			<div id='overlay-selectcharscreen' className='overlay'>
-				<SelectChar />
+				<SelectChar
+					activeSlot={activeSlot}
+					setArrSlot={setArrSlot}
+					arrSlot={arrSlot}
+					playeraddress='0x320CA81698b298A4Fb25192d57F967395462FCb8'
+				/>
 			</div>
 			<div id='overlay-selectmapscreen' className='overlay'>
-				<SelectMap minigameData={minigameData} />
+				<SelectMap minigameData={minigameData} setActiveCity={setActiveCity} />
 			</div>
 			<div id='overlay-selectfightscreen' className='overlay'>
-				<SelectFight />
+				<SelectFight activeCity={activeCity} />
 			</div>
 		</div>
 	)

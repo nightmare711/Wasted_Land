@@ -12,16 +12,16 @@ import ConfirmModal from 'pages/Minigame/components/ConfirmModal'
  **/
 
 export const SelectMap = (props) => {
-	const { minigameData } = props
+	const { minigameData, setActiveCity } = props
 	return (
 		<div className='selectmap-screen relative'>
 			<ConfirmModal
 				modal_id='overlay-confirm-map'
-				todo1={() => {
-					console.log('TODOMap')
+				todoYes={() => {
+					onMoveAnimation('overlay-selectfightscreen', 'moveInOpacity')
 				}}
 			>
-				PAY 50 WLP TO REROLL THE MISSION
+				GO TO CENTRAL CITY FOR MISSION?
 			</ConfirmModal>
 			<div
 				className='btn-primary-minigame fixed top-5 left-5 btn-prev'
@@ -52,6 +52,7 @@ export const SelectMap = (props) => {
 							<div
 								className={`worldmap btn-primary-minigame map-${city.cityId} absolute flex flex-col items-center`}
 								onClick={() => {
+									setActiveCity(city.cityId)
 									onMoveAnimation('overlay-confirm-map', 'moveInOpacity')
 								}}
 							>

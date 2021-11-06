@@ -18,7 +18,7 @@ export const ConfirmModal = (props) => {
 					<div
 						className='btn-primary-minigame confirm__btn-yes mr-7'
 						onClick={() => {
-							onMoveAnimation('overlay-selectfightscreen', 'moveInOpacity')
+							onMoveAnimation(`${modal_id}`, 'moveOutOpacity')
 							if (todoYes) todoYes()
 						}}
 					></div>

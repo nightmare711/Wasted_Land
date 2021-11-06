@@ -15,6 +15,10 @@ export const StartScreen = (props) => {
 				<div className='btn-primary-minigame fixed top-5 left-5 btn-prev'></div>
 				<div className='w-full max-w-screen-xl h-full'>
 					<div className=' flex  items-center justify-between h-full px-40'>
+						<div className='start-card'>
+							<div className='market-icon mb-3'></div>
+							<div className='btn-primary-minigame btn-market'></div>
+						</div>
 						<div className='start-card flex flex-col'>
 							<div className='mission-icon mb-3'></div>
 							<div
@@ -23,10 +27,6 @@ export const StartScreen = (props) => {
 									onMoveAnimation('overlay-missionscreen', 'moveInOpacity')
 								}}
 							></div>
-						</div>
-						<div className='start-card'>
-							<div className='market-icon mb-3'></div>
-							<div className='btn-primary-minigame btn-market'></div>
 						</div>
 						<div className='start-card'>
 							<div className='warrior-icon mb-3'></div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { useQuery } from 'react-query'
+import { useQuery, useMutation } from 'react-query'
 import { TEST_API } from 'constants/api'
 
 export const useGetMinigameData = () => {
@@ -21,12 +21,34 @@ export const useGetPlayerData = (address) => {
 			})
 	})
 }
-
-export const useGetRerollMission = (address) => {
-	fetch(TEST_API + `/api/v1/minigame/reroll?address=${address}`)
-		.then((response) => response.json())
-		.then((data) => {
-			return data.data
-		})
-		.catch((err) => console.error(err))
+export const useGetPlayerHero = (address) => {
+	return useQuery('useGetPlayerHero', () => {
+		return fetch(TEST_API + `/api/v1//hero/own_by?owner=${address}`)
+			.then((res) => res.json())
+			.then((result) => {
+				return result.data
+			})
+	})
 }
+
+export const useGetCitySlots = (cityId, slotSize, slotPage) => {
+	return useQuery('useGetCitySlots', () => {
+		return fetch(
+			TEST_API + `/api/v1//minigame/city_slots/${cityId}?size=${slotSize}&page=${slotPage}`
+		)
+			.then((res) => res.json())
+			.then((result) => {
+				return result.data
+			})
+	})
+}
+
+// export const useGetRerollMission = (address) => {
+// 	return useMutation((address) => {
+// 		return fetch(TEST_API + `/api/v1/minigame/player_data?address=${address}`)
+// 			.then((res) => res.json())
+// 			.then((result) => {
+// 				return result.data
+// 			})
+// 	})
+// }

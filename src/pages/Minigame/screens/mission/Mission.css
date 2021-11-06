@@ -72,7 +72,7 @@
 .mission-screen .mission-screen__container .mission-card .mission-level-D{
     background: url('../../../../assets/minigame/selectmission/missionpanel_d.png');
 }
-.mission-screen .mission-screen__container .mission-card .mission-level-A{
+.mission-screen .mission-screen__container .mission-card .mission-level-A , .mission-level-C, .mission-level-B{
     background-image: url('../../../../assets/minigame/selectmission/missionpanel_c.png');
 }
 .mission-screen .mission-screen__container .mission-card .mission-pannel .mission-name{

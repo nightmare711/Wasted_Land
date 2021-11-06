@@ -31,8 +31,8 @@ function App() {
 	useShowButtonScroll()
 	return (
 		<React.Suspense fallback={<PreLoading />}>
-			<Route component={MiniGame} path='/minigame' exact />
-			{/* <ScrollButton />
+			{/* <Route component={MiniGame} path='/minigame' exact /> */}
+			<ScrollButton />
 			<AccountDetail />
 			<PreLoading />
 			<ListMessage />
@@ -51,7 +51,7 @@ function App() {
 				<Route component={IDOPage} exact path='/ido-page' />
 				<Route component={ComingPage} />
 			</Switch>
-			<Footer /> */}
+			<Footer />
 		</React.Suspense>
 	)
 }

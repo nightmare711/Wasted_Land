@@ -5,9 +5,53 @@
     grid-template-columns: auto auto;
     grid-template-rows: auto auto auto;
     justify-content: center;
-    grid-gap: 20px;
-    padding-top: 20px;
+    grid-gap: 10px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     background-size: cover;
+}
+.selectfight-screen .selectfight-pagination{
+    width: 640px;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+}
+.selectfight-screen .selectfight-pagination .left-control .btn-prev-page{
+    width: 18px;
+    height: 33px;
+    background-image: url('../../../../assets/minigame/fightslot/icon_prev.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 5px;
+}
+.selectfight-screen .selectfight-pagination .left-control .btn-prevend-page{
+    width: 31px;
+    height: 33px;
+    background-image: url('../../../../assets/minigame/fightslot/icon_prevend.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.selectfight-screen .selectfight-pagination .right-control .btn-next-page{
+    width: 18px;
+    height: 33px;
+    background-image: url('../../../../assets/minigame/fightslot/icon_next.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 5px;
+}
+.selectfight-screen .selectfight-pagination .right-control .btn-nextend-page{
+    width: 31px;
+    height: 33px;
+    background-image: url('../../../../assets/minigame/fightslot/icon_nextend.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.selectfight-screen .selectfight-pagination .selectfight-page .page-icon{
+    width: 16px;
+    height: 13px;
+    background-image: url('../../../../assets/minigame/fightslot/dot1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 .selectfight-container .selectfight-plate{
     width: 744px;
@@ -38,4 +82,8 @@
     width: 101px;
     height: 75px;
     background-image: url('../../../../assets/minigame/selectmission/btn_back.png');
+}
+
+.page-active .page-icon{
+    background-image: url('../../../../assets/minigame/fightslot/dot3.png') !important;
 }

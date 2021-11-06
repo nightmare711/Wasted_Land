@@ -1,14 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Mission.css'
 import { onMoveAnimation } from 'services/useDevelopUI'
 import ConfirmModal from 'pages/Minigame/components/ConfirmModal'
 import PlateSlot from 'pages/Minigame/components/PlateSlot'
-import {
-	useGetPlayerData,
-	useGetMinigameData,
-	useGetRerollMission,
-} from 'queries/useMinigame.query'
-import { ConstructionOutlined, HelpOutline } from '@mui/icons-material'
+import { useGetPlayerData } from 'queries/useMinigame.query'
+import { useMutation } from 'react-query'
 
 /**
  * @author
@@ -16,15 +12,41 @@ import { ConstructionOutlined, HelpOutline } from '@mui/icons-material'
  **/
 
 export const MissionScreen = (props) => {
-	const { minigameData } = props
-	const playeraddress = '0xfffff90a30f83c5ca60b3c088213ad6a9b0bc4ec'
-	const { data: playerdata } = useGetPlayerData(playeraddress)
+	const [rerollCount, setRerollCount] = useState(0)
+	const objToString = (obj) => {
+		for (const [key, value] of Object.entries(obj)) {
+			return <span>{`${value} ${key}`}</span>
+		}
+	}
+	React.useEffect(() => {
+		refetchPlayerData()
+	}, [rerollCount])
+	const mutation = useMutation((address) => {
+		console.log('heeloo')
+		return fetch(`https://test.thewastedlands.io/api/v1/minigame/reroll?address=${address}`)
+			.then((res) => res.json())
+			.then((result) => {
+				return result.data
+			})
+	})
+
+	const { minigameData, setActiveSlot, arrSlot, playeraddress } = props
+	const { data: playerdata, refetch: refetchPlayerData } = useGetPlayerData(playeraddress)
 	return (
 		<div className='mission-screen flex flex-col items-center'>
-			<ConfirmModal modal_id='overlay-reroll'>PAY 50 WLP TO REROLL THE MISSION</ConfirmModal>
+			<ConfirmModal
+				modal_id='overlay-reroll'
+				todoYes={() => {
+					mutation.mutate(playeraddress)
+					setRerollCount(rerollCount + 1)
+				}}
+			>
+				PAY 50 WLP TO REROLL THE MISSION
+			</ConfirmModal>
 			<div
 				className='btn-primary-minigame fixed top-5 left-5 btn-prev'
 				onClick={() => {
+					setActiveSlot(1)
 					onMoveAnimation('overlay-missionscreen', 'moveOutOpacity')
 				}}
 			></div>
@@ -41,37 +63,38 @@ export const MissionScreen = (props) => {
 						{minigameData && playerdata
 							? minigameData.mini_missions
 									.filter((miss) => playerdata.mission_data.missions.indexOf(miss.id) > -1)
-									.map((mis) => {
-										console.log(mis)
+									.map((mis, key) => {
 										return (
-											<div className='mission-card flex flex-col items-center justify-between'>
+											<div
+												key={key}
+												className='mission-card flex flex-col items-center justify-between'
+											>
 												<div className={`mission-pannel relative mission-level-${mis.level}`}>
 													<div className='mission-name'>{mis.mission_type}</div>
-													<div className='mission-req '>{JSON.stringify(mis.requirements)}</div>
+													<div className='mission-req flex flex-col '>
+														<span>REQUIREMENTS</span>
+														{objToString(mis.requirements)}
+													</div>
 													<div className='mission-rate'></div>
 												</div>
 												<div className='flex'>
-													<div className='mission-plate-slot flex relative'>
-														<div className='mission-character'></div>
-														<div className='mission-icon'></div>
-														<div className='mission-level'></div>
-													</div>
-													<div className='mission-plate-slot flex relative'>
-														<div
-															className='btn-primary-minigame mission-add-char'
-															onClick={() => {
-																onMoveAnimation('overlay-missionscreen', 'moveOutOpacity')
-																onMoveAnimation('overlay-selectcharscreen', 'moveInOpacity')
-															}}
-														></div>
-														<div className='mission-icon'></div>
-														<div className='mission-level'></div>
-													</div>
-													<div className='mission-plate-slot flex relative'>
-														<div className='mission-character'></div>
-														<div className='mission-icon'></div>
-														<div className='mission-level'></div>
-													</div>
+													{arrSlot.slice(key * 3, key * 3 + 3).map((sl, keysl) => {
+														return (
+															<div className='mission-plate-slot flex relative'>
+																<div
+																	className={`btn-primary-minigame ${sl.type} absolute -top-4 -right-1`}
+																	onClick={() => {
+																		setActiveSlot(key * 3 + keysl)
+																		onMoveAnimation('overlay-selectcharscreen', 'moveInOpacity')
+																	}}
+																></div>
+																<div className='mission-icon'></div>
+																<div className='mission-level text-white absolute bottom-3 left-0 right-0  text-center'>
+																	{sl.level}
+																</div>
+															</div>
+														)
+													})}
 												</div>
 												<div
 													className='btn-primary-minigame mission-btn-go'
