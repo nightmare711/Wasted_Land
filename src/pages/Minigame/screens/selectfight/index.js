@@ -22,9 +22,11 @@ export const SelectFight = (props) => {
 		refetchCitySlot()
 		setCurrentPage(0)
 		setWherePoint(1)
+		// eslint-disable-next-line
 	}, [activeCity])
 	React.useEffect(() => {
 		refetchCitySlot()
+		// eslint-disable-next-line
 	}, [currentPage])
 	return (
 		<div className='selectfight-screen  justify-center items-center relative'>

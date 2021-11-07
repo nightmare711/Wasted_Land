@@ -1,7 +1,6 @@
 import React from 'react'
 import './Start.css'
 import { onMoveAnimation } from 'services/useDevelopUI'
-import img1 from '../../../../assets/minigame/popuprerollmission/pop-up_panel.png'
 
 /**
  * @author

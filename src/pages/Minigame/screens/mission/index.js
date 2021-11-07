@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import './Mission.css'
 import { onMoveAnimation } from 'services/useDevelopUI'
 import ConfirmModal from 'pages/Minigame/components/ConfirmModal'
-import PlateSlot from 'pages/Minigame/components/PlateSlot'
 import { useGetPlayerData } from 'queries/useMinigame.query'
 import { useMutation } from 'react-query'
 
@@ -18,9 +17,7 @@ export const MissionScreen = (props) => {
 			return <span>{`${value} ${key}`}</span>
 		}
 	}
-	React.useEffect(() => {
-		refetchPlayerData()
-	}, [rerollCount])
+
 	const mutation = useMutation((address) => {
 		console.log('heeloo')
 		return fetch(`https://test.thewastedlands.io/api/v1/minigame/reroll?address=${address}`)
@@ -32,6 +29,10 @@ export const MissionScreen = (props) => {
 
 	const { minigameData, setActiveSlot, arrSlot, playeraddress } = props
 	const { data: playerdata, refetch: refetchPlayerData } = useGetPlayerData(playeraddress)
+	React.useEffect(() => {
+		refetchPlayerData()
+		// eslint-disable-next-line
+	}, [rerollCount])
 	return (
 		<div className='mission-screen flex flex-col items-center'>
 			<ConfirmModal

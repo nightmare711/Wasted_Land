@@ -1,5 +1,4 @@
-import React from 'react'
-import { useQuery, useMutation } from 'react-query'
+import { useQuery } from 'react-query'
 import { TEST_API } from 'constants/api'
 
 export const useGetMinigameData = () => {

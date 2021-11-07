@@ -1,7 +1,6 @@
 import React from 'react'
 import './ConfirmModal.css'
 import { onMoveAnimation } from 'services/useDevelopUI'
-import { useGetRerollMission } from 'queries/useMinigame.query'
 
 /**
  * @author

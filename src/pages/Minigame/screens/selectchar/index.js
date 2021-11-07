@@ -8,7 +8,7 @@ import { useGetPlayerHero } from 'queries/useMinigame.query'
  **/
 
 export const SelectChar = (props) => {
-	const { activeSlot, setArrSlot, arrSlot, playeraddress } = props
+	const { activeSlot, setArrSlot, arrSlot } = props
 	const { data: playerHero, isSuccess: getHeroSuccess } = useGetPlayerHero(
 		'0x320CA81698b298A4Fb25192d57F967395462FCb8'
 	)
