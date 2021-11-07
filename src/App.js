@@ -1,6 +1,6 @@
 import React from 'react'
 import {
-	Navbar,
+	// Navbar,
 	Connect,
 	Loading,
 	ListMessage,
@@ -31,17 +31,17 @@ function App() {
 	useShowButtonScroll()
 	return (
 		<React.Suspense fallback={<PreLoading />}>
-			<Route component={MiniGame} path='/minigame' exact />
 			<ScrollButton />
 			<AccountDetail />
-			<PreLoading />
+			{/* <PreLoading /> */}
 			<ListMessage />
 			<Loading />
 			<MenuList />
-			<Navbar />
+			{/* <Navbar /> */}
 			<Connect />
 			<HeaderText />
 			<Switch>
+				<Route component={MiniGame} path='/minigame' exact />
 				<Route component={GalleryPage} path='/gallery' exact />
 				<Route component={WhitePaper} path='/white-paper' exact />
 				<Route component={ComingBuyPage} path='/summon-warriors' exact />

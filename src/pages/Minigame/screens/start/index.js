@@ -1,5 +1,5 @@
 import React from 'react'
-import './Start.css'
+import './start.css'
 import { onMoveAnimation } from 'services/useDevelopUI'
 
 /**
@@ -10,16 +10,16 @@ import { onMoveAnimation } from 'services/useDevelopUI'
 export const StartScreen = (props) => {
 	return (
 		<div>
-			<div className='start flex flex-col items-center'>
-				<div className='btn-primary-minigame fixed top-5 left-5 btn-prev'></div>
-				<div className='w-full max-w-screen-xl h-full'>
-					<div className=' flex  items-center justify-between h-full px-40'>
+			<div className='flex flex-col items-center start'>
+				<div className='fixed btn-primary-minigame top-5 left-5 btn-prev'></div>
+				<div className='w-full h-full max-w-screen-xl'>
+					<div className='flex items-center justify-between h-full px-40 '>
 						<div className='start-card'>
-							<div className='market-icon mb-3'></div>
+							<div className='mb-3 market-icon'></div>
 							<div className='btn-primary-minigame btn-market'></div>
 						</div>
-						<div className='start-card flex flex-col'>
-							<div className='mission-icon mb-3'></div>
+						<div className='flex flex-col start-card'>
+							<div className='mb-3 mission-icon'></div>
 							<div
 								className='btn-primary-minigame btn-mission'
 								onClick={() => {
@@ -28,7 +28,7 @@ export const StartScreen = (props) => {
 							></div>
 						</div>
 						<div className='start-card'>
-							<div className='warrior-icon mb-3'></div>
+							<div className='mb-3 warrior-icon'></div>
 							<div className='btn-primary-minigame btn-warrior'></div>
 						</div>
 					</div>
