@@ -31,7 +31,7 @@ function App() {
 	useShowButtonScroll()
 	return (
 		<React.Suspense fallback={<PreLoading />}>
-			{/* <Route component={MiniGame} path='/minigame' exact /> */}
+			<Route component={MiniGame} path='/minigame' exact />
 			<ScrollButton />
 			<AccountDetail />
 			<PreLoading />
