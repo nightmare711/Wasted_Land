@@ -23,10 +23,10 @@ export const SelectChar = (props) => {
 					}}
 				></div>
 				{getHeroSuccess
-					? playerHero.heroes.map((slot) => {
+					? playerHero.heroes.map((slot, key) => {
 							let heroId = slot.id
 							return (
-								<div className='selectchar-plate relative'>
+								<div key={key} className='selectchar-plate relative'>
 									<div className='iconleft absolute'></div>
 									<div>
 										<div></div>

@@ -80,7 +80,7 @@ export const MissionScreen = (props) => {
 												<div className='flex'>
 													{arrSlot.slice(key * 3, key * 3 + 3).map((sl, keysl) => {
 														return (
-															<div className='mission-plate-slot flex relative'>
+															<div key={keysl} className='mission-plate-slot flex relative'>
 																<div
 																	className={`btn-primary-minigame ${sl.type} absolute -top-4 -right-1`}
 																	onClick={() => {

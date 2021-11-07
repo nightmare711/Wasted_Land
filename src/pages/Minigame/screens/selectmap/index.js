@@ -31,7 +31,7 @@ export const SelectMap = (props) => {
 				}}
 			></div>
 			{minigameData
-				? minigameData.cities.map((city) => {
+				? minigameData.cities.map((city, key) => {
 						let cit = city1
 						switch (city.name_code) {
 							case 'A':
@@ -50,6 +50,7 @@ export const SelectMap = (props) => {
 						}
 						return (
 							<div
+								key={key}
 								className={`worldmap btn-primary-minigame map-${city.cityId} absolute flex flex-col items-center`}
 								onClick={() => {
 									setActiveCity(city.cityId)

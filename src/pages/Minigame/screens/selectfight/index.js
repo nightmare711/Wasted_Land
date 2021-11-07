@@ -36,9 +36,9 @@ export const SelectFight = (props) => {
 					}}
 				></div>
 				{getCiTyListSuccess
-					? cityListSlot.slots.map((slot) => {
+					? cityListSlot.slots.map((slot, key) => {
 							return (
-								<div className='selectfight-plate relative flex flex-col items-center'>
+								<div key={key} className='selectfight-plate relative flex flex-col items-center'>
 									<div className='plate-top flex justify-around w-full p-5 h-3/4'>
 										<div className=' flex flex-col justify-between'>
 											<div className='selectfight-iconslot'>
