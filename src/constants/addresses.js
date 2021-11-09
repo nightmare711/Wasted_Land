@@ -1,1 +1,1 @@
-export const BSC_TESTNET = '0xe8ec6906c40b2f89edaf026b36d8edeccd6e6ee1'
+export const BSC_TESTNET = '0x29684D757dc610fa43535F7214DeD6380A80E1B5'

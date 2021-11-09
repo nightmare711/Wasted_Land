@@ -1,5 +1,4 @@
 .salepage { 
-    min-height: 100vh;
     padding-top: 65px;
     color: #DECFC0;
 
@@ -7,352 +6,211 @@
 .salepage .salepage__header {
     position: relative;
 }
-.salepage .salepage__header  img {
+.salepage .salepage__header  .banner{
     width: 100vw;
     min-width: 1540px;
 }
-.salepage .salepage__header .header__title {
+.salepage .salepage__header .border-img {
     position: absolute;
-    bottom: 0px;
-    color: white;
-    left: 50%;
-    transform: translate(-50%, 0%);
-    font-size: 70px;
-    font-weight: 700;
-    text-align: center;
-    font-family: 'Chakra Petch';
-    letter-spacing: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width:100vw;
-    height:40%;
-    background: linear-gradient(180deg, rgba(29, 31, 35, 0) 0%, #101218 100%);;
+    bottom:0%;
+    width:120vw;
+    left:0%;
+    z-index: 2;
 }
 .salepage .sale {
-    background: url('../../assets/sale/bg__page.png');
-    background-size: 100vw 100vh;
-    background-position: center;
+    padding: 50px 0px;
     background-attachment: fixed;
-    background-repeat: no-repeat;
-    width:100vw;
+    background-size: 100%;
+    background-image: url('../../assets/sale/bg__page.png');
 }
 .salepage .sale .sale__title {
-    color: #E7E1D9;
     font-size: 24px;
     font-weight: 700;
-    font-family: 'Chakra Petch';
+    padding:15px;
     background-image: url('../../assets/sale/bg__title.png');
-    background-position: center;
-    background-size: cover;
-    width:400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height:80px;
-    margin: 60px 0px;
-    justify-self: center;
-    align-self: center;
-    letter-spacing: 8px;
-}
-.salepage .sale .sale__side {
-
-}
-.salepage .sale .sale__side .sale__left .sale__box .overlay__slide {
-    position: absolute;
-    width:250px;
-    right: 0;
-    top:0;
-    z-index: 1;
-    height: 100%;
-    background: linear-gradient(90deg, rgba(22, 24, 29, 0) 0%, #16181D 100%);;
-}
-.salepage .sale .sale__side .sale__left {
-    width:70%;
-    max-width: 70%;
-    overflow: visible;
-}
-.salepage .sale .sale__side .sale__left .sale__box {
-    position:relative;
-}
-.salepage .sale .sale__side .sale__left .sale__box #btn-next {
-    right:0;
-    transform: translate(120%, -50%) rotate(180deg);
-    width:40px;
-    z-index: 1;
-}
-.salepage .sale .sale__side .sale__left .sale__box #btn-prev {
-    width:40px;
-    transform: translate(-150%, -50%);
-    z-index: 1;
-}
-.salepage .sale .sale__side .sale__left .box {
-    background-image: url('../../assets/sale/bg__box.png');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    background-size:100% 100%;
+    width:500px;
     text-align: center;
-    transition: all .3s;
-    cursor: pointer;
-    min-width: 200px !important;
-    width: 210px !important;
-    border: 2px solid white;
-    margin-right: 20px !important;
-    margin: 20px 0px;
-}
-.salepage .sale .sale__side .sale__left .active__box {
-    box-shadow: 0 4px 8px 0 rgba(180, 59, 7, 0.2), 0 6px 20px 0 rgba(180, 59, 7, 0.2);
-    border: 2px solid #B43B07;
-
-}
-.salepage .sale .sale__side .sale__left .box.active__box .box__number {
-    background: url('../../assets/sale/bg__text-active.png');
-    background-size: 100% 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    color:white;
-}
-.salepage .sale .sale__side .sale__left .box.active__box .box__number span {
-    color:white;
-}
-.salepage .sale .sale__side .sale__left .slick-slider {
-    width:100%;
-}
-.salepage .sale .sale__side .sale__left .box:hover {
-    box-shadow: 0 4px 8px 0 rgba(180, 59, 7, 0.2), 0 6px 20px 0 rgba(180, 59, 7, 0.2);
-}
-.salepage .sale .sale__side .sale__left .box img {
-    width: 150px;
-    display: block;
-    margin:50px 0px;
-}
-.salepage .sale .sale__side .sale__left .box .box__title {
-    padding: 15px 0px;
-    font-size: 22px;
-    font-weight: 600;
-    display: block;
-    width: 100%;
-    background: url('../../assets/sale/bg__title-package.png');
-    background-size: cover;
-}
-
-.salepage .sale .sale__side .sale__left .box .box__image.gif__active {
-    animation-play-state: running;
-}
-.salepage .sale .sale__side .sale__left .box .box__price {
-    color: #CCAA8B;
-    font-size: 15px;
-
-}
-.salepage .sale .sale__side .sale__left .box .box__number {
-    background-image: url('../../assets/sale/bg__text.png');
-    padding:5px;
-    width:100%;
-    flex:1;
-    background-size: 100% 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    font-size: 16px;
-    font-weight: 600;
-    margin-top: 8px;
-    color: #CCAA8B;
-}
-.salepage .sale .sale__side .sale__left .box .box__number span{
-    font-size: 32px;
-    font-weight: 600;
-    color:black;
-}
-.salepage .sale .sale__side .sale__left .sale__info {
-    padding: 30px 0px 40px 0px;
-    border-bottom:2px solid #51555A;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 20px;
-}
-.salepage .sale .sale__side .sale__left .sale__info .info {
-    display: flex;
-    flex-direction: column;
-    font-size: 14px;
-    flex: 1;
-    height: 100%;
-}
-.salepage .sale .sale__side .sale__left .sale__info .info b {
-    color: #E7C060;
-}
-.salepage .sale .sale__side .sale__left .sale__info .info .info__title {
-    font-weight: 600;
-    font-size: 18px;
-    color: #CCAA8B;
-}
-.salepage .sale .sale__side .sale__left .sale__info .info .info__content {
-    color: #E7E1D9;
-}
-
-.salepage .package__inside { 
-    color: #E7E1D9;
-}
-.salepage .package__inside .title {
-    font-size: 40px;
-    font-weight: 700;
-    font-family: 'Chakra Petch';
-    letter-spacing: 15px;
-    margin-top: 30px;
-    color: white;
-}
-.salepage .package__inside .subtitle {
-    margin-top:10px;
-    font-size:15px;
-}
-.salepage .package__inside .btn-secondary {
-    margin:30px 0px; 
-}
-.salepage .package__inside  .characters {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 5px;
-    margin-bottom: 30px;
-}
-.salepage .package__inside  .characters .character {
-    border: 1px solid #E7E1D9;
-    position:relative;
-}
-.salepage .package__inside  .characters .character .character__sex {
-    width:30px;
-    font-size:10px;
-    height: 30px; 
-    background-color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 10px;
-    left:10px;
-}
-.salepage .package__inside  .characters .character .character__sex.male {
-    color: #66c5ef;
-}
-.salepage .package__inside  .characters .character .character__img {
-    width: 150px;
-}
-.salepage .package__inside  .characters .character .character__stats {
-    margin-top:10px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-column-gap: 10px;
-    padding: 0px 10px;
-}
-.salepage .package__inside  .characters .character .character__stats div {
-    display: flex;
-    width:100%;
-    flex-direction: row;
-    justify-content: space-between;
-    box-sizing: border-box;
-    font-size: 14px;
-    font-weight: 600;
-}
-.salepage .package__inside  .characters .character .character__stats .stat__common {
-    color: #E7E1D9;
-}
-.salepage .package__inside  .characters .character .character__stats .stat__rare {
-    color: #31BC00;
-}
-
-.salepage .package__inside  .characters .character .character__stats .stat__epic {
-    color: #FF7A00;
-}
-.salepage .package__inside  .characters .character .character__stats .stat__mystic {
-    color: #BD00FF;
-}
-.salepage .package__inside  .characters .character  .character__description {
-    position: relative;
-    border-top: 1px solid #E7E1D9;
-    height:80px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-top: 10px;
-}
-.salepage .package__inside  .characters .character  .character__description img {
-    position: absolute;
-    top:0;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 30px;
-    
-}
-.salepage .package__inside  .characters .character  .character__description .description__title {
-    font-size: 20px;
-    font-weight: 600;
     font-family: 'Chakra Petch';
     letter-spacing: 5px;
-}
-.salepage .package__inside  .characters .character  .character__description .description__subtitle {
-    font-size: 14px;
-    color: #DECFC0;
-}
-.salepage .sale .sale__side .sale__right {
-    width:25%;
-    height:100%;
-    margin-left: 30px;
-    position:sticky;
-    top:80px;
-    margin-bottom: 40px;
-}
-.salepage .sale .sale__side .sale__right .btn-primary {
-    margin-top: 50px;
-    z-index: 1;
-}
-.salepage  .btn-primary {
-    font-weight: 600;
-}
-.salepage .sale .sale__side .sale__right .box__container {
-    position: relative;
-}
-.salepage .sale .sale__side .sale__right .box__container .box__info {
-    position: absolute;
-    top:-20px;
-    left:0;
-}
-.salepage .sale .sale__side .sale__right .box__container .box__price {
-    position: absolute;
-    right:60px;
-    bottom:35px;
-    z-index: 100;
-    font-size: 20px;
-    color:white;
-    font-weight: 600;
-    font-family: 'Chakra Petch';
-}
-.salepage .sale .sale__side .sale__right img {
-    width: 100%;
-    position:relative;
-    z-index: 1;
-}
-.salepage .sale .sale__side .sale__right img:first-child {
-
-}
-.salepage .sale .sale__side .sale__right img.box__foot {
     
 }
-.salepage .git__container {
-    height:400px;
+.salepage .sale .sale__package {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 30px;
+    margin-top:40px;
+}
+.salepage .sale .sale__package .package__name {
+    padding:10px;
+    background-color: #101010;
+    border: 2px solid #352d23;
+    transition:all .3s;
+    cursor: pointer;
+    font-size: 18px;;
+    font-weight: 600;
+}
+.salepage .sale .sale__package .package__name.active {
+    border: 2px solid #B43B07;
+    color: #FF9162;
+    box-sizing: border-box;
+    filter: drop-shadow(0px 4px 16px #FF9162);
+    background-image: url('../../assets/sale/bg__text-active.png');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.salepage .sale .sale__package .package__name span {
+    width:200px;
+    display: block;
+    text-align: center;
+    background-image: url('../../assets/sale/bg__title-package.png');
+    background-size: 100% 100%;
+    padding: 10px 0px;
+}
+.salepage .sale  .package__info {
+    display: flex;
+    flex-direction: row;
+    margin-top: 100px;
+}
+.salepage .sale  .package__info .price {
+    position: absolute;
+    bottom:10%;
+    font-size: 25px;
+    font-family: 'Chakra Petch';
+    font-weight: 700;
+    color:white;
+    right:31%;
+}
+.salepage .sale  .package__info .package-image {
+    flex:1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.salepage .sale  .package__info .package-image .package {
+    position: absolute;
+    top:-10%;
+    width:60%;
+}
+.salepage .sale  .package__info .package-image .foot {
+    width:60%;
+}
+.salepage .sale  .package__info .peek-inside {
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.salepage .sale  .package__info .peek-inside .title-warrior {
+    font-size: 18px;
+    display: block;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+.salepage .sale  .package__info .peek-inside .warrior-preview {
+    display: flex;
+    background: #131317;
+    flex-direction: column;
+    width:100%;
+    position:relative;
+}
+.salepage .sale   .btn-primary {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top:40px;
+}
+.salepage .sale  .package__info .peek-inside .warrior-preview .container-image {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding:15px 0px;
+    justify-content: center;
+}
+.salepage .sale  .package__info .peek-inside .warrior-preview .container-image .left {
 
 }
-.salepage .git__container img {
+.salepage .sale  .package__info .peek-inside .warrior-preview .container-image .left .left-info {
+    text-align: end;
+}
+.salepage .sale  .package__info .peek-inside .warrior-preview .container-image  .label {
+    font-size:12px;
+    color: #CCAA8B;
+}
+.salepage .sale  .package__info .peek-inside .warrior-preview .container-image  .left-info {
+    display: flex;
+    flex-direction: column;
+}
+.salepage .sale  .package__info .peek-inside .warrior-preview .sexual {
+    position:absolute;
+    top:10px;
+    left:10px;
+    width:30px;
+    height:30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8);;
+}
+.salepage .sale  .package__info .peek-inside  .rarity-1 {
+    color: #E7E1D9;
+    font-weight: 600;
+}
+.salepage .sale  .package__info .peek-inside  .rarity-2 {
+    color: #31BC00;
+    font-weight: 600;
+}
+.salepage .sale  .package__info .peek-inside  .rarity-3 {
+    color: #FF7A00;
+    font-weight: 600;
+}
+.salepage .sale  .package__info .peek-inside  .rarity-4 {
+    color: #BD00FF;
+    font-weight: 600;
+}
+.salepage .sale  .package__info .peek-inside .warrior-preview  img {
     width:200px;
-    margin-right: 20px;
 }
-.salepage .git__container .title {
-    display: block;
-    font-family: 'Chakra Petch';
+.salepage .sale  .package__info .peek-inside .addition-info {
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-top:1px solid #51555A;
+}
+.salepage .sale  .package__info .peek-inside .addition-info span {
+    margin-right:10px;
+}
+.salepage .github-container {
+    height:400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background:linear-gradient(180deg, #111217 0%, rgba(19, 19, 23, 0) 100%), url('../../assets/sale/bg-github-container.png');
+    background-size: 100% 100%;
+    background-position: center;
+    width: 100%;
+}
+.salepage .github-container span {
+    text-align: center;
+}
+.salepage .github-container .title {
     font-size: 40px;
-    letter-spacing: 10px;
-    font-weight: 700;
-    color: white;
+    font-family: 'Chakra Petch';
+    font-weight: bold;
+    color: #CCAA8B;
+    letter-spacing: 20px;
 }
+.salepage .github-container .subtitle {
+    font-size: 16px;
+    font-weight: 600;
+    color: #E7E1D9;
+    margin-bottom: 30px;
+    
+}
+
+
+
+

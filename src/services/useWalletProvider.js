@@ -10,7 +10,7 @@ import React from 'react'
 
 const POLLING_INTERVAL = 12000
 const rpcUrl = getNodeUrl()
-const chainId = parseInt(56, 10)
+const chainId = parseInt(97, 10)
 
 export const provider = new WalletConnectProvider({
 	rpc: { [chainId]: rpcUrl },
@@ -61,7 +61,7 @@ export const useConnectWallet = () => {
 		switch (active) {
 			case METAMASK: {
 				if (window.ethereum) {
-					if (parseInt(window.ethereum.networkVersion) === 56) {
+					if (parseInt(window.ethereum.networkVersion) === 97) {
 						if (wallet.status !== 'connected') {
 							try {
 								await wallet.connect()

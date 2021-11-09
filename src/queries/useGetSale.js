@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React from 'react'
 import { useQuery } from 'react-query'
 import { TEST_API } from 'constants/api'
@@ -9,19 +10,20 @@ import { requestLoading, requestUnload } from 'services/redux/loading/actions'
 import { requestSuccessMessage, requestErrorMessage } from 'services/redux/alert/action'
 import { getContract, getWeb3 } from 'services/utils/getWeb3'
 import WAHABI from 'constants/WAH.json'
-import { DataContext } from 'contexts/DataContext'
 import { BSC_TESTNET } from 'constants/addresses'
 import { onCheckStatusOfTransaction } from 'services/utils/checkStatus'
 
-export const useGetPossibilities = () => {
-	const [possibilities, setPossibilities] = React.useState([])
-	const data = React.useContext(DataContext)
+export const useGetPossibilities = (packageId) => {
+	const [possibilities, setPossibilities] = React.useState(null)
+	const dispatch = useDispatch()
 	React.useEffect(() => {
-		fetch(TEST_API + '/api/v1/package/1/peek?size=8')
+		dispatch(requestLoading())
+		fetch(TEST_API + `/api/v1/package/${packageId}/peek?size=1`)
 			.then((res) => res.json())
 			.then((result) => setPossibilities(result.data.heros))
 			.catch((err) => console.log(err))
-	}, [data.count])
+			.finally(() => dispatch(requestUnload()))
+	}, [packageId])
 	return possibilities
 }
 export const useClaimHero = () => {
@@ -32,7 +34,9 @@ export const useClaimHero = () => {
 		const _type = onCheckType()
 		const web3 = getWeb3()
 		const wahContract = getContract(WAHABI, BSC_TESTNET)
-		const contractData = wahContract.methods.createHero(poolId, amount, rarityPackage).encodeABI()
+		const contractData = wahContract.methods
+			.createWarrior(poolId, amount, rarityPackage)
+			.encodeABI()
 		if (_type === METAMASK) {
 			const params = [
 				{
@@ -61,12 +65,11 @@ export const useClaimHero = () => {
 					} else {
 						dispatch(requestErrorMessage('Order', 'Something went wrong'))
 					}
-					dispatch(requestUnload())
 				})
 				.catch((err) => {
 					dispatch(requestErrorMessage('Order', 'Something went wrong'))
-					dispatch(requestUnload())
 				})
+				.finally(() => dispatch(requestUnload()))
 		}
 	}
 }

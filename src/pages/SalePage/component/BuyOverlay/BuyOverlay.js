@@ -52,7 +52,7 @@ export const BuyOverlay = ({ type, price, image, onClose, rarityPackage }) => {
 					<div
 						onClick={() => {
 							claimHero(
-								latestPool ? latestPool : 10,
+								latestPool ? latestPool : 1,
 								quantity,
 								rarityPackage,
 								parseFloat(price * quantity).toFixed(2)

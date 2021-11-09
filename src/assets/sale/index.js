@@ -8,6 +8,7 @@ import StaticNormal from './static_plastic.png'
 import StaticRare from './static_steal.png'
 import StaticEpic from './static_gold.png'
 import StaticMystic from './static_diamond.png'
+import Border from './border.png'
 
 export {
 	HeaderImg,
@@ -20,4 +21,5 @@ export {
 	StaticRare,
 	StaticEpic,
 	StaticMystic,
+	Border,
 }
