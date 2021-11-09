@@ -1,25 +1,68 @@
 import React from 'react'
 import './Inventory.css'
+import { onMoveAnimation } from 'services/useDevelopUI'
+import { Banner, Art1, Art2, Icon } from '../../assets/inventory'
 
 /**
  * @author
- * @function Inventory
+ * @function
  **/
 
 export const Inventory = (props) => {
+	const listWarrior = [
+		{ image: Art1, pos: 'Intern Worker', icon: Icon, price: '$308', bnb: '0.82 BNB' },
+		{ image: Art2, pos: 'Intern Profeser', icon: Icon, price: '$308', bnb: '0.82 BNB' },
+		{ image: Art1, pos: 'Intern Worker', icon: Icon, price: '$308', bnb: '0.82 BNB' },
+		{ image: Art2, pos: 'Intern Profeser', icon: Icon, price: '$308', bnb: '0.82 BNB' },
+		{ image: Art1, pos: 'Intern Worker', icon: Icon, price: '$308', bnb: '0.82 BNB' },
+		{ image: Art2, pos: 'Intern Profeser', icon: Icon, price: '$308', bnb: '0.82 BNB' },
+		{ image: Art1, pos: 'Intern Worker', icon: Icon, price: '$308', bnb: '0.82 BNB' },
+		{ image: Art2, pos: 'Intern Profeser', icon: Icon, price: '$308', bnb: '0.82 BNB' },
+		{ image: Art1, pos: 'Intern Worker', icon: Icon, price: '$308', bnb: '0.82 BNB' },
+		{ image: Art2, pos: 'Intern Profeser', icon: Icon, price: '$308', bnb: '0.82 BNB' },
+	]
 	return (
-		<div className='inventory flex flex-col items-center w-full'>
-			<div className='inventory-banner h-16 bg-red-400 w-full'></div>
-			<div className='max-w-screen-xl bg-red-50'>
-				<div className='inventory-tiltle'>This is tiltle</div>
-				<div className='inventory-tabbar sticky top-16'> This is tabbar</div>
-				<div className='inventory-container h-screen'>
-					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam fugit soluta omnis!
-					Illum temporibus itaque minima corrupti dolor, vero optio quidem provident, sed eligendi
-					deserunt cumque voluptas nulla nemo? Pariatur! Lorem ipsum, dolor sit amet consectetur
-					adipisicing elit. Quia, culpa. Fugiat velit, perferendis ipsa numquam tenetur nulla
-					molestias pariatur deserunt iste architecto eaque sed magnam consectetur quibusdam minus
-					amet beatae!
+		<div>
+			<div id='overlay-war-info' className='warrior-information'></div>
+			<div className='inventory flex flex-col items-center'>
+				<img
+					onLoad={() => onMoveAnimation('pre-loading', 'moveOutOpacity')}
+					src={Banner}
+					alt='inventory-banner'
+				/>
+				<div className='flex flex-col w-full items-center'>
+					<div className='inventory-tiltle self-center'>YOUR INVENTORY</div>
+					<div className='inventory-tabbar sticky flex w-full justify-center'>
+						<div className='max-w-screen-xl flex flex-1'>
+							<div className='tabbar-active'>Warriors</div>
+							<div className=''>Equipment</div>
+							<div className=''>Vehicle</div>
+						</div>
+					</div>
+					<div id='inventory-warriors' className='max-w-screen-xl  inventory-container grid'>
+						{listWarrior.map((war, key) => {
+							return (
+								<div
+									key={key}
+									className='warrior-container'
+									onClick={() => {
+										onMoveAnimation('overlay-war-info', 'moveOutOpacity')
+									}}
+								>
+									<img className='war-img' src={war.image} alt={war.image} />
+									<span className='warrior-pos'>{war.pos}</span>
+									<div className='war-border'></div>
+									<div className='flex justify-between items-center'>
+										<div className='flex items-center'>
+											<img className='war-icon mr-1' src={war.icon} alt={war.icon} />
+											<span className='war-bnb'>{war.bnb}</span>
+										</div>
+										<span className='war-price'>{war.price}</span>
+									</div>
+								</div>
+							)
+						})}
+					</div>
 				</div>
 			</div>
 		</div>
