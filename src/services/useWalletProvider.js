@@ -18,7 +18,7 @@ export const provider = new WalletConnectProvider({
 	bridge: 'https://pancakeswap.bridge.walletconnect.org/',
 	mobileLinks: ['rainbow', 'metamask', 'argent', 'trust', 'imtoken', 'pillar'],
 	pollingInterval: POLLING_INTERVAL,
-	chainId: 0x38,
+	chainId: chainId,
 })
 
 export const connector = provider.connector
@@ -116,7 +116,7 @@ export const useCheckAccountActive = () => {
 	const wallet = useWallet()
 	React.useEffect(() => {
 		if (wallet.status === 'connected') {
-			setAccount(wallet.account)
+			setAccount(window.ethereum.selectedAddress)
 		} else if (connector.connected) {
 			setAccount(connector.accounts[0])
 		} else {
@@ -124,4 +124,30 @@ export const useCheckAccountActive = () => {
 		}
 	}, [wallet.status, connector.connected])
 	return account
+}
+export const useCheckConnected = () => {
+	const [isConnected, setIsConnected] = React.useState(false)
+	const wallet = useWallet()
+	React.useEffect(() => {
+		if (wallet.status === 'connected' || wallet.status === 'error') {
+			setIsConnected(true)
+		} else if (connector.connected) {
+			setIsConnected(true)
+		} else {
+			setIsConnected(false)
+		}
+	}, [wallet.status, connector.connected])
+	return isConnected
+}
+export const useCheckWalletType = () => {
+	const wallet = useWallet()
+	return () => {
+		if (wallet.status === 'connected' || wallet.status === 'error') {
+			return METAMASK
+		} else if (connector.connected) {
+			return WALLETCONNECT
+		} else {
+			return ''
+		}
+	}
 }

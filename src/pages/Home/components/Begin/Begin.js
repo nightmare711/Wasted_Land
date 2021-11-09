@@ -14,7 +14,7 @@ export const Begin = () => {
 			</AnimationOnScroll>
 			<span className='text-center title-secondary'>
 				<AnimationOnScroll animateOnce={true} animateIn='animate__fadeInLeftBig'>
-					Collect Your <span className='text-center'>NFT characters</span>
+					Collect Your <span className='text-center'>NFT warriors</span>
 				</AnimationOnScroll>
 			</span>
 			<div className='character__strip'>

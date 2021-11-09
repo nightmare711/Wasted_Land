@@ -4,6 +4,7 @@ import { useCheckAccountActive } from 'services/useWalletProvider'
 import { useGetBalance } from 'services/useGetBalance'
 import Btn_Hover from 'assets/home/btn-primary-hover.png'
 import MenuIcon from '@material-ui/icons/Menu'
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
 import { Link } from 'react-router-dom'
 import Logo from 'assets/logo.png'
 import './Navbar.css'
@@ -19,12 +20,40 @@ export const Navbar = () => {
 						<img src={Logo} alt='logo' />
 					</Link>
 					<ul className='list-nav'>
-						<li>Marketplace</li>
-						<li>Staking</li>
-						<li>Gacha</li>
-						<li>Wallet</li>
-						<li>
-							<Link to='/about'>About</Link>
+						<li className='nav-link'>
+							<Link to='/buy-token'>Buy $WAL</Link>
+						</li>
+						<li className='nav-link'>
+							<Link to='/summon-warriors'>Summon Warriors</Link>
+						</li>
+						<li className='nav-link'>
+							<Link to='/about-us'>About Us</Link>
+						</li>
+						{/* <li>
+
+							<Link to='/about-us'>Gallery</Link>
+						</li> */}
+						<li className='nav-link'>
+							<span>
+								More <KeyboardArrowDownIcon />
+							</span>
+							<div className='nav-hover'>
+								<ul>
+									<li
+										onClick={() =>
+											window.open('https://the-wasted-lands.gitbook.io/the-wasted-lands/', '_blank')
+										}
+									>
+										Gitbook
+									</li>
+									<Link to='/white-paper'>
+										<li>White paper</li>
+									</Link>
+									<Link to='/gallery'>
+										<li>Gallery</li>
+									</Link>
+								</ul>
+							</div>
 						</li>
 					</ul>
 				</div>

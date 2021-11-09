@@ -1,0 +1,94 @@
+.buy-overlay {
+    width:100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+}
+.buy-overlay .buy-form {
+    background: url('../../../../assets/sale/bg__overlay.png');
+    padding: 30px;
+    width:430px;
+    border-radius:10px;
+    position:relative;
+    background-position: center;
+    background-size: cover;
+}
+.buy-overlay .buy-form .btn {
+    width:120px;
+}
+.buy-overlay .buy-form .title {
+    width:320px;
+    height:80px;
+    background: url('../../../../assets/sale/bg__title__overlay.png');
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top:0;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+.buy-overlay .buy-form .title span {
+    transform: translateY(-5px);
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Chakra Petch';
+    color:white;
+    letter-spacing: 5px;
+}
+.buy-overlay .buy-form .package__info {
+    margin: 30px 0px;
+
+}
+.buy-overlay .buy-form .package__info img {
+    width:190px;
+}
+.buy-overlay .buy-form .package__info  .info__main {
+
+}
+.buy-overlay .buy-form .package__info  .info__main .package__name {
+    font-size: 24px;
+    font-weight: 600;
+    color: #CCAA8B;
+}
+.buy-overlay .buy-form .package__info  .info__main .price {
+    font-size:15px;
+    color: #E7E1D9;
+}
+.buy-overlay .buy-form .package__info  .info__main .quantity {
+    font-size: 16px;
+    color: #CCAA8B;
+    font-weight: 600;
+    justify-content: space-between;
+}
+.buy-overlay .buy-form .package__info  .info__main .amount {
+}
+.buy-overlay .buy-form .package__info  .info__main .amount .icon {
+    font-size: 13px;
+}
+.buy-overlay .buy-form .package__info  .info__main .amount .container-icon {
+    width:30px;
+    height:30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition:all .3s;
+    cursor: pointer;
+}
+.buy-overlay .buy-form .package__info  .info__main .amount .container-icon:hover {
+    background-color: rgba(0,0,0,0.4);
+}
+.buy-overlay .buy-form .package__info  .info__main .amount .container-icon:active {
+    background-color: rgba(0,0,0,0.8);
+}

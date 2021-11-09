@@ -7,8 +7,11 @@
     overflow: hidden;
     background-attachment: fixed;
     padding-top:65px;
+    background-color: #060404;
 }
-
+.banner-home .banner__container {
+    
+}
 .banner-home video::-webkit-media-controls {
     display: none;
 }
@@ -103,5 +106,23 @@
     }
     .banner-home .banner-content {
         bottom:50px;
+    }
+    .banner-home .banner__container {
+        overflow: hidden;
+        height:fit-content;
+        position: relative;
+    }
+    .banner-home video  {
+        min-width: 0px !important;
+        height:auto;
+    }
+    .banner-home .banner__gradient {
+        position: absolute;
+        z-index: 1;
+        bottom:0;
+        left:0;
+    }
+    .banner-home .banner-content {
+        bottom:100px;
     }
  }

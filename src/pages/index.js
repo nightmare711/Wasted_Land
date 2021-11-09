@@ -1,2 +1,6 @@
 export * from './Home'
 export * from './About/About'
+export * from './SalePage/SalePage'
+export * from './Roadmap/Roadmap'
+export * from './Gallery'
+export * from './Quests/Quests'

@@ -22,7 +22,16 @@ const Members = [
 		profile: [
 			'CEO at E-lite Limited - Casual and Hyper-casual Mobile Game Studio.',
 			'Ex-CMO at Zitga Mobile Game Vietnam.',
-			'Leader game development at Amanotes - Successful launch Magic Tiles 3 and Tiles Hop, which are now having more than 500M downloads on IOS and Android.',
+			'Leader game publishing at Amanotes - Successfully launched Magic Tiles 3 and Tiles Hop, which are now having 500M+ downloads on iOS and android.',
+		],
+	},
+	{
+		image: member_5,
+		name: 'Bang Mai',
+		position: 'Co-Founder',
+		profile: [
+			'CEO Dizitech - Growth Hacking Agency.',
+			'Experienced in marketing & growth hacking (for crypto industry since 2017).',
 		],
 	},
 	{
@@ -38,51 +47,29 @@ const Members = [
 		image: member_3,
 		name: 'Tu Nguyen',
 		position: 'CTO',
-		profile: [
-			'CTO at E-lite Limited.',
-			'10 years+ exp in Technical Lead and CTO for Gameloft: Modern Combat, Dungeon Hunter, Asphalt, BlackStar, TOH Game.',
-		],
+		profile: ['CTO at E-lite Limited.'],
 	},
 	{
-		image: member_4,
-		name: 'Hai Vu',
-		position: 'Game Adviser',
+		image: member_7,
+		name: 'Henry Van',
+		position: 'CMO',
 		profile: [
-			'Technical Leader at Zitga Game Vietnam.',
-			'Lead Technical team with 30+ members, developing and maintaining 7 Mid-core games.',
-			'7 years exp of game programming and technical management.',
+			'5 years exp expert in building community & establish partnerships.',
+			'Fundraising on different platforms (both crypto & non crypto like Kickstarter, Indiegogo).',
+			'Token listings & Content strategist.',
+			'Strong relationship with crypto influencers around the world.',
 		],
 	},
-	{
-		image: member_5,
-		name: 'Bang Mai',
-		position: 'Co-Founder',
-		profile: [
-			'CEO Dizitech Growth Hacking Agency.',
-			'Experienced in marketing & growth hacking (for crypto industry since 2017).',
-			'Successfully launch and growth some Defi & NFTs project into top 100 CMC, Coingecko.',
-		],
-	},
+
 	{
 		image: member_6,
 		name: 'Tai Nguyen',
 		position: 'Blockchain Lead',
 		profile: [
-			'VIN ID Product Lead.',
+			'VIN ID core product team.',
 			'4 years experienced in building DeFi apps (Light Shadow Box, Arise Finance) NFT market place (Arise NFTs marketplace) & an NFT Guru himself.',
 			'DeFi & NFT games (Ari Bird).',
 			'Smart contract experts.',
-		],
-	},
-	{
-		image: member_7,
-		name: 'Henry Van',
-		position: 'CGO',
-		profile: [
-			'5 years exp expert in building community & establish partnerships.',
-			'Fundraising on different platforms (both crypto & non crypto like kickstarter, indiegogo).',
-			'Token listings & Content strategist.',
-			'Have strong relationship with many KOLs/Influencers in Vietnam.',
 		],
 	},
 
@@ -100,7 +87,20 @@ const Members = [
 		image: member_9,
 		name: 'Tran Hoang',
 		position: 'Core Developer',
-		profile: ['Lead Dev at VinID.', '3 years exp in blockchain & smart contract development.'],
+		profile: [
+			'3 years in blockchain & excel at smart contract development.',
+			'Full-stack, highly experienced in building blockchain game.',
+		],
+	},
+	{
+		image: member_4,
+		name: 'Hai Vu',
+		position: 'Game Adviser',
+		profile: [
+			'Technical Leader at Zitga Game Vietnam.',
+			'Lead Technical team with 30+ members, developing and maintaining 7 Mid-core games.',
+			'7 years exp of game programming and technical management.',
+		],
 	},
 ]
 

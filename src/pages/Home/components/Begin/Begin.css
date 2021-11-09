@@ -8,6 +8,8 @@
     background-position: center;
     color: #F6E9D9;
     height:100vh;
+    width:100vw;
+    overflow: hidden;
 }
 
 .begin-section .sub-title {
@@ -35,9 +37,10 @@
     text-transform: none;
 }
 .begin-section .character__strip {
-    max-width:100vw;
+    width:100%;
     overflow: hidden;
-    /* animation: moveInfinity 10s;
+    /* animation: moveInfinity 3s;
+    animation-direction: alternate;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
     animation-timing-function: linear; */
@@ -77,9 +80,9 @@
 }
 @keyframes moveInfinity {
     from {
-        transform: translateX(100%);
+        transform: translateX(0);
     }
     to {
-        transform: translateX(-100%);
+        transform: translateX(50vw);
     }
 }

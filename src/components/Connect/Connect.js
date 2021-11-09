@@ -9,8 +9,9 @@ export const Connect = () => {
 	const onConnect = useConnectWallet()
 	return (
 		<div
+			style={{ zIndex: 101 }}
 			id='connect-modal'
-			className='fixed inset-0 z-10 flex items-center justify-center invisible w-screen h-screen text-white opacity-0'
+			className='fixed inset-0 flex items-center justify-center invisible w-screen h-screen text-white opacity-0'
 		>
 			<div
 				onClick={() => onMoveAnimation('connect-modal', 'moveOutOpacity')}
