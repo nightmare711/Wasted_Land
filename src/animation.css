@@ -18,6 +18,26 @@
         visibility: hidden;
     }
 }
+@keyframes moveInOpacityNoneDisplay {
+    from {
+        opacity: 0;
+        visibility: hidden;
+        position: fixed;
+    }
+    to {
+        opacity:1;
+        visibility: visible;
+        position: relative;
+    }
+}
+@keyframes moveOutOpacityNoneDisplay {
+    from {
+        display: block;
+    }
+    to {
+        display: none;
+    }
+}
 
 @keyframes moveInCircle {
     0% {

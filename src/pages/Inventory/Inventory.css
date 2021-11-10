@@ -2,17 +2,6 @@
     margin-top: 65px;
     background-color: #131317;
 }
-.inventory .warrior-information{
-    position:fixed;
-    top:0;
-    left:0;
-    /* opacity: 0;
-    visibility: hidden; */
-    width: 100vw;
-    height: 100vh;
-    background-color: white;
-    z-index: 1000;
-}
 .inventory .inventory-tiltle {
     color: #E7E1D9;
     font-size: 40px;
@@ -31,6 +20,10 @@
     font-family: 'Titillium Web';   
     border-bottom: 1px #51555A solid;
     background-color:#131317;
+}
+.inventory .inventory-tabbar .tabbar-container{
+    max-width: 848px;
+    padding-left: 12px;
 }
 .inventory .inventory-tabbar div div{
     padding-top: 10px;
@@ -63,6 +56,10 @@
     height: 288px;
     border: 1px solid #51555A;
     padding: 12px;
+}
+.inventory .inventory-container .warrior-container:hover{
+    background-color: #2A2A32;
+    cursor: pointer;
 }
 .inventory .inventory-container .warrior-container .war-img{
     object-fit: cover;
@@ -99,4 +96,28 @@
     background-color: #5B4B37;
     margin-top: 8px;
     margin-bottom: 10px;
+}
+
+
+@media only screen and (max-width: 900px) {
+    .inventory .inventory-container{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .inventory .inventory-container{
+        grid-template-columns: 1fr 1fr;
+    }
+    .inventory .inventory-tiltle {
+        font-size: 30px;
+    }
+}
+@media only screen and (max-width: 560px){
+    .inventory .inventory-container{
+        grid-template-columns: 1fr;
+    }
+    .inventory .inventory-tiltle {
+        font-size: 25px;
+    }
 }

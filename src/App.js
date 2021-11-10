@@ -24,6 +24,7 @@ const ComingBuyPage = React.lazy(() => import('./components/Coming/ComingBuy'))
 const WhitePaper = React.lazy(() => import('./pages/WhitePaper/WhitePaper'))
 const Quests = React.lazy(() => import('./pages/Quests/Quests'))
 const Inventory = React.lazy(() => import('./pages/Inventory'))
+const WarriorInfo = React.lazy(() => import('./pages/Inventory/WarriorInfo'))
 
 function App() {
 	useHideMessage()
@@ -47,6 +48,7 @@ function App() {
 				<Route component={HomePage} path='/' exact />
 				<Route component={Quests} exact path='/quests' />
 				<Route component={Inventory} exact path='/inventory' />
+				<Route path='/inventory/:id' children={<WarriorInfo />} />
 				<Route component={ComingPage} />
 			</Switch>
 			<Footer />

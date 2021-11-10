@@ -2,6 +2,7 @@ import React from 'react'
 import './Inventory.css'
 import { onMoveAnimation } from 'services/useDevelopUI'
 import { Banner, Art1, Art2, Icon } from '../../assets/inventory'
+import { Link } from 'react-router-dom'
 
 /**
  * @author
@@ -23,8 +24,7 @@ export const Inventory = (props) => {
 	]
 	return (
 		<div>
-			<div id='overlay-war-info' className='warrior-information'></div>
-			<div className='inventory flex flex-col items-center'>
+			<div id='overlay-inventory' className='inventory flex flex-col items-center'>
 				<img
 					onLoad={() => onMoveAnimation('pre-loading', 'moveOutOpacity')}
 					src={Banner}
@@ -33,7 +33,7 @@ export const Inventory = (props) => {
 				<div className='flex flex-col w-full items-center'>
 					<div className='inventory-tiltle self-center'>YOUR INVENTORY</div>
 					<div className='inventory-tabbar sticky flex w-full justify-center'>
-						<div className='max-w-screen-xl flex flex-1'>
+						<div className='tabbar-container flex flex-1'>
 							<div className='tabbar-active'>Warriors</div>
 							<div className=''>Equipment</div>
 							<div className=''>Vehicle</div>
@@ -42,24 +42,20 @@ export const Inventory = (props) => {
 					<div id='inventory-warriors' className='max-w-screen-xl  inventory-container grid'>
 						{listWarrior.map((war, key) => {
 							return (
-								<div
-									key={key}
-									className='warrior-container'
-									onClick={() => {
-										onMoveAnimation('overlay-war-info', 'moveOutOpacity')
-									}}
-								>
-									<img className='war-img' src={war.image} alt={war.image} />
-									<span className='warrior-pos'>{war.pos}</span>
-									<div className='war-border'></div>
-									<div className='flex justify-between items-center'>
-										<div className='flex items-center'>
-											<img className='war-icon mr-1' src={war.icon} alt={war.icon} />
-											<span className='war-bnb'>{war.bnb}</span>
+								<Link to='/inventory/1'>
+									<div key={key} className='warrior-container'>
+										<img className='war-img' src={war.image} alt={war.image} />
+										<span className='warrior-pos'>{war.pos}</span>
+										<div className='war-border'></div>
+										<div className='flex justify-between items-center'>
+											<div className='flex items-center'>
+												<img className='war-icon mr-1' src={war.icon} alt={war.icon} />
+												<span className='war-bnb'>{war.bnb}</span>
+											</div>
+											<span className='war-price'>{war.price}</span>
 										</div>
-										<span className='war-price'>{war.price}</span>
 									</div>
-								</div>
+								</Link>
 							)
 						})}
 					</div>
