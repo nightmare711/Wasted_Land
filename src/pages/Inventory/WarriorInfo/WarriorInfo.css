@@ -4,8 +4,16 @@
 .warrior-information .warrior-info-top{
     width: 100%;
     position: relative;
-    padding-top: 71px;
+    padding-top: 136px;
     padding-bottom: 97px;
+}
+.warrior-information .warrior-info-top .icon-circle{
+    width: 44px;
+    height: 44px;
+    background-image: url('../../../assets/inventory/art2.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 50%;
 }
 .warrior-information .warrior-info-top:after {
     content : "";
@@ -62,8 +70,8 @@
     font-weight: 600;
     line-height: 48px;
 }
-.warrior-information .warrior-info-top .war-info-statbody{
-
+.warrior-information .warrior-info-bottom .table-container{
+    background-color: rgba(94, 58, 58, 0.692);
 }
 .warrior-information .warrior-info-bottom .warior-info-table{
     height: 200px;
@@ -76,13 +84,39 @@
     width: 100%;
 }
 .warrior-information .warrior-info-bottom .warior-info-table thead tr {
-    background-color: rgba(0.14, 0.14, 0.15, 1.0);
+    background-color: rgb(24, 22, 22);
     text-align: left;
   }
   .warior-info-table th,
   .warior-info-table td {
   padding: 12px 15px;
 }
-.warior-info-table tbody{
-    
+.warrior-information .details-stats{
+    padding-top: 12px;
+    bottom: 16px;
+    left: 50%;
+    border-top: solid 1px rgba(0.32, 0.33, 0.35, 1.0);
+    transform: translateX(-50%);
+    color: #3F93F5;
+}
+.warrior-information .body-part img{
+    width: 24px;
+    height: 24px;
+}
+.warrior-information .body-part{
+    border: solid rgba(0.32, 0.33, 0.35, 1.0) 1px;
+}
+.warrior-information .war-stat{
+    grid-template-columns: 1fr 1fr;
+    border: solid rgba(0.32, 0.33, 0.35, 1.0) 1px;
+}
+.warrior-information .war-stat img{
+    width: 24px;
+    height: 24px;
+}
+.warrior-information .war-font-medium{
+    font-size: 20px;
+}
+.warrior-information .war-font-minimum{
+    font-size: 12px;
 }

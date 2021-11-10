@@ -1,6 +1,6 @@
 import React from 'react'
 import './WarriorInfo.css'
-import { Art4, War1, Icon } from '../../../assets/inventory'
+import { Art4, War1, Icon, Icon1 } from '../../../assets/inventory'
 import { onMoveAnimation } from 'services/useDevelopUI'
 import { useParams } from 'react-router'
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft'
@@ -16,6 +16,7 @@ export const WarriorInfo = (props) => {
 	let id = useParams()
 	console.log(id)
 	const { data: heroData, refetch: refetchHeroData, isSuccess } = useGetHero(id.id)
+	isSuccess ? console.log(Object.entries(heroData.hero.parts)) : console.log()
 	React.useEffect(() => {
 		refetchHeroData()
 		// eslint-disable-next-line
@@ -142,7 +143,7 @@ export const WarriorInfo = (props) => {
 			<div className='warrior-info-top flex items-center justify-center'>
 				<div className='max-w-screen-xl flex justify-between w-full relative'>
 					<Link to='/inventory'>
-						<div className='back-to-inventory absolute top-0 left-0 flex items-center'>
+						<div className='back-to-inventory absolute -top-9 left-0 flex items-center'>
 							<KeyboardArrowLeftIcon />
 							<span>Back</span>
 						</div>
@@ -159,7 +160,12 @@ export const WarriorInfo = (props) => {
 								<img src={War1} alt='' />
 								<img src={War1} alt='' />
 							</div>
-							<img className=' war-img' src={isSuccess ? heroData.hero.image : Art4} alt='art4' />
+							<img
+								className=' war-img'
+								src={isSuccess ? heroData.hero.image : Art4}
+								alt='art4'
+								// onLoad={() => onMoveAnimation('pre-loading', 'moveOutOpacity')}
+							/>
 							<div className='war-left-info flex flex-col justify-center'>
 								<img src={War1} alt='' />
 								<img src={War1} alt='' />
@@ -169,14 +175,14 @@ export const WarriorInfo = (props) => {
 						</div>
 						<div className='flex justify-center items- mt-8'>
 							<div className='flex items-center mr-16'>
-								<div className=''>icon</div>
+								<div className='icon-circle'></div>
 								<div className='flex flex-col'>
-									<span>Faction</span>
+									<span className='opacity-50'>Faction</span>
 									<span>Ex-Soldier</span>
 								</div>
 							</div>
 							<div className='flex flex-col'>
-								<span>Level</span>
+								<span className='opacity-50'>Level</span>
 								<span>Intern</span>
 							</div>
 						</div>
@@ -196,39 +202,47 @@ export const WarriorInfo = (props) => {
 							<div className='btn-sell-war btn-secondary'>Sell On MarketPlace</div>
 						</div>
 						<div className=''>
-							<div className='flex justify-between mt-6 war-info-statbody'>
-								<div className=''>
-									<span>Stats (28)</span>
-									<div className='p-6 relative border-solid border border-white w-52'>
+							<div className='flex justify-between mt-6'>
+								<div className='w-2/5 mr-4'>
+									<span>Stats ({isSuccess ? Object.entries(heroData.hero.stats).length : 0})</span>
+									<div className=' p-6 relative border-solid border border-white w-full grid war-stat h-full mt-4'>
 										{isSuccess
-											? Object.entries(heroData.hero.stats).map((stat, keysl) => {
-													return (
-														<div key={keysl} className='flex'>
-															<span>icon</span>
-															<div className='flex flex-col'>
-																<span>{stat.key}</span>
-																<span>{stat.value}</span>
+											? Object.entries(heroData.hero.stats)
+													.slice(0, 4)
+													.map((stat) => {
+														return (
+															<div className='flex'>
+																<img src={Icon1} alt='icon1' />
+																<div className='flex flex-col ml-2'>
+																	<span className='opacity-50 war-font-minimum'>{stat[0]}</span>
+																	<span>{stat[1]}</span>
+																</div>
 															</div>
+														)
+													})
+											: null}
+										<span className='absolute text-center  details-stats w-4/5 '>
+											Details Stats
+										</span>
+									</div>
+								</div>
+								<div className='w-3/5'>
+									<span>Body Part</span>
+									<div className='p-5 relative w-full flex flex-col justify-around body-part h-full mt-4'>
+										{isSuccess
+											? Object.entries(heroData.hero.parts).map((res, key) => {
+													return (
+														<div key={key} className='flex justify-between items-center'>
+															<div className='flex items-center'>
+																<img src={Icon1} alt='icon1' />
+																<span className='opacity-50'>{res[1].type}</span>
+															</div>
+
+															<span>{res[1].character}</span>
 														</div>
 													)
 											  })
 											: null}
-										<span className='absolute bottom-0 text-center w-full '>Details Stats</span>
-									</div>
-								</div>
-								<div className=''>
-									<span>Body Part</span>
-									<div className='p-6 relative border-solid border border-white w-52 flex flex-col'>
-										{/* {isSuccess
-											? Object.entries(heroData.hero.parts).map((res, keysl) => {
-													return (
-														<div key={keysl} className='flex'>
-															<span>{res.value.type}</span>
-															<span>{res.value.character}</span>
-														</div>
-													)
-											  })
-											: null} */}
 									</div>
 								</div>
 							</div>
@@ -238,9 +252,9 @@ export const WarriorInfo = (props) => {
 			</div>
 			<div className='warrior-info-bottom flex flex-col items-center justify-center w-full'>
 				<div className='max-w-screen-xl flex w-full'>
-					<div className='w-1/3 mr-4 flex flex-col'>
-						<span>Offers</span>
-						<div className='w-full max-h-60 overflow-y-auto relative'>
+					<div className='w-1/3 mr-4 flex flex-col '>
+						<span className='war-font-medium mb-2'>Offers</span>
+						<div className='w-full max-h-60 overflow-y-auto relative table-container'>
 							<table className='warior-info-table'>
 								<thead>
 									<tr>
@@ -263,9 +277,9 @@ export const WarriorInfo = (props) => {
 							</table>
 						</div>
 					</div>
-					<div className='w-2/3 flex-col flex'>
-						<span>Sale history</span>
-						<div className='w-full h-60 overflow-y-auto relative'>
+					<div className='w-2/3 flex-col flex '>
+						<span className='war-font-medium mb-2'>Sale history</span>
+						<div className='w-full h-60 overflow-y-auto relative table-container'>
 							<table className='warior-info-table warior-info-table-fixed'>
 								<thead className='sticky top-0'>
 									<tr>
