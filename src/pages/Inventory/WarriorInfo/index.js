@@ -5,6 +5,7 @@ import { onMoveAnimation } from 'services/useDevelopUI'
 import { useParams } from 'react-router'
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft'
 import { Link } from 'react-router-dom'
+import { useGetHero } from 'queries/useGetHero.query'
 
 /**
  * @author
@@ -13,7 +14,12 @@ import { Link } from 'react-router-dom'
 
 export const WarriorInfo = (props) => {
 	let id = useParams()
-
+	console.log(id)
+	const { data: heroData, refetch: refetchHeroData, isSuccess } = useGetHero(id.id)
+	React.useEffect(() => {
+		refetchHeroData()
+		// eslint-disable-next-line
+	}, [id])
 	const offerList = [
 		{
 			offfer_from: '0x320CA81',
@@ -153,7 +159,7 @@ export const WarriorInfo = (props) => {
 								<img src={War1} alt='' />
 								<img src={War1} alt='' />
 							</div>
-							<img className=' war-img' src={Art4} alt='art4' />
+							<img className=' war-img' src={isSuccess ? heroData.hero.image : Art4} alt='art4' />
 							<div className='war-left-info flex flex-col justify-center'>
 								<img src={War1} alt='' />
 								<img src={War1} alt='' />
@@ -178,7 +184,9 @@ export const WarriorInfo = (props) => {
 					<div className='flex-1 mt-8 ml-16'>
 						<div className='flex justify-between items-center'>
 							<div className='flex flex-col'>
-								<span className='war-info-tiltle'>Elite Professor</span>
+								<span className='war-info-tiltle'>
+									{isSuccess ? heroData.hero.parts.body_id.character : null}
+								</span>
 								<div className='flex items-center mt-2'>
 									<img className='war-icon mr-1' src={Icon} alt='ss' />
 									<span className='war-bnb'>0.82 BNB</span>
@@ -192,15 +200,35 @@ export const WarriorInfo = (props) => {
 								<div className=''>
 									<span>Stats (28)</span>
 									<div className='p-6 relative border-solid border border-white w-52'>
+										{isSuccess
+											? Object.entries(heroData.hero.stats).map((stat, keysl) => {
+													return (
+														<div key={keysl} className='flex'>
+															<span>icon</span>
+															<div className='flex flex-col'>
+																<span>{stat.key}</span>
+																<span>{stat.value}</span>
+															</div>
+														</div>
+													)
+											  })
+											: null}
 										<span className='absolute bottom-0 text-center w-full '>Details Stats</span>
 									</div>
 								</div>
 								<div className=''>
 									<span>Body Part</span>
-									<div className='p-6 relative border-solid border border-white w-52'>
-										<span className='absolute bottom-0 left-1/2 -translate-x-1/2'>
-											Details Stats
-										</span>
+									<div className='p-6 relative border-solid border border-white w-52 flex flex-col'>
+										{/* {isSuccess
+											? Object.entries(heroData.hero.parts).map((res, keysl) => {
+													return (
+														<div key={keysl} className='flex'>
+															<span>{res.value.type}</span>
+															<span>{res.value.character}</span>
+														</div>
+													)
+											  })
+											: null} */}
 									</div>
 								</div>
 							</div>
@@ -212,7 +240,7 @@ export const WarriorInfo = (props) => {
 				<div className='max-w-screen-xl flex w-full'>
 					<div className='w-1/3 mr-4 flex flex-col'>
 						<span>Offers</span>
-						<div className='w-full h-60 overflow-y-scroll relative'>
+						<div className='w-full max-h-60 overflow-y-auto relative'>
 							<table className='warior-info-table'>
 								<thead>
 									<tr>
@@ -237,7 +265,7 @@ export const WarriorInfo = (props) => {
 					</div>
 					<div className='w-2/3 flex-col flex'>
 						<span>Sale history</span>
-						<div className='w-full h-60 overflow-y-scroll relative'>
+						<div className='w-full h-60 overflow-y-auto relative'>
 							<table className='warior-info-table warior-info-table-fixed'>
 								<thead className='sticky top-0'>
 									<tr>
