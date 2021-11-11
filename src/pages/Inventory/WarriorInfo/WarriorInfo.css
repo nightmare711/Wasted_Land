@@ -1,12 +1,13 @@
 .warrior-information{
+    font-weight: 600;
     color: #E7E1D9;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.9))
+    background: linear-gradient(to bottom, rgba(19,19,23,0.5),rgba(19,19,23,0.7))
 }
 .warrior-information .warrior-info-top{
     width: 100%;
     position: relative;
     padding-top: 136px;
-    padding-bottom: 97px;
+    padding-bottom: 69px;
 }
 .warrior-information .warrior-info-top .icon-circle{
     width: 44px;
@@ -48,12 +49,9 @@
 .warrior-information .warrior-info-top .war-bnb{
     color: #E7C060;
     font-size: 16px;
-    font-weight: 600;
     line-height: 28px;
 }
 .warrior-information .warrior-info-top .war-price{
-    font-size: 14px;
-    font-weight: 600;
     color: #E7E1D9;
 
 }
@@ -63,6 +61,8 @@
     height: 16px;
 }
 .warrior-information .warrior-info-top .btn-sell-war{
+    font-size: 18px;
+    line-height: 28px;
     width: 188px;
     height: 56px;
     filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.8));
@@ -70,7 +70,6 @@
 .warrior-information .warrior-info-top .war-info-tiltle{
     font-size: 40px;
     font-family: 'Titillium Web';
-    font-weight: 600;
     line-height: 48px;
 }
 .warrior-information .warrior-info-bottom{
@@ -86,6 +85,9 @@
 }
 .warrior-information .warrior-info-bottom .warior-info-table thead{
     width: 100%;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 600 !important;
 }
 .warrior-information .warrior-info-bottom .warior-info-table thead tr {
     background-color: #232327;
@@ -120,7 +122,43 @@
 }
 .warrior-information .war-font-medium{
     font-size: 20px;
+    line-height: 32px
 }
 .warrior-information .war-font-minimum{
+    font-weight: 400;
     font-size: 12px;
+    line-height: 20px;
+}
+.warrior-information  .font-stat-bodypart{
+    line-height: 32px;
+    font-size: 20px;
+}
+.warrior-information .bodypart-color-1{
+    color: #31BC00;
+}
+.warrior-information .bodypart-color-2{
+    color: yellow;
+}
+.warrior-information .bodypart-color-3{
+    color: #31BC00;
+}
+.warrior-information .bodypart-color-4{
+    color:#BD00FF;
+    
+}
+.warrior-information .bodypart-color-5{
+    color: blue;
+    
+}
+.warrior-information .bodypart-color-6{
+    color: blue;
+}
+.warrior-information .bodypart-color-7{
+    color: red;   
+}
+.warrior-information .bodypart-color-8{
+    color: red;
+}
+.warrior-information .bodypart-color-9{
+    color: white;
 }

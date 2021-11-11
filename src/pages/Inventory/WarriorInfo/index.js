@@ -172,12 +172,12 @@ export const WarriorInfo = (props) => {
 							<div className='flex items-center mr-16'>
 								<div className='icon-circle'></div>
 								<div className='flex flex-col'>
-									<span className='opacity-50'>Faction</span>
+									<span className='opacity-50 war-font-minimum'>Faction</span>
 									<span>Ex-Soldier</span>
 								</div>
 							</div>
 							<div className='flex flex-col'>
-								<span className='opacity-50'>Level</span>
+								<span className='opacity-50 war-font-minimum'>Level</span>
 								<span>Intern</span>
 							</div>
 						</div>
@@ -190,8 +190,8 @@ export const WarriorInfo = (props) => {
 								</span>
 								<div className='flex items-center mt-2'>
 									<img className='war-icon mr-1' src={Icon} alt='ss' />
-									<span className='war-bnb'>0.82 BNB</span>
-									<span className='war-price'>= $308</span>
+									<span className='war-bnb mr-2'>0.82 BNB</span>
+									<span className='war-price war-font-minimum'>≈ $308</span>
 								</div>
 							</div>
 							<div className='btn-sell-war btn-secondary'>Sell On MarketPlace</div>
@@ -199,7 +199,9 @@ export const WarriorInfo = (props) => {
 						<div className=''>
 							<div className='flex justify-between mt-6'>
 								<div className='w-2/5 mr-4'>
-									<span>Stats ({isSuccess ? Object.entries(heroData.hero.stats).length : 0})</span>
+									<span className='font-stat-bodypart'>
+										Stats ({isSuccess ? Object.entries(heroData.hero.stats).length : 0})
+									</span>
 									<div className=' p-6 relative border-solid border border-white w-full grid war-stat h-full mt-4'>
 										{isSuccess
 											? Object.entries(heroData.hero.stats)
@@ -222,7 +224,7 @@ export const WarriorInfo = (props) => {
 									</div>
 								</div>
 								<div className='w-3/5'>
-									<span>Body Part</span>
+									<span className='font-stat-bodypart'>Body Part</span>
 									<div className='p-5 relative w-full flex flex-col justify-around body-part h-full mt-4'>
 										{isSuccess
 											? Object.entries(heroData.hero.parts).map((res, key) => {
@@ -230,10 +232,12 @@ export const WarriorInfo = (props) => {
 														<div key={key} className='flex justify-between items-center'>
 															<div className='flex items-center'>
 																<img src={Icon1} alt='icon1' />
-																<span className='opacity-50'>{res[1].type}</span>
+																<span className='opacity-50 ml-2'>{res[1].type}</span>
 															</div>
 
-															<span>{res[1].character}</span>
+															<span className={`bodypart-color-${res[1].part_class}`}>
+																{res[1].character}
+															</span>
 														</div>
 													)
 											  })
@@ -247,9 +251,9 @@ export const WarriorInfo = (props) => {
 			</div>
 			<div className='warrior-info-bottom flex flex-col items-center justify-center w-full'>
 				<div className='max-w-screen-xl flex w-full'>
-					<div className='w-1/3 mr-4 flex flex-col '>
+					<div className='w-1/3 mr-8 flex flex-col '>
 						<span className='war-font-medium mb-2'>Offers</span>
-						<div className='w-full max-h-60 overflow-y-auto relative table-container'>
+						<div className='w-full h-60 overflow-y-auto relative table-container'>
 							<table className='warior-info-table'>
 								<thead>
 									<tr>
@@ -261,7 +265,7 @@ export const WarriorInfo = (props) => {
 								<tbody>
 									{offerList.map((off, key) => {
 										return (
-											<tr key={key}>
+											<tr key={key} className='war-font-minimum'>
 												<td>{off.offfer_from}</td>
 												<td>{off.offer_to}</td>
 												<td>{off.offer_time}</td>
@@ -298,7 +302,7 @@ export const WarriorInfo = (props) => {
 								<tbody>
 									{historyList.map((off, key) => {
 										return (
-											<tr key={key}>
+											<tr key={key} className='war-font-minimum'>
 												<td>{off.offer_event}</td>
 												<td>{off.offer_price}</td>
 												<td>{off.offfer_from}</td>
@@ -313,7 +317,7 @@ export const WarriorInfo = (props) => {
 					</div>
 				</div>
 				<div className='max-w-screen-xl w-full'>
-					<div className='btn-secondary self-start mt-6 mb-20'>Make Offer</div>
+					<div className='btn-secondary self-start mt-4 mb-20'>Make Offer</div>
 				</div>
 			</div>
 		</div>

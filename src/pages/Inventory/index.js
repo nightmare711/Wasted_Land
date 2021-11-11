@@ -41,12 +41,12 @@ export const Inventory = (props) => {
 											<img className='war-img' src={Art1} alt={war.image} />
 											<span className='warrior-pos'>{war.parts.body_id.character}</span>
 											<div className='war-border'></div>
-											<div className='flex justify-between items-center'>
+											<div className='flex justify-between items-center '>
 												<div className='flex items-center'>
 													<img className='war-icon mr-1' src={Icon} alt={Icon} />
-													<span className='war-bnb'>{war.listing}</span>
+													<span className='war-bnb'>0.82BNB</span>
 												</div>
-												<span className='war-price'>{war.price}</span>
+												<span className='war-price'>$308</span>
 											</div>
 										</div>
 									</Link>

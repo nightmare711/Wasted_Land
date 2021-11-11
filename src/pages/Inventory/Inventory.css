@@ -1,6 +1,7 @@
 .inventory{
     margin-top: 65px;
     background-color: #131317;
+    font-weight: 600;
 }
 .inventory .inventory-banner-bottom{
     margin-top: -39px;
@@ -20,12 +21,14 @@
     color: #E7E1D9;
     font-size: 40px;
     font-weight: 700;
+    line-height: 52px;
     font-family: 'Chakra Petch';
     letter-spacing: 20px;
     text-transform: uppercase;
     margin-top: 40px;
 }
 .inventory .inventory-tabbar{
+    line-height: 32px;
     z-index: 101;
     margin-top: 24px;
     top: 65px;  
@@ -67,19 +70,19 @@
 }
 .inventory .inventory-container .warrior-container{
     width: 200px;
-    height: 288px;
     border: 1px solid #51555A;
     padding: 12px;
+    padding-bottom: 14px;
 }
 .inventory .inventory-container .warrior-container:hover{
     background-color: #2A2A32;
     cursor: pointer;
 }
-/* .inventory .inventory-container .warrior-container .war-img{
+.inventory .inventory-container .warrior-container .war-img{
     object-fit: cover;
     width: 100%;
     height: 180px;
-} */
+}
 .inventory .inventory-container .warrior-container .warrior-pos{
     font-size: 16px;
     color:#CCAA8B;
@@ -94,6 +97,7 @@
     line-height: 28px;
 }
 .inventory .inventory-container .warrior-container .war-price{
+    line-height: 20px;
     font-size: 14px;
     font-weight: 600;
     color: #E7E1D9;
