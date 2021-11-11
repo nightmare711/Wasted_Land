@@ -1,10 +1,9 @@
 import React from 'react'
 import { AnimationOnScroll } from 'react-animation-on-scroll'
 import BannerGif from 'assets/home/banner.mp4'
-import BannerPoster from 'assets/home/bg.png'
+import BannerPoster from 'assets/home/bg.jpeg'
 import { onMoveAnimation } from 'services/useDevelopUI'
 import BannerGradient from 'assets/home/banner__gradient.png'
-
 import './Banner.css'
 
 export const Banner = () => {
@@ -20,7 +19,6 @@ export const Banner = () => {
 						playsInline
 						type='video/mp4'
 						src={BannerGif}
-						poster={BannerPoster}
 					/>
 				) : (
 					<img

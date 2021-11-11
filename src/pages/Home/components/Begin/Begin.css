@@ -1,9 +1,9 @@
 .begin-section {
-    background: url('../../../../assets/home/bg-section3.png');
+    background: url('../../../../assets/home/bg-section3.jpeg');
+    background-color: #130c09;
     background-attachment: fixed;
     text-transform: uppercase;
     min-height: 800px;
-    background-color: #130c09;
     background-size: 100vw 100%;
     background-position: center;
     color: #F6E9D9;
