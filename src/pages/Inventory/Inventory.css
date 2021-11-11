@@ -2,6 +2,20 @@
     margin-top: 65px;
     background-color: #131317;
 }
+.inventory .inventory-banner-bottom{
+    margin-top: -39px;
+    width: 100%;
+    height: 48px;
+    background-image:url('../../assets/inventory/banner-bottom.png');
+    background-size:1935px 48px;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+.inventory .inventory-banner{
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
 .inventory .inventory-tiltle {
     color: #E7E1D9;
     font-size: 40px;

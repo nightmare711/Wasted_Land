@@ -1,5 +1,6 @@
 .warrior-information{
     color: #E7E1D9;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.9))
 }
 .warrior-information .warrior-info-top{
     width: 100%;
@@ -12,8 +13,9 @@
     height: 44px;
     background-image: url('../../../assets/inventory/art2.png');
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     border-radius: 50%;
+    margin-right: 7px;
 }
 .warrior-information .warrior-info-top:after {
     content : "";
@@ -21,13 +23,13 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url(../../../assets/inventory/warrior-info-bg.png);
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    background-position-y: -216px;
+    background:url(../../../assets/inventory/warrior-info-bg.png);
+    background-size: cover, cover;
+    background-repeat: no-repeat, no-repeat;
+    background-position-y:bottom, center;
     width: 100%;
     height: 100%;
-    opacity : 0.2;
+    opacity : 0.15;
     z-index: -1;
 }
 .warrior-information .warrior-info-top .war-left-info img{
@@ -63,6 +65,7 @@
 .warrior-information .warrior-info-top .btn-sell-war{
     width: 188px;
     height: 56px;
+    filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.8));
 }
 .warrior-information .warrior-info-top .war-info-tiltle{
     font-size: 40px;
@@ -70,21 +73,22 @@
     font-weight: 600;
     line-height: 48px;
 }
+.warrior-information .warrior-info-bottom{
+}
 .warrior-information .warrior-info-bottom .table-container{
-    background-color: rgba(94, 58, 58, 0.692);
+    background-color: #343438;
 }
 .warrior-information .warrior-info-bottom .warior-info-table{
     height: 200px;
     overflow-y: auto;
     width: 100%;
     -collapse: collapse;
-    box-shadow: 0 0 20px rgba(0.2, 0.2, 0.22, 1.0)
 }
 .warrior-information .warrior-info-bottom .warior-info-table thead{
     width: 100%;
 }
 .warrior-information .warrior-info-bottom .warior-info-table thead tr {
-    background-color: rgb(24, 22, 22);
+    background-color: #232327;
     text-align: left;
   }
   .warior-info-table th,
@@ -95,7 +99,7 @@
     padding-top: 12px;
     bottom: 16px;
     left: 50%;
-    border-top: solid 1px rgba(0.32, 0.33, 0.35, 1.0);
+    border-top: solid 1px #51555A;
     transform: translateX(-50%);
     color: #3F93F5;
 }
@@ -104,11 +108,11 @@
     height: 24px;
 }
 .warrior-information .body-part{
-    border: solid rgba(0.32, 0.33, 0.35, 1.0) 1px;
+    border: solid #51555A 1px;
 }
 .warrior-information .war-stat{
     grid-template-columns: 1fr 1fr;
-    border: solid rgba(0.32, 0.33, 0.35, 1.0) 1px;
+    border: solid #51555A 1px;
 }
 .warrior-information .war-stat img{
     width: 24px;

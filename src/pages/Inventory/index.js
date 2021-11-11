@@ -17,10 +17,12 @@ export const Inventory = (props) => {
 		<div>
 			<div id='overlay-inventory' className='inventory flex flex-col items-center'>
 				<img
+					className='inventory-banner'
 					onLoad={() => onMoveAnimation('pre-loading', 'moveOutOpacity')}
 					src={Banner}
 					alt='inventory-banner'
 				/>
+				<div className='inventory-banner-bottom'></div>
 				<div className='flex flex-col w-full items-center'>
 					<div className='inventory-tiltle self-center'>YOUR INVENTORY</div>
 					<div className='inventory-tabbar sticky flex w-full justify-center'>

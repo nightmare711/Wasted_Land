@@ -160,12 +160,7 @@ export const WarriorInfo = (props) => {
 								<img src={War1} alt='' />
 								<img src={War1} alt='' />
 							</div>
-							<img
-								className=' war-img'
-								src={isSuccess ? heroData.hero.image : Art4}
-								alt='art4'
-								// onLoad={() => onMoveAnimation('pre-loading', 'moveOutOpacity')}
-							/>
+							<img className=' war-img' src={isSuccess ? heroData.hero.image : Art4} alt='art4' />
 							<div className='war-left-info flex flex-col justify-center'>
 								<img src={War1} alt='' />
 								<img src={War1} alt='' />
